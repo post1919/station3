@@ -1,5 +1,6 @@
 package com.station3.intercentor;
 
+import com.station3.common.ConstantProperties;
 import com.station3.login.dto.CustomUserDetailsDto;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -72,14 +73,11 @@ public class AuthInterceptor implements HandlerInterceptor {
 			mav.addObject("RETURN_URL", URLEncoder.encode(currentURL, "UTF-8"));
 			//로그인 후 현재페이지로 이동[e]
 
-			/*mav.addObject("PATH_IMG", ConstantProperties.PATH_IMG);
-			mav.addObject("PATH_BI", ConstantProperties.PATH_BI);
+			mav.addObject("PATH_IMG", ConstantProperties.PATH_IMG);
 			mav.addObject("PATH_JS", ConstantProperties.PATH_JS);
 			mav.addObject("PATH_CSS", ConstantProperties.PATH_CSS);
 			mav.addObject("PATH_LIB", ConstantProperties.PATH_STATIC);
 
-			mav.addObject("SITE_URL", ConstantProperties.SITE_URL);
-			mav.addObject("PATH_DOMAIN", ConstantProperties.PATH_DOMAIN);*/
 			mav.addObject("DATE_yyyyMMddHHmmss", LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMddHHmmss")));
 
 			//최상위메뉴(홈/로그인시/카테고리 메뉴펼침) or 기타

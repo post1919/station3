@@ -48,9 +48,8 @@ public class WebMvcConfig implements WebMvcConfigurer {
 
 		registry.addInterceptor(new LoginInterceptor())
 				.addPathPatterns("/*")
-				.addPathPatterns("/event/*", "/kkultip/*")
 				.excludePathPatterns("/login/*")
-				.excludePathPatterns("/castingn/static/**","/lib/**", "/error", "/error/**" ,"/castingn/common/**", "/static/css/**", "/static/js/**", "/static/html/**" ,"/*.html, /*.js, /*.css, /*.jpg, /*.jpeg, /*.png, /*.gif");
+				.excludePathPatterns("/static/css/**", "/static/js/**", "/*.html, /*.js, /*.css, /*.jpg, /*.jpeg, /*.png, /*.gif");
 
 		registry.addInterceptor(authInterceptor())
 				.excludePathPatterns("/castingn/static/**","/lib/**", "/error", "/error/**" ,"/castingn/common/**", "/static/css/**", "/static/js/**", "/static/html/**");
@@ -66,20 +65,6 @@ public class WebMvcConfig implements WebMvcConfigurer {
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
 		registry.addResourceHandler("/**").addResourceLocations(CLASSPATH_RESOURCE_LOCATIONS);
-
-		//webjars
-		registry.addResourceHandler("/webjars/**").addResourceLocations("classpath:/META-INF/resources/webjars/");
-
-		//업로드 파일 경로 설정
-		registry.addResourceHandler("/image/**").addResourceLocations("file:/var/www/castingn/images/");
-		registry.addResourceHandler("/files/**").addResourceLocations("file:/var/www/castingn/files/");
-		registry.addResourceHandler("/upload/**").addResourceLocations("file:/var/www/castingn/upload/");
-
-		//PHP쪽 파일/이미지들
-		registry.addResourceHandler(ConstantProperties.PATH_CASTING_VIEW + "**").addResourceLocations("file:"+ ConstantProperties.PATH_CASTING);
-
-		//견적및  Buyer 데이타
-		registry.addResourceHandler("/Buyr/**").addResourceLocations("file:/home/casting/casting/Buyr/files/");
 	}
 
 	@Bean
@@ -88,30 +73,6 @@ public class WebMvcConfig implements WebMvcConfigurer {
 		beanNameViewResolver.setOrder(2);
 		return beanNameViewResolver;
 	}
-
-	/*@Bean
-	public TilesConfigurer tilesConfigurer() {
-
-		final TilesConfigurer configurer = new TilesConfigurer();
-
-		configurer.setDefinitions(new String[] {"WEB-INF/tiles/tiles.xml"});
-
-		configurer.setCheckRefresh(true);
-
-		return configurer;
-	}
-
-	@Bean
-	public TilesViewResolver tilesViewResolver() {
-		final TilesViewResolver tilesViewResolver = new TilesViewResolver();
-		tilesViewResolver.setViewClass(TilesView.class);
-		tilesViewResolver.setOrder(3);
-
-		//redirect할때 https -> http로 풀리는 현상 수정 => nginx설정파일에서 변경함 20220427 신동아
-		//tilesViewResolver.setRedirectHttp10Compatible(false);
-
-		return tilesViewResolver;
-	}*/
 
 	@Bean
 	public AuthInterceptor authInterceptor() {

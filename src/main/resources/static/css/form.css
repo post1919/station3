@@ -172,9 +172,6 @@ dl.column-view > dd {
   color: #666;
   border: 0 none;
 }
-.btn.arrow-right {
-  background: transparent url() no-repeat right 3px center;
-}
 .btn.min-width {
   min-width: 135px;
 }

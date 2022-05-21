@@ -6,6 +6,11 @@ spring:
       enabled: true
     restart:
       enabled: true #classpath에 속해있는 파일들의 수정을 감지하고 자동으로 재시작
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+
 
 #로그 레벨
 logging:
@@ -59,26 +64,11 @@ resources:
 spring:
   config:
     activate:
-      on-profile: dev1, dev2, dev
+      on-profile: dev
   datasource:
     url: jdbc:log4jdbc:mysql://3.37.238.95:3306/casting?characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
     driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
     username: root
     password: sotkfkd0!A
-    dbcp2:
-      validation-query: SELECT 1
-
-# prd 환경
----
-spring:
-  config:
-    activate:
-      on-profile: real1,real2,prd
-  datasource:
-    url: jdbc:log4jdbc:mysql://castingn-mysql.ck5zpynlgs85.ap-northeast-2.rds.amazonaws.com:3306/casting?characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
-    #url: jdbc:log4jdbc:mysql://13.124.245.226:3306/casting?characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
-    driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
-    username: albatross
-    password: sotkfkd0!
     dbcp2:
       validation-query: SELECT 1
