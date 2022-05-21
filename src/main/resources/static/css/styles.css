@@ -1,0 +1,809 @@
+
+
+html, body {
+  font-family: 'Pretendard';
+}
+
+.btn-basic,
+[class*="pop-"] .btns .btn {
+  height: 40px;
+  line-height: 37px;
+  text-align: center;
+  border: 1px solid #c8c8c8;
+  border-radius: 20px;
+  background: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  color: #111;
+}
+
+.dim {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+
+  display: none;
+}
+[class*="pop-"] {
+  position: fixed;
+  padding: 40px 49.7px 40px 50.3px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 2.6px 5.4px 13px 0 rgba(0, 0, 0, 0.24);
+  background: #fff;
+}
+
+.pop-login {
+  
+}
+.pop-login .title {
+  line-height: 40px;
+  margin-bottom: 25px;
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  color: #000;
+}
+.pop-login .title:before,
+.pop-login .title.span.logo {
+  /* content: ""; */
+  overflow: hidden;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  vertical-align: middle;
+  border-radius: 6px;
+  background: #21c802 url(https://resource.mall.castingn.com/static/images/icons/ico_kakao.svg) no-repeat center center;
+}
+.pop-login .title.span.logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.pop-login.naver .title:before {
+  background-color: #21c802;
+  background-image: url();
+}
+.pop-login.kakao .title:before {
+  background-color: #fbe718;
+  background-image: url();
+}
+.pop-login.google .title:before {
+  border: solid 1px #ddd;
+  background-color: #fff;
+  background-image: url();
+}
+.pop-login.facebook .title:before {
+  background-color: #3c59a9;
+  background-image: url();
+}
+
+
+.pop-login .title:after {
+  content: "간편로그인";
+  display: inline-block;
+}
+
+[class*="pop-"] .body .cont {
+  line-height: 1.37;
+  margin-bottom: 20px;
+  font-size: 16px;
+  text-align: center;
+  color: #000;
+}
+[class*="pop-"] .btns {
+  display: flex;
+  justify-content: space-between;
+}
+[class*="pop-"] .btns .btn {
+  width: 120px;
+  height: 40px;
+  line-height: 37px;
+  text-align: center;
+  border: 1px solid #c8c8c8;
+  background: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  color: #111;
+}
+[class*="pop-"] .btns .btn.blue {
+  border: 1px solid #0e89e8;
+  background: #0e89e8;
+  color: #ffffff;
+}
+
+
+
+/* [class*="pageConts-"] {
+  width: calc(100% - 258px);
+  padding: 0 80px;
+} */
+
+[class*="pageConts-"] .pageTitle {/*font-size: 26px;*/ /*font-weight: 800; */ /* margin-top: 40px; */ /*margin-bottom: 65px;*/ /*color: #000;*/} /* 공통적으로 다 쓰고 있어서 레이아웃이 다 틀어짐*/
+
+
+
+.contsTitle {
+  padding-bottom: 19px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #000;
+  border-bottom: solid 1px #d9d9d9;
+}
+
+[class*="line-personalInfo"] {
+  overflow: hidden;
+  border-bottom: 1px solid #aaaeb1;
+}
+.line-personalInfo-01 {
+  padding: 30px 0;
+}
+.line-personalInfo-01 .kit-profilePic {
+  position: relative;
+  float: left;
+  margin-right: 20px;
+  vertical-align: middle;
+}
+.line-personalInfo-01 .kit-profilePic .pic {
+  overflow: hidden;
+  width: 73px;
+  height: 73px;
+  border-radius: 50%;
+  background: url(https://castingn-mall.s3.ap-northeast-2.amazonaws.com/static/images/account/ico-user-thum.svg) left/100% no-repeat;
+}
+
+.line-personalInfo-01 .kit-profilePic .pic img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.line-personalInfo-01 .kit-profilePic .pic.ico-co-thum{
+  background: url(https://castingn-mall.s3.ap-northeast-2.amazonaws.com/static/images/account/ico-co-thum.svg) left/100% no-repeat;
+}
+
+
+.line-personalInfo-01 .kit-profilePic .btn-modify {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 25px;
+  height: 25px;
+  padding: 0;
+  border-radius: 50%;
+  border: solid 1px #dbdbdb;
+  background: #fff url(https://resource.mall.castingn.com/static/images/ico_setting.png) no-repeat center center / 60%;
+}
+
+.line-personalInfo-01 .box-memberInfo {
+  float: left;
+  margin: 35px 10px 0 0;
+  vertical-align: middle;
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+}
+
+.line-personalInfo-01 .kit-memberType {
+  float: left;
+  height: 30px;
+  line-height: 30px;
+  margin-top: 29px;
+  padding: 0 5px 0 0;
+  vertical-align: middle;
+  font-size: 13px;
+  border-radius: 15px;
+  border: solid 1px #e6e6e6;
+  background-color: #fff;
+  color: #333333;
+  min-width: 100px;
+}
+.line-personalInfo-01 .kit-memberType:before {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+  border-radius: 15px;
+  background: #a6bfd2 url(https://resource.mall.castingn.com/static/images/ico_member.png) no-repeat center bottom -10% / 60%;
+  margin-right: 5px;
+}
+.line-personalInfo-01 .kit-memberType.gold:before {
+  background: #a6bfd2 url(https://resource.mall.castingn.com/static/images/ico_gold.png) no-repeat center center / 60%;
+}
+.line-personalInfo-01 .kit-memberType.corp:before {
+  background-color: #33a2be;
+}
+.line-personalInfo-01 .kit-memberType.businessClub:before {
+  background-color: #0e89e8;
+}
+.line-personalInfo-01 .kit-memberType.gold:before {
+  background-color: transparent;
+}
+/* .line-personalInfo-01 .kit-memberType:after {
+  content: "일반회원";
+} */
+.line-personalInfo-01 .kit-memberType.corp:after {
+  content: "멤버쉽회원";
+}
+.line-personalInfo-01 .kit-memberType.businessClub:after {
+  content: "스마트핀클럽 회원";
+}
+.line-personalInfo-01 .kit-memberType.gold:after {
+  content: "골드기업회원";
+}
+.line-personalInfo-01 .btns {
+  float: right;
+  margin-top: 100px;
+}
+.line-personalInfo-01 .btns .btn {
+  min-width: 110px;
+  padding: 0 20px;
+}
+
+
+.line-personalInfo-02 {
+  margin-bottom: 53px;
+  padding: 20px 0 60px;
+}
+
+dl.column-personalInfo {
+  overflow: hidden;
+  line-height: 40px;
+}
+dl.column-personalInfo > dt {
+  clear: both;
+  float: left;
+  width: 160px;
+  font-size: 16px;
+  color: #000;
+}
+dl.column-personalInfo > dd {
+  overflow: hidden;
+}
+dl.column-personalInfo > dd .tag {
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 7px;
+  border-radius: 15px;
+  border: solid 1px #d9d9d9;
+  font-size: 13px;
+  font-weight: 500;
+  text-align: center;
+  color: #333;
+  background-color: #fff;
+}
+dl.column-personalInfo > dd .tag.marketing:before {
+  content: "마케팅";
+}
+dl.column-personalInfo > dd .tag.it:before {
+  content: "IT개발";
+}
+dl.column-personalInfo > dd .tag.account:before {
+  content: "회계";
+}
+
+
+ul.list-loginKind {
+  
+}
+ul.list-loginKind > li {
+  margin-bottom: 25px;
+  padding: 19.6px 23.6px 17.9px 23.4px;
+  border-radius: 15px;
+  border: solid 1px #e3e3e3;
+  background-color: #fff;
+}
+ul.list-loginKind > li > dl.column-loginKind {
+
+}
+ul.list-loginKind > li > dl.column-loginKind > dt {
+  overflow: hidden;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ececec;
+}
+ul.list-loginKind > li > dl.column-loginKind > dt h5 {
+  float: left;
+  font-size: 18px;
+  line-height: 40px;
+  color: #000;
+}
+ul.list-loginKind > li > dl.column-loginKind > dt h5:before,
+ul.list-loginKind > li > dl.column-loginKind > dt h5 span.logo {
+  /* content: ""; */
+  overflow: hidden;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin-right: 12px;
+  vertical-align: middle;
+  border-radius: 6px;
+  background: #21c802 url(https://resource.mall.castingn.com/static/images/icons/ico_kakao.svg) no-repeat center center;
+}
+ul.list-loginKind > li > dl.column-loginKind > dt h5 span.logo img {
+  width: 100%;
+  height: 100%;
+}
+ul.list-loginKind > li.naver > dl.column-loginKind > dt h5:before {
+  background-color: #21c802;
+  background-image: url();
+}
+ul.list-loginKind > li.kakao > dl.column-loginKind > dt h5:before {
+  background-color: #fbe718;
+  background-image: url();
+}
+ul.list-loginKind > li.google > dl.column-loginKind > dt h5:before {
+  border: solid 1px #ddd;
+  background-color: #fff;
+  background-image: url();
+}
+ul.list-loginKind > li.facebook > dl.column-loginKind > dt h5:before {
+  background-color: #3c59a9;
+  background-image: url();
+}
+
+ul.list-loginKind > li > dl.column-loginKind > dt h5:after {
+  content: "간편로그인";
+}
+ul.list-loginKind > li > dl.column-loginKind > dt button {
+  float: right;
+  height: 35px;
+  line-height: 35px;
+  padding: 0 20px;
+  border-radius: 8px;
+  border: solid 1px #c8c8c8;
+  background: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  color: #000;
+}
+ul.list-loginKind > li > dl.column-loginKind > dt button:before {
+  content: "연결하기";
+}
+ul.list-loginKind > li.on > dl.column-loginKind > dt button:before {
+  content: "연결해제";
+}
+
+ul.list-loginKind > li > dl.column-loginKind > dd {
+  padding: 16px 0 0;
+}
+
+dl.list-logInfo {
+  overflow: hidden;
+  font-size: 14px;
+  line-height: 1.57;
+  color: #333;
+}
+dl.list-logInfo > dt {
+  clear: both;
+  float: left;
+}
+dl.list-logInfo > dt:after {
+  content: " : ";
+  display: inline-block;
+  margin: 0 3px;
+}
+dl.list-logInfo > dd {
+  overflow: hidden;
+}
+dl.list-logInfo > dt.connected,
+dl.list-logInfo > dt.connected + dd {
+  display: none;
+}
+ul.list-loginKind > li.on dl.list-logInfo > dt.connected,
+ul.list-loginKind > li.on dl.list-logInfo > dt.connected + dd {
+  display: block;
+}
+
+
+
+.group-destination {
+  margin-bottom: 60px;
+}
+.group-destination .line-title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.group-destination .line-title h4 {
+  text-indent: 5px;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 1.86;
+  color: #000;
+}
+.group-destination .line-title .btns {
+}
+.group-destination .line-title .btns .btn {
+  height: 35px;
+  line-height: 35px;
+  padding: 0 13px 0 30px;
+  border-radius: 17.5px;
+  text-align: center;
+  border: solid 1px #c8c8c8;
+  background-color: #fff;
+}
+.group-destination .line-title .btns .btn-add {
+  background: transparent url(https://resource.mall.castingn.com/static/images/ico-bt-plus2.png) 13px center no-repeat;
+}
+
+
+
+ul.list-destination {
+  
+}
+ul.list-destination > li {
+  display: flex;
+  justify-content: space-between;
+  height: 125px;
+  margin-bottom: 20px;
+  padding: 23px 30px 26px 28px;
+  border-radius: 15px;
+  border: solid 1px #e3e3e3;
+  background: #fff;
+  box-sizing: border-box;
+}
+ul.list-destination > li > .info {
+
+}
+ul.list-destination > li > .info .title {
+  margin-bottom: 4.8px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #000;
+}
+ul.list-destination > li > .info .user {
+  margin-bottom: 4.8px;
+  font-size: 16px;
+  color: #010101;
+}
+ul.list-destination > li > .control {
+  display: flex;
+  justify-content: space-between;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+}
+ul.list-destination > li > .control .appoint {
+  position: relative;
+  width: 132px;
+  height: 22px;
+  margin-right: 7px;
+
+  font-size: 14px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.57;
+  letter-spacing: normal;
+  text-align: left;
+  color: #999;
+}
+ul.list-destination > li > .control .appoint input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+ul.list-destination > li > .control .appoint label {
+
+}
+ul.list-destination > li > .control .appoint label:before {
+  content: "";
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  margin-right: 6px;
+  vertical-align: middle;
+  border-radius: 50%;
+  border: solid 1px #999;
+}
+ul.list-destination > li > .control .appoint input:checked + label:before {
+  background: #0e89e8 url(https://resource.mall.castingn.com/static/images/ico-rd-chk.png) center no-repeat;
+  border: solid 1px #0e89e8;
+}
+ul.list-destination > li > .control .appoint label:after {
+  content: "기본배송지로 지정";
+  vertical-align: middle;
+}
+
+ul.list-destination > li > .control .btns {
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  border: solid 1px #c8c8c8;
+  border-radius: 5px;
+}
+ul.list-destination > li > .control .btns .btn {
+  height: 35px;
+  line-height: 34px;
+  margin-left: -1px;
+  padding: 0 10px;
+  border: 0 none;
+  border-left: 1px solid #c8c8c8;
+  border-radius: 0;
+}
+ul.list-destination > li > .control .btns .btn:first-child {
+  margin-left: 0;
+  border-left: 0 none;
+}
+
+dl.column-blank {
+  overflow: hidden;
+  height: 102px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 15px;
+}
+
+ul.list-destination + dl.column-blank {
+  /* display: none; */
+}
+dl.column-blank > dt {
+  width: 130px;
+  height: 100%;
+  background: #32ab8c url(https://resource.mall.castingn.com/static/images/picto_car.png) no-repeat center center / 50% auto;
+}
+dl.column-blank > dd {
+  width: calc(100% - 130px);
+  height: 100%;
+  padding-left: 28px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  display: flex;
+  /* flex-direction: column; */
+  /* justify-content: center; */
+  align-items: center;
+  border: solid 1px #e3e3e3;
+  border-left: 0 none;
+  box-sizing: border-box;
+}
+
+
+.group-destination.corp dl.column-blank > dt {
+  background: #0e89e8 url(https://resource.mall.castingn.com/static/images/picto_car.png) no-repeat center center / 50% auto;
+}
+
+
+.group-destination + hr {
+  margin-bottom: 60px;
+  background: #ececec;
+}
+
+
+.box-desc {
+  font-size: 16px;
+  line-height: 1.37;
+  margin-bottom: 37px;
+  text-align: center;
+  color: #333;
+}
+
+.corpInfo .box-desc {
+  padding-top: 158px;
+}
+
+
+.block-link {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+.block-link .box-link {
+  overflow: hidden;
+  width: 447px;
+  text-align: center;
+  border-radius: 15px;
+  border: solid 1px #e3e3e3;
+  border-top: 0 none;
+}
+
+.block-link .box-link:first-child{
+  margin-right: 24px;
+}
+
+
+.block-link .box-link h5 {
+  height: 52px;
+  line-height: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  background: #32ab8c;
+}
+.block-link .box-link:nth-child(2) h5 {
+  background: #0e89e8;
+}
+.block-link .box-link .desc {
+  padding: 25px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #000;
+}
+.block-link .box-link .btn {
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  margin: 0 auto 40px;
+  padding: 0 19px;
+  border-radius: 20px;
+  border: solid 1px #c8c8c8;
+  background-color: #fff;
+}
+
+.tbl-wrap {
+  
+}
+.tbl-wrap .tbl-basic {
+  margin-bottom: 23px;
+  border-collapse: collapse;
+  border-top: 2px solid #000000;
+}
+.tbl-wrap .tbl-basic thead th {
+  height: 54px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  color: #000;
+}
+.tbl-wrap .tbl-basic th {
+  border-bottom: 1px solid #cbcbcb;
+}
+.tbl-wrap .tbl-basic td {
+  height: 50px;
+  text-align: center;
+  border-bottom: 1px solid #ececec;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  color: #000;
+}
+
+.tbl-wrap .tbl-basic td.noData {
+  text-align: center;
+}
+.tbl-wrap .tbl-basic td.noData:before {
+  content:"내역이 없습니다.";
+}
+
+
+ul.list-desc {
+  margin-bottom: 100px;
+}
+ul.list-desc > li {
+  font-size: 14px;
+  line-height: 1.57;
+  color: #333;
+}
+
+
+.line-noData {
+  display: flex;
+  justify-content: space-between;
+  height: 162px;
+  padding: 30px 0 30px 64px;
+  border-bottom: solid 1px #d9d9d9;
+  box-sizing: border-box;
+  background: transparent url(https://castingn-mall.s3.ap-northeast-2.amazonaws.com/static/images/account/ico-co-thum.svg) no-repeat left center/74px;
+}
+.line-noData .desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+.line-noData .btns {
+  display: flex;
+  justify-content:flex-end;
+  align-items:flex-end;
+}
+.line-noData .btns .btn {
+  min-width: 110px;
+  padding: 0 20px;
+}
+
+.line-conts.noData {
+  text-align: center;
+}
+.line-conts.noData .desc {
+  margin-bottom: 30px;
+  padding-top: 160px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.56;
+  text-align: center;
+  color: #000;
+  background: transparent url(https://resource.mall.castingn.com/static/images/picto_info.png) no-repeat center 60px / 100px auto;
+}
+.line-conts.noData .btns {
+}
+.line-conts.noData .btn {
+  display: inline-block;
+  height: 57px;
+  line-height: 57px;
+  margin: 0 auto;
+  padding: 0px 40px;
+  border-radius: 28.7px;
+  border: 0 none;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  background-color: #0e89e8;
+}
+
+
+.pull-right {
+  float: left;
+}
+
+
+@media screen and (max-width: 768px) {
+  
+
+
+  [class*="pageConts-"] {
+    width: auto;
+    padding: 20px;
+  }
+
+
+
+  ul.list-destination > li.on {
+    border: solid 1px #0e89e8;
+    background: #f7fbfe;
+  }
+
+  ul.list-destination > li > .control .appoint {
+    width: 0;
+    text-indent: -99999px;
+  }
+  ul.list-destination > li.on > .info .title:after {
+    content: "기본배송지";
+    display: inline-block;
+    margin-left: 10px;
+    color: #1c92d8;
+  }
+
+  ul.list-destination > li > .control .btns {
+    border: 0 none;
+  }
+  ul.list-destination > li > .control .btns .btn-modify {
+    width: 40px;
+    height: 40px;
+    text-indent: -99999px;
+    border: 0 none;
+    background: transparent url(https://resource.mall.castingn.com/static/images/ico_pencil.png) no-repeat center center / 90% auto;
+  }
+  ul.list-destination > li > .control .btns .btn-delete {
+    display: none;
+  }
+
+  .line-personalInfo-01 .kit-profilePic .btn-modify {
+    width: 18px;
+    height: 18px;
+  }
+
+  .line-noData {
+    background: transparent url(https://castingn-mall.s3.ap-northeast-2.amazonaws.com/static/images/account/ico-co-thum.svg) no-repeat left center/52px;
+  }
+}

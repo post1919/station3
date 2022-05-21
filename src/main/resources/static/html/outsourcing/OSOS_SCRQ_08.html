@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>업무마켓9</title>
+	<script type="text/javascript" async="" src="../../js/jquery-3.3.1.min.js"></script>
+	<link rel="stylesheet" href="../../css/reset.css" />
+	<link rel="stylesheet" href="../../css/layout.css" />
+	<link rel="stylesheet" href="../../css/mall.css" />
+	<link rel="stylesheet" href="https://unpkg.com/swiper@6/swiper-bundle.min.css" />
+	<script type="text/javascript" async="" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/js/swiper.min.js"></script>
+<body>
+
+<div id="wrap">
+	<!-- header -->
+	<div id="header-mall" class="subpage">
+		<div class="header-top m-hide">
+			<div class="inner">
+                <span class="header-top-left">
+                  <a href="/casting/intro">업무마켓나인 소개</a>
+                </span>
+				<span class="header-top-right">
+
+                                    <a href="javascript:void(0);" id="loginBtn" onclick="loginFormOn();">로그인</a>
+                  <a href="javascript:void(0);" onclick="loginchangeStep3();">회원가입</a>
+                  <a href="/casting/Buyr/Interaction/?menu=inquery">1:1문의</a>
+                  <div class="layer-wrap">
+                    <a href="javascript:void(0);" class="last center-bt">공급사 통합센터</a>
+                    <div class="head-layer-pop head-layer-1">
+                      <ul class="center-list">
+                        <li><a href="/casting/Buyr/?page_mode=partner">공급사 입점신청</a></li>
+                        <li><a href="/casting/Manage/Auth/index.php">공급사 통합 로그인</a></li>
+                        <li><a href="https://www.castingn.com/join/partner/formnew?workmarket9HeaderRemove=OK" target="_blank">소싱 파트너 로그인</a></li>
+                      </ul>
+                    </div>
+                  </div>
+
+
+
+                </span>
+			</div>
+			<!-- login후 나오는 팝업 -->
+		</div>
+
+		<div class="header-center m-hide">
+			<div class="inner">
+				<h1 class="logo">
+					<a href="#"><img src="https://resource.mall.castingn.com/static/images/etc-mall-logo.png" alt="" class="m-hide"></a>
+				</h1>
+
+				<div class="header-search">
+					<input type="text" id="q" placeholder="업무에 필요한 상품을 빠르게 검색해보세요!" value="" onkeydown="if(event.keyCode == 13) schcheck();" onclick="wordcheck();">
+					<button type="button" onclick="schcheck();">검색</button>
+				</div>
+
+				<div class="header-category">
+					<a href="javascript:loginFormOn();" class="category-menu1">내정보</a>
+					<a href="/casting/Mypage/?mode=cart" class="category-menu2">장바구니</a>
+					<a href="javascript:loginFormOn();" class="category-menu3">배송정보</a>
+					<a href="javascript:loginFormOn();" class="category-menu4">채팅</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="header-bottom m-hide">
+			<div class="inner">
+				<ul class="gnb">
+					<li class="menu-1 ">
+						<a href="javascript:void(0)" class="btn-toggle-menu">비품,사무용품 <i class="el-icon-arrow-down"></i></a>
+					</li>
+					<li class="menu-2">
+						<span class="tool-tip">전문업체매칭</span>
+						<i class="ico-maching">👊</i>
+						<a href="javascript:void(0)">파워매칭</a>
+					</li>
+					<li class="menu-3">
+						<span class="tool-tip">기업형구독서비스</span>
+						<i class="ico-pin"></i>
+						<a href="javascript:void(0)">핀스퀘어</a>
+					</li>
+					<li class="menu-4 ">
+						<i class="ico-smart"></i>
+						<a href="javascript:void(0)">스마트핀클럽</a>
+					</li>
+					<li class="menu-5 "><a href="javascript:void(0)">C노트</a></li>
+					<li class="menu-6 "><a href="javascript:void(0)">이벤트</a></li>
+
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- //header -->
+
+	<!-- header-sub -->
+	<div class="mo-sub-head p-hide">
+		<button type="button" class="btn-history-back" onclick="javascript:history.go(-1);">back</button>
+		<strong class="header-tit">비품,사무용품</strong>
+
+		<div class="header-category">
+			<a href="#" class="cate-menu1" id="dev_search_button">검색</a>
+			<a href="javascript:void(0)" class="cate-menu2">장바구니 </a>
+		</div>
+	</div>
+	<!-- //header-sub -->
+
+	<!-- container -->
+	<div id="container" class="container-favorite">
+
+		<section class="power-step-wrap">
+
+			<div class="help-item-wrap">
+				<div class="help-tit">필요하신 내용을 작성해 주시면, 30분 이내 전담 소싱 디렉터가 연락을 드립니다.
+					<br />영역별 수 년간 상담해온 <strong>전문가가 전문업체 선정</strong>을 무료로 <strong>컨설팅</strong> 해드립니다. </div>
+				<div class="help-desc">부담 없이 파워소싱 의뢰해 보세요. 전문가들의 친절한 상담이 시작됩니다!</div>
+			</div>
+
+			<div class="req-cont-wrap">
+				<div class="lt-item">
+
+					<div class="preview-item-wrap">
+						<div class="pcont">
+							<div class="req-page-wrap">
+								<div class="rtit">파워소싱 의뢰 요청서</div>
+
+								<table class="tbl01">
+									<tr>
+										<th>의뢰 제목</th>
+										<td colspan="3">세탁 작업 연결을 위한 앱 개발</td>
+									</tr>
+									<tr>
+										<th>매칭 마감일</th>
+										<td>2022. 03. 21</td>
+										<th>소싱 마감일</th>
+										<td>2022. 03. 21</td>
+									</tr>
+								</table>
+
+								<div class="label">주식회사 캐스팅엔</div>
+								<table class="tbl02">
+									<colgroup>
+										<col width="" />
+										<col width="15%" />
+										<col width="15%" />
+										<col width="26%" />
+										<col width="34%" />
+									</colgroup>
+									<tr>
+										<th>소속</th>
+										<th>직급</th>
+										<th>성명</th>
+										<th>전화번호</th>
+										<th>이메일</th>
+									</tr>
+									<tr>
+										<td>마케팅팀</td>
+										<td>대리</td>
+										<td>김지은</td>
+										<td>010-2685-6895</td>
+										<td>email@castingn.com</td>
+									</tr>
+								</table>
+
+								<dl>
+									<dt>의뢰종류</dt>
+									<dd>
+										<ul>
+											<li class="on">
+												<i class="el-icon-success"></i>
+												<span>IT개발</span>
+											</li>
+											<li>
+												<i class="el-icon-success"></i>
+												<span>앱개발</span>
+											</li>
+											<li>
+												<i class="el-icon-success"></i>
+												<span>게임개발</span>
+											</li>
+										</ul>
+									</dd>
+
+									<dt>진행준비사항</dt>
+									<dd>
+										<div class="sdesc">아이디어만 있습니다.
+											<br />지금 논의중인 사항을 정리 중에 있습니다. 해당 내용은 미팅 시 소개해 드릴 수 있습니다</div>
+									</dd>
+
+									<dt>기본 의뢰 내용</dt>
+									<dd>
+										<div class="sdesc">사용언어 : 한국어, 중국어, 태국어
+											<br />제작상태 : 신규 구축, 유지보수
+											<br />운영중인 사이트 또는 앱 : castingn.com
+											<br />운영하려는 서비스 또는 상품 :</div>
+									</dd>
+
+									<dt>상세 의뢰 내용</dt>
+									<dd>
+										<div class="sdesc">개발 필요사항 : 네이티브 앱, 하이브리드 앱
+											<br />스토어에 등록할 예정이에요.
+											<br />솔루션을 활용한 웹개발이 필요합니다.
+											<br />기획을 제공하여 외주사에서 개발만 진행하길 원합니다.
+											<br />비상주로 업무 진행을 원합니다.</div>
+									</dd>
+
+									<dt>프로젝트 상세 내용</dt>
+									<dd>
+										<div class="sdesc">의뢰제목:
+											<br />의뢰 마감일: 2022.02.15
+											<br />프로젝트 기간: 2022.03.10~2022.06.09 (92일)
+											<br />예상 예산: 50,000,0000원
+
+											<br /><br />세탁작업을 의뢰할 웹과 앱 개발이 필요합니다.
+											<br />미팅은 주 2회 이상 하였으면 하고, 진행하여야 하는 내용은 협의하고 싶습니다.
+											<br />예상하는 견적은 50,000,000원이나 상황에 따라 조율 가능합니다.</div>
+									</dd>
+
+									<dt>예산 및 일정</dt>
+									<dd>
+										<div class="sdesc">예산 : 50,000,000 원 (오 천만 원)
+											<br />기간 : 3개월</div>
+									</dd>
+								</dl>
+
+								<div class="req-btn-wrap">
+									<button type="button">
+										<img src="https://resource.mall.castingn.com/static/images/ico-link-copy.svg" />
+										<span>Link복사</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="mob-stit">파워소싱 의뢰요청서</div>
+						<div class="mob-sdesc">세탁 작업 연결을 위한 앱 개발</div>
+						<div class="pbtn-wrap">
+							<button type="button">
+								<img src="https://resource.mall.castingn.com/static/images/ico-pop-view.svg" />
+								<span>화면으로보기</span>
+							</button>
+							<button type="button">
+								<img src="https://resource.mall.castingn.com/static/images/ico-link-copy.svg" />
+								<span>Link복사</span>
+							</button>
+						</div>
+					</div>
+
+				</div>
+				<div class="rt-item complete">
+					<div class="comp-cont-wrap">
+						<div class="cico"><img src="https://resource.mall.castingn.com/static/images/ico-osos-complete.svg" /></div>
+						<div class="ctit">파워소싱 의뢰가
+							<br />완료되었습니다.</div>
+						<div class="cdesc">빠른 시간내로 소싱디렉터가
+							<br />연락드리겠습니다.</div>
+						<div class="cetc">의뢰내역은
+							<br /><strong>마이페이지 > 파워소싱관리 > 소싱의뢰현황</strong>
+							<br />에서 확인하실 수 있습니다.
+						</div>
+						<div class="cbtn-wrap">
+							<button type="button">의뢰 현황보기</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</section>
+
+
+
+
+
+	</div>
+	<!-- //container -->
+
+	<!-- footer -->
+	<div id="footer">
+		<div class="section">
+			<div class="foot-menu">
+				<a href="#"><span>1:1문의</span></a>
+				<a href="#"><span>고객센터</span></a>
+				<a href="#"><span>파트너센터</span></a>
+			</div>
+			<div class="foot-etc">
+				<a href="#"><span>회사소개</span></a>
+				<a href="#"><span>서비스소개</span></a>
+				<a href="#"><span>안전거래보장</span></a>
+				<a href="#"><span>이용약관</span></a>
+				<a href="#"><span class="t-red">개인정보처리방침</span></a>
+				<a href="#"><span>공지사항</span></a>
+			</div>
+			<div class="foot-cs">
+				<div class="cs-num">1644 <i class="circle"></i> 2653</div>
+				<div class="cs-time">
+					<dl>
+						<dt>평일</dt>
+						<dd>08:30 ~ 17:30</dd>
+					</dl>
+					<dl>
+						<dt>점심시간</dt>
+						<dd>12:00~13:00</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="foot-info">
+				<strong>㈜캐스팅엔     CEO : 용성남, 최준혁</strong> <br/><br/>
+				통신판매신고 : 제 2019-인천부평-1343 호 고객섬김센터 : Tel. 1644-2653 Fax. 070-4032-2523 사업자등록번호 : 423-86-00075 [사업자정보]<br/>
+				주소 : 서울지점 - 서울특별시 마포구 백범로31길 21 서울창업허브 809호 | 본점 - 인천광역시 부평구 대정로 66, 4층 408호(부평동, 다운타운일레븐)
+			</div>
+			<p class="foot-copy">ⓒ 2017 CastingN. All rights reserved.</p>
+			<p class="foot-logo"><img src="https://resource.mall.castingn.com/static/images/foot-logo.png" alt=""></p>
+		</div>
+	</div>
+	<!-- //footer -->
+
+	<div class="right-fix m-hide">
+		<a href="#" class="btn-estimate"><span>비<br/>교<br/>견<br/>적</span><i class="ico-pen"></i></a>
+		<button type="button" class="btn-top"><img src="https://resource.mall.castingn.com/static/images/btn-top.png" alt=""></button>
+	</div><!-- //right-fix -->
+</div>
+
+
+<script>
+    $(function(){
+        $("body").on("click", ".rtit .btn-mob-toggle", function(){
+            var ck = $(this).hasClass("on");
+            if(ck){
+                $(this).removeClass("on");
+                $(".lt-item .scrolls").removeClass("on");
+            }else{
+                $(this).addClass("on");
+                $(".lt-item .scrolls").addClass("on");
+            }
+        });
+	});
+
+
+
+</script>
+
+</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,871 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>업무마켓9</title>
+	<script type="text/javascript" async="" src="../../../static/js/jquery-3.3.1.min.js"></script>
+	<link rel="stylesheet" href="../../../static/css/reset.css">
+	<link rel="stylesheet" href="../../../static/css/layout.css">
+	<link rel="stylesheet" href="../../css/mall.css" />
+</head>
+<body class="detail-page"><!-- 상세보기 페이지일때 detail-page 넣어주세요. 해당페이지에서 header영역이 가려집니다 -->
+
+<div id="wrap">
+    <!-- header -->
+    <div id="header-mall" class="">
+        <div class="header-top m-hide">
+            <div class="inner">
+                <span class="header-top-left">
+                  <a href="/casting/intro">업무마켓나인 소개</a>
+                </span>
+                <span class="header-top-right">
+
+                                    <a href="javascript:void(0);" id="loginBtn" onclick="loginFormOn();">로그인</a>
+                  <a href="javascript:void(0);" onclick="loginchangeStep3();">회원가입</a>
+                  <a href="/casting/Buyr/Interaction/?menu=inquery">1:1문의</a>
+                  <div class="layer-wrap">
+                    <a href="javascript:void(0);" class="last center-bt">공급사 통합센터</a>
+                    <div class="head-layer-pop head-layer-1">
+                      <ul class="center-list">
+                        <li><a href="/casting/Buyr/?page_mode=partner">공급사 입점신청</a></li>
+                        <li><a href="/casting/Manage/Auth/index.php">공급사 통합 로그인</a></li>
+                        <li><a href="https://www.castingn.com/join/partner/formnew?workmarket9HeaderRemove=OK" target="_blank">소싱 파트너 로그인</a></li>
+                      </ul>
+                    </div>
+                  </div>
+
+
+
+                </span>
+            </div>
+            <!-- login후 나오는 팝업 -->
+        </div>
+
+        <div class="header-center m-hide">
+            <div class="inner">
+                <h1 class="logo">
+                    <a href="#"><img src="https://resource.mall.castingn.com/static/images/etc-mall-logo.png" alt="" class="m-hide"></a>
+                </h1>
+
+                <div class="header-search">
+                    <input type="text" id="q" placeholder="업무에 필요한 상품을 빠르게 검색해보세요!" value="" onkeydown="if(event.keyCode == 13) schcheck();" onclick="wordcheck();">
+                    <button type="button" onclick="schcheck();">검색</button>
+                </div>
+
+                <div class="header-category">
+                    <a href="javascript:loginFormOn();" class="category-menu1">내정보</a>
+                    <a href="/casting/Mypage/?mode=cart" class="category-menu2">장바구니</a>
+                    <a href="javascript:loginFormOn();" class="category-menu3">배송정보</a>
+                    <a href="javascript:loginFormOn();" class="category-menu4">채팅</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-bottom m-hide">
+            <div class="inner">
+                <ul class="gnb">
+                    <li class="menu-1 ">
+                        <a href="javascript:void(0)" class="btn-toggle-menu">비품,사무용품 <i class="el-icon-arrow-down"></i></a>
+                    </li>
+                    <li class="menu-2">
+                        <span class="tool-tip">전문업체매칭</span>
+                        <i class="ico-maching">👊</i>
+                        <a href="javascript:void(0)">파워매칭</a>
+                    </li>
+                    <li class="menu-3">
+                        <span class="tool-tip">기업형구독서비스</span>
+                        <i class="ico-pin"></i>
+                        <a href="javascript:void(0)">핀스퀘어</a>
+                    </li>
+                    <li class="menu-4 ">
+                        <i class="ico-smart"></i>
+                        <a href="javascript:void(0)">스마트핀클럽</a>
+                    </li>
+                    <li class="menu-5 "><a href="javascript:void(0)">C노트</a></li>
+                    <li class="menu-6 "><a href="javascript:void(0)">이벤트</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- //header -->
+
+	<!-- container :: m-hide - 모바일에서 안보임 / p-hide - PC화면에서 안보임 -->
+	<div id="container">
+		<div class="detail-top-wrap">
+            <div class="mo-sub-head p-hide">
+                <button type="button" class="btn-history-back" onclick="javascript:history.go(-1);">back</button>
+                <strong class="header-tit">3M)다용도테이프(522D/1</strong>
+
+                <div class="header-category">
+                    <a href="#" class="cate-menu1" id="dev_search_button">검색</a>
+                    <a href="javascript:void(0)" class="cate-menu2">장바구니 </a>
+                </div>
+            </div>
+			<div class="detail-top">
+				<div class="detail-loca-wrap">
+					<div class="detail-location">
+						<div class="loca-item"><span>비품</span></div>
+						<div class="loca-item"><span>사무용품</span></div>
+						<div class="loca-item"><span>복사용지</span></div>
+						<div class="loca-item"><span>A4</span></div>
+					</div>
+					<button type="button" class="btn-menu p-hide">menu</button>
+				</div>
+
+				<div class="pddt-detail-header">
+					<strong>더블에이 복사용지 (A4/80g/500매*5권)</strong>
+					<span>멤버쉽회원 15% 추가 할인 | 무료배송(~2022.12.31)</span>
+					<a href="javascript:void(0)">업무마켓9 멤버쉽 혜택보기</a>
+				</div>
+
+				<div class="top-area">
+					<div class="top-left">
+						<div class="main-thumb-area">
+							<div class="thumb-info">
+								<p class="code"><span>상품코드</span><span>C000131227</span></p>
+								<button type="button" class="btn-copy">복사</button>
+							</div>
+							<div class="thumb-box"><img src="https://resource.mall.castingn.com/static/images/sub/detail-main-thumb.png" alt=""></div>
+						</div>
+						<div class="rating-area">
+							<div class="star-box">
+                                <!-- <div class="star4"></div> star0 / star1 / star2 / star3 / star4 / star5 -->
+                                <div class="bar" style="width:80%;"></div>
+							</div>
+							<div class="rating-count">
+								<dl>
+									<dt>상품 만족도</dt>
+									<dd>(22)</dd>
+								</dl>
+							</div>
+						</div>
+					</div>
+					<div class="delivery-area p-hide">
+						<dl>
+							<dt>배송예정일</dt>
+							<dd>평일 오후 4시이전 주문 시 모레도착 <i class="ico-info"></i></dd>
+						</dl>
+					</div>
+
+					<div class="top-right">
+                        <div class="top-title p-hide">
+                            <a href="javascript:vodi(0)" class="btn-membership"><i class="ico-pin"></i> <strong>스마트핀클럽 혜택보기</strong><i class="ico-arrow"></i></a>
+                            <span class="title-area" id="dev_product_name2">3M)다용도테이프(522D/12mm*20m)</span>
+                        </div>
+						<div class="detail-right-sec">
+							<div class="detail-compare-wrap">
+								<div class="compare-slc-area"> <!-- 이 영역은 display:none 상태였다가 하단으로 스크롤링될때 나타나는 영역입니다, 아래의  detail-compare-table에서 선택된 영역이 나오도록 되어있습니다.-->
+									<div class="seller-market"><input type="radio" id="mrk_slc" name="mrk_slc" checked><label for="mrk_slc"><img src="https://resource.mall.castingn.com/static/images/sub/bi/other-logo8.png" alt=""></label></div>
+									<div><strong>54</strong>%</div>
+									<div><span class="t-line">28,200원</span></div>
+									<div><span>24,200원</span></div>
+									<div><span class="t-mint"><strong>23,500</strong>원</span></div>
+									<div><strong class="t-mint">무료배송</strong></div>
+									<div><span>2일 소요</span></div>
+									<div><div class="result-price t-mint"><span class="low-box">최저가</span><strong>23,500</strong>원</div></div>
+									<div><button type="button" class="btn-table-open">선택영역 다시보기</button></div>
+								</div>
+
+								<div class="detail-compare-table">
+									<table>
+										<thead>
+											<tr>
+                                                <th><span>판매처</span></th>
+												<th class="m-hide">&nbsp;</th>
+												<th><span>일반판매가</span></th>
+												<th><strong>업무마켓9가</strong></th>
+												<th>
+                                                    <img width="10" src="https://resource.mall.castingn.com/static/images/sub/ico-list-item.png" />
+                                                    <strong>핀클럽가</strong>
+                                                </th>
+												<th class="m-hide"><strong>배송비</strong></th>
+												<th class="m-hide"><strong>배송시간</strong></th>
+												<th><strong>최종가</strong></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>
+													<div class="seller-market"><input type="radio" id="mrk1" name="mrk" checked><label for="mrk1"><img src="https://resource.mall.castingn.com/static/images/sub/bi/other-logo8.png" alt=""></label></div>
+												</td>
+												<td class="m-hide"><strong>54</strong>%</td>
+												<td><strong class="p-hide t-mint">54%</strong><span class="t-line">28,200원</span></td>
+												<td><span>24,200원</span></td>
+												<td><span class="t-mint"><strong>23,500</strong>원</span></td>
+												<td class="m-hide"><strong class="t-mint">무료배송</strong></td>
+												<td class="m-hide"><span>2일 소요</span></td>
+												<td><div class="result-price t-mint"><span class="low-box">최저가</span><strong>23,500</strong>원</div></td>
+											</tr>
+											<tr>
+												<td>
+													<div class="seller-market"><input type="radio" id="mrk2" name="mrk"><label for="mrk2"><img src="https://resource.mall.castingn.com/static/images/sub/bi/other-logo8.png" alt=""></label></div>
+												</td>
+												<td class="m-hide"><strong>54</strong>%</td>
+												<td><strong class="p-hide">54%</strong><span class="t-line">28,200원</span></td>
+												<td><span>24,200원</span></td>
+												<td><span><strong>23,500</strong>원</span></td>
+												<td class="m-hide"><div class="flex"><span class="t-line">2,000원</span><i class="ico-help"></i></div></td>
+												<td class="m-hide"><span>2일 소요</span></td>
+												<td><div class="result-price t-blue"><span class="fast-box">배송빠름</span><strong>24,500</strong>원</div></td>
+											</tr>
+											<tr>
+												<td>
+													<div class="seller-market"><input type="radio" id="mrk3" name="mrk"><label for="mrk3"><img src="https://resource.mall.castingn.com/static/images/sub/bi/other-logo8.png" alt=""></label></div>
+												</td>
+												<td class="m-hide"><strong>54</strong>%</td>
+												<td><strong class="p-hide">54%</strong><span class="t-gray">28,200원</span></td>
+												<td><span>24,200원</span></td>
+												<td><span><strong>23,500</strong>원</span></td>
+												<td class="m-hide"><span>무료배송</span></td>
+												<td class="m-hide"><span>2일 소요</span></td>
+												<td><div class="result-price"><strong>245,700</strong>원</div></td>
+											</tr>
+											<tr>
+												<td>
+													<div class="seller-market"><input type="radio" id="mrk4" name="mrk"><label for="mrk4"><img src="https://resource.mall.castingn.com/static/images/sub/bi/other-logo8.png" alt=""></label></div>
+												</td>
+												<td class="m-hide"><strong>54</strong>%</td>
+												<td><strong class="p-hide">54%</strong><span class="t-gray">28,200원</span></td>
+												<td><span>24,200원</span></td>
+												<td><span><strong>23,500</strong>원</span></td>
+												<td class="m-hide"><span>2,000원</span></td>
+												<td class="m-hide"><span>2일 소요</span></td>
+												<td><div class="result-price"><strong>24,500</strong>원</div></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="select-area">
+								<div class="select-seller">
+									<div class="seller-name"><i class="ico-slc-chk"></i><span>옥션 선택됨</span></div>
+									<div class="seller-type">최저가 구매</div>
+								</div>
+								<div class="select-right">
+									<div class="p-hide slc-option">
+										<span class="t-mint">무료배송</span>
+										<span>2일소요</span>
+										<span>멤버쉼회원가</span>
+									</div>
+									<div class="dc-area"><strong>54</strong>%</div>
+									<div class="price-area"><strong>23,500</strong><span class="unit">원</span></div>
+									<div class="quantity-area">
+										<button type="button" class="btn-minus">-</button>
+										<input type="text" id="" name="" value="1">
+										<button type="button" class="btn-plus">+</button>
+									</div>
+								</div>
+							</div>
+
+							<div class="right-btm">
+								<div class="etc-area">
+									<div class="rating-area p-hide">
+										<div class="star-box">
+											<div class="star4"></div><!-- star0 / star1 / star2 / star3 / star4 / star5 -->
+										</div>
+										<div class="rating-count">
+											<dl>
+												<dt>상품만족도</dt>
+												<dd>22</dd>
+											</dl>
+										</div>
+									</div>
+									<div class="rating-area">
+										<div class="star-box">
+                                            <!--<div class="star4"></div> star0 / star1 / star2 / star3 / star4 / star5 -->
+                                            <div class="bar" style="width:80%;"></div>
+										</div>
+										<div class="rating-count">
+											<dl>
+												<dt>배송만족도</dt>
+												<dd>22</dd>
+											</dl>
+										</div>
+									</div>
+
+                                    <div class="smartpin-item-wrap">
+                                        <img width="10" src="https://resource.mall.castingn.com/static/images/sub/ico-list-item.png" />
+                                        <strong>스마트핀클럽 회원 15% 추가할인   |  무료배송 </strong>
+                                        <span>(~2022.12.31)</span>
+                                    </div>
+                                    <div class="delivery-area">
+										<dl>
+											<dt>배송예정일</dt>
+											<dd>평일 오후 4시이전 주문 시 모레도착 <i class="ico-info"></i></dd>
+										</dl>
+									</div>
+								</div>
+								<div class="btn-area m-hide">
+									<button type="button" class="btn btn-line grow0_5 btn-wish"><strong>209</strong><i class="ico-wish"></i></button>
+									<a href="#" class="btn btn-line grow1">
+                                        <i class="ico-cart"></i>
+                                        <strong>장바구니</strong>
+                                    </a>
+									<a href="#" class="btn btn-comp grow1_5"><strong>구매하기</strong></a>
+								</div>
+							</div>
+							<button type="button" class="btn-right-more p-hide"><span>Toggle button</span></button>
+						</div>
+
+                        <div class="etc-area p-hide">
+                            <span><i class="ico-deliver"></i></span>
+                            <div class="delivery-area">
+                                <div class="sale-tt"><i class="ico-pinclub"></i> <span>스마트핀클럽회원 15% 추가할인</span><span>무료배송 <b>(~2022.12.31)</b></span></div>
+                                <dl>
+                                    <dt>배송예정일</dt>
+                                    <dd>평일 오후 4시이전 주문 시 모레도착 <i class="ico-info"></i></dd>
+                                </dl>
+                            </div>
+                        </div>
+
+						<div class="btn-area mobile-btn-area p-hide">
+							<button type="button" class="btn btn-line grow1 btn-wish"><strong>209</strong><i class="ico-wish"></i></button>
+							<button type="button" class="btn btn-comp grow3 btn-pop-area"><strong>구매하기</strong></button>
+						</div>
+					</div>
+				</div>
+
+                <div class="guide-msg-wrap">
+                    <div class="gtit">
+                        <i class="el-icon-warning"></i>
+                        <strong>직거래 유도 주의안내</strong>
+                    </div>
+                    <div class="gdesc">판매자가 현금 직거래를 유도하는 경우 거래를 즉시 중지하시고, 당사에 신고하여 주시기 바랍니다. ( 신고번호 1644-2653 )</div>
+                </div>
+
+
+                <div class="detail-tab-area01 m-hide">
+                    <button type="button" class="btn-tab active-tab" data-tab="detail-cont1"><span>상세정보</span></button>
+                    <button type="button" class="btn-tab" data-tab="detail-cont2"><span>배송/교환/반품</span></button>
+                    <button type="button" class="btn-tab" data-tab="detail-cont3"><span>부가정보 및 상품정보고시</span></button>
+                </div>
+
+			</div>
+		</div>
+
+
+
+
+		<div class="detail-container">
+
+
+            <!--
+            <div class="inq-bnr">
+				<i class="ico-bnr-inq"></i>
+				<p><span class="m-hide">업무마켓9은 현재 1만 3천개의 기업이 이용 중입니다.</span><strong>기업 구매담당자 이신가요?</strong></p>
+				<div class="bnr-btn-area">
+					<a href="#" class="p-hide"><span>기업회원문의 바로가기</span><i class="ico-arrow"></i></a>
+					<a href="#" class="m-hide"><span>여신회원문의 바로가기</span><i class="ico-arrow"></i></a>
+					<a href="#" class="m-hide"><span>대량구매가 필요하실 땐 비교견적 신청하기</span><i class="ico-arrow"></i></a>
+				</div>
+			</div>
+
+			<div class="inq-bnr2 p-hide">
+				<p>대량구매가 필요 시.<strong>비교견적 신청하기</strong></p>
+				<div class="bnr-btn-area"><a href="#"><span>신청하기</span><i class="ico-arrow"></i></a></div>
+			</div>-->
+
+			<div class="tab-cont active-cont" id="detail-cont1">
+				<div class="info-tt p-hide"><strong>상세정보</strong></div>
+				<div class="cont-detail-img">
+					<p style="text-align:center;"><img src="https://resource.mall.castingn.com/static/images/sub/detail-img.png" alt=""></p>
+				</div>
+				<button type="button" class="btn-more-view p-hide"><span>더보기</span></button>
+			</div>
+			<div class="tab-cont" id="detail-cont2">
+				<div class="detail-info">
+					<div class="info-cont">
+						<dl>
+							<dt>배송방법</dt>
+							<dd>
+                                <ul class="klist">
+                                    <li>
+                                        <div class="key">배송방법</div>
+                                        <div class="value">순차배송(묶음 배송 가능)</div>
+                                    </li>
+                                    <li>
+                                        <div class="key">배송사</div>
+                                        <div class="value">CJ대한통운</div>
+                                    </li>
+                                    <li>
+                                        <div class="key">배송비</div>
+                                        <div class="value">무료배송</div>
+                                    </li>
+                                </ul>
+                            </dd>
+						</dl>
+						<dl>
+							<dt>배송안내</dt>
+							<dd>
+                                <div class="ptit">
+                                    <i class="el-icon-check"></i>
+                                    <span>배송안내</span>
+                                </div>
+                                <ul class="nlist">
+                                    <li>주문하신 상품은 공급사를 통해 택배 발송 진행됩니다.</li>
+                                    <li>배송 기간은 배송조건에 따라 당일에서 3일 가량 소요됩니다.</li>
+                                    <li>스마트핀클럽 회원의 경우 모든 주문,반품,교환에 대하여 무료배송 진행됩니다.</li>
+                                </ul>
+
+                                <div class="ptit">
+                                    <i class="el-icon-check"></i>
+                                    <span>업체별도배송</span>
+                                </div>
+                                <ul class="nlist">
+                                    <li>제조사에서 직접 배송하는 상품으로 2~5일 정도 소요 됩니다.</li>
+                                    <li>교환 및 반품이 불가하니 주문접수 시 신중한 주문처리 부탁드립니다.</li>
+                                </ul>
+                            </dd>
+						</dl>
+						<dl>
+							<dt>교환/반품 안내</dt>
+							<dd>
+                                <div class="ptit">
+                                    <i class="el-icon-check"></i>
+                                    <span>업체별도배송</span>
+                                </div>
+                                <div class="pdesc">
+                                    <span>5,000원</span>
+                                    <strong>스마트핀클럽 교환/반품 배송비 모두 무료</strong>
+                                </div>
+                                <ul class="nlist">
+                                    <li>단, 고객 변심의 경우에만 발생</li>
+                                    <li>부분반품 시, 남은금액이 무료배송 조건을 유지하면 일부 반품비용이 부과</li>
+                                </ul>
+
+                                <div class="ptit">
+                                    <i class="el-icon-check"></i>
+                                    <span>교환/반품 안내</span>
+                                </div>
+                                <ul class="nlist">
+                                    <li>반품신청은 “배송완료” 상태에서만 가능합니다</li>
+                                    <li>주문취소는 “미처리” 상태에서만 가능합니다.</li>
+                                </ul>
+
+                                <div class="ptit">
+                                    <i class="el-icon-check"></i>
+                                    <span>반품접수 시 유의사항</span>
+                                </div>
+                                <ul class="nlist">
+                                    <li>반품 요청은 상품을 공급 받은 날로부터 7일 이내에만 가능합니다.  (단, 상품하자 및 소비자 과실이 아닐 경우 30일 이내)</li>
+                                </ul>
+
+                                <div class="ptit">
+                                    <i class="el-icon-check"></i>
+                                    <span>교환/반품이 불가능한 경우</span>
+                                </div>
+                                <ul class="olist">
+                                    <li><strong>1. 상품 수령 후 개봉 및 사용흔적이 있거나, 포장 상태불량, 상품파손, 봉인라벨 제거</strong> (컴퓨터, 카메라, Tech 및 보안기, 잉크&토너, 외장하드)</li>
+                                    <li><strong>2. 유통기한 경과 상품</strong> (식음료, 잉크&토너 등 유통기한 표기 상품)</li>
+                                    <li><strong>3. 그 외 반품처리 불가 상품</strong></li>
+                                    <li>(화이트보드(1500*900이상), 제작상품(도장, 화이트보드, 가구 등))</li>
+                                    <li>(복사용지 및 색지류 등의 지류상품 (상품훼손 불가피) 및 폼보드류)</li>
+                                    <li>(시트지류 및 아스테이지)</li>
+                                    <li>(고가의 필기류, 각인, 인쇄 및 주문제작 (회사 로고 인쇄 등) 사무용품)</li>
+                                    <li>(주문 접수 시 반품불가 안내 상품)</li>
+                                </ul>
+
+                                <div class="ptit">
+                                    <i class="el-icon-check"></i>
+                                    <span>기타 교환/반품 관련 안내</span>
+                                </div>
+                                <ul class="nlist">
+                                    <li>색상, 사이즈 등 고객 변심 혹은 고객 과실로 인한 제품의 교환/반품을 원하시는 경우, 교환/반품에 소요되는 배송비는 고객이 부담합니다.</li>
+                                    <li>반품 사유에 적합하지 않은 경우 반품처리 불가하며, 반품 된 상품이 고객님께 재반송 될 수 있음을 양해 부탁드립니다.</li>
+                                    <li>상품 불량 혹은 하자로 인한 교환/반품의 경우 공급사에서 배송료를 부담합니다.</li>
+                                    <li>기타 교환/반품과 관련된 문의사항은 고객센터 혹은 1:1 문의를 이용하여 주시기 바랍니다.</li>
+                                </ul>
+                            </dd>
+						</dl>
+					</div>
+				</div>
+
+			</div>
+            <div class="tab-cont" id="detail-cont3">
+
+                <div class="detail-prodinfo-wrap">
+                    <div class="dp-tit">전자상거래 등에서의 상품정보제공 고시</div>
+                    <table>
+                        <tr>
+                            <th>품명 및 모델명</th>
+                            <td>단순변심에 의한 로켓배송 상품의 교환/반품은 제품 수령 후 30일 이내까지, 교환/반품 제한사항에 해당하지 않는 경우에만 가능 (교환/반품 비용 고객부담)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>허가 관련</th>
+                            <td>주문/제작 상품의 경우, 상품의 제작이 이미 진행된 경우
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>제조국 또는 원산지</th>
+                            <td>모니터 해상도의 차이로 인해 색상이나 이미지가 실제와 달라, 고객이 단순 변심으로 교환/반품을 무료로 요청하는 경우</td>
+                        </tr>
+                        <tr>
+                            <th>제조자 / 수입자</th>
+                            <td>상품의 시리얼 넘버 유출로 내장된 소프트웨어의 가치가 감소한 경우 (내비게이션, OS시리얼이 적힌 PMP)</td>
+                        </tr>
+                        <tr>
+                            <th>관련 연락처</th>
+                            <td>상품을 개봉하여 장착한 이후 단순변심인 경우</td>
+                        </tr>
+                        <tr>
+                            <th>주문 후 예상 배송기간</th>
+                            <td>홀로그램 등을 분리, 분실, 훼손하여 상품의 가치가 현저히 감소하여 재판매가 불가할 경우 (노트북, 데스크탑 PC 등)</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="detail-title">
+                    <dl>
+                        <dt>온라인가격정보 안내</dt>
+                        <dd>온라인 가격 정보는 해당 상품의 시세를 제공하는 목적으로 포털사이트의 API 정보를 기반으로 제공되며, <strong class="t-mint">배송비</strong> 및 <strong class="t-mint">배송일정</strong>은 포함되지 않습니다. <br/>캐스팅엔에서 제공하는 전문업체 구매조건과 오픈마켓의 구매조건을 비교해서 합리적인 구매를 선택하세요.</dd>
+                    </dl>
+                </div>
+                <div class="detail-flex">
+                    <div class="flex-box">
+                        <p class="detail-tt">가격 변동 추이</p>
+                        <div class="detail-cont">
+                            <div class="graph-term-area">
+                                <button type="button" class="btn-term active-term"><span>1개월</span></button>
+                                <button type="button" class="btn-term"><span>3개월</span></button>
+                                <button type="button" class="btn-term"><span>6개월</span></button>
+                                <button type="button" class="btn-term"><span>12개월</span></button>
+                            </div>
+                            <div class="graph-area">
+                                <div class="graph-main-area">
+                                    <dl>
+                                        <dt class="t-mint">최저가</dt>
+                                        <dd><strong>26,000</strong></dd>
+                                    </dl>
+                                    <dl>
+                                        <dt class="t-blue">평균가</dt>
+                                        <dd><strong>32,000</strong></dd>
+                                    </dl>
+                                    <dl>
+                                        <dt class="t-orange">최고가</dt>
+                                        <dd><strong>78,000</strong></dd>
+                                    </dl>
+                                </div>
+                                <div class="graph-txt">배송비를 제외한 판매가격으로 수정된 가격 정보입니다.</div>
+                                <div class="graph-box">
+                                    <canvas id="myChart"></canvas> <!-- 참고파일 casting/product/goods_view_v5.php, casting/product/goods_info_module/common_script.php 에서 makeChart 옮겨주시면 됩니다. -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-box">
+                        <p class="detail-tt">오픈마켓 가격</p>
+                        <div class="detail-cont">
+                            <div class="openmarket-compare">
+                                <div class="other-table">
+                                    <table>
+                                        <thead>
+                                        <tr>
+                                            <th>판매처</th>
+                                            <th>판매가</th>
+                                            <th>배송비</th>
+                                            <th>구매</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td><span class="m-hide">네이버</span><span class="p-hide">네이버</span></td>
+                                            <td class="t-mint"><i class="ico-low"></i>1,199,000원</td>
+                                            <td class="t-mint">배송비 별도</td>
+                                            <td><a href="#" class="btn-go-gray" target="_blank">직접구매</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="m-hide"><img src="https://resource.mall.castingn.com/static/images/sub/bi/add_logo_05.png" alt="롯데ON"></span><span class="p-hide">롯데ON</span></td>
+                                            <td>1,201,000원</td>
+                                            <td>배송비 별도</td>
+                                            <td><a href="#" class="btn-go-gray" target="_blank">직접구매</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="m-hide">35NETSHOP</span><span class="p-hide">35NETSHOP</span></td>
+                                            <td>1,201,000원</td>
+                                            <td>배송비 별도</td>
+                                            <td><a href="#" class="btn-go-gray" target="_blank">직접구매</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="m-hide">리퍼노트</span><span class="p-hide">리퍼노트</span></td>
+                                            <td>1,232,100원</td>
+                                            <td>배송비 별도</td>
+                                            <td><a href="#" class="btn-go-gray" target="_blank">직접구매</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="m-hide">아이즈팩토리</span><span class="p-hide">아이즈팩토리</span></td>
+                                            <td>1,249,000원</td>
+                                            <td>배송비 별도</td>
+                                            <td><a href="#" class="btn-go-gray" target="_blank">직접구매</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="m-hide"><img src="https://resource.mall.castingn.com/static/images/sub/bi/other-logo5.png" alt="쿠팡"></span><span class="p-hide">쿠팡</span></td>
+                                            <td>1,368,920원</td>
+                                            <td>배송비 별도</td>
+                                            <td><a href="#" class="btn-go-gray" target="_blank">직접구매</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="m-hide">레노버온라인스토어</span><span class="p-hide">레노버온라인스토어</span></td>
+                                            <td>1,429,000원</td>
+                                            <td>배송비 별도</td>
+                                            <td><a href="#" class="btn-go-gray" target="_blank">직접구매</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="m-hide"><img src="https://resource.mall.castingn.com/static/images/sub/bi/other-logo6.png" alt="G마켓"></span><span class="p-hide">G마켓</span></td>
+                                            <td>1,429,000원</td>
+                                            <td>배송비 별도</td>
+                                            <td><a href="#" class="btn-go-gray" target="_blank">직접구매</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="m-hide">SYSI 스토어</span><span class="p-hide">SYSI 스토어</span></td>
+                                            <td>1,459,000원</td>
+                                            <td>배송비 별도</td>
+                                            <td><a href="#" class="btn-go-gray" target="_blank">직접구매</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="m-hide"><img src="https://resource.mall.castingn.com/static/images/sub/bi/other-logo4.png" alt="11번가"></span><span class="p-hide">11번가</span></td>
+                                            <td>1,496,070원</td>
+                                            <td>배송비 별도</td>
+                                            <td><a href="#" class="btn-go-gray" target="_blank">직접구매</a></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+		</div>
+	</div>
+	<!-- //container -->
+
+	<div class="detail-pop-fix p-hide"> <!-- 모바일 화면에서 구매하기 버튼 눌렀을때 뜨는 팝업 창 -->
+		<div class="detail-pop-cont">
+			<button type="button" class="pop-control">bar</button>
+			<div class="select-seller">
+				<div class="seller-name"><i class="ico-slc-chk"></i><span>옥션 선택됨</span></div>
+				<div class="seller-type">최저가 구매</div>
+			</div>
+			<div class="select-price-area">
+				<ul>
+					<li class="normal-price">
+						<div class="price-label">일반판매가</div>
+						<div class="price-box"><span class="t-line">75,000원</span></div>
+					</li>
+					<li>
+						<div class="price-label">
+							<label for=""><span>업무마켓9가</span></label>
+						</div>
+						<div class="price-box"><span>67,500원</span></div>
+					</li>
+					<li>
+						<div class="price-label">
+              <span class="ico-pct-box">54%</span>
+              <span class="ico-chk"></span>
+							<span class="ico-pinclub"></span>
+							<label for=""><strong>스마트핀클럽회원가</strong></label>
+						</div>
+						<div class="price-box"><strong class="t-blue">65,250원</strong></div>
+					</li>
+					<li>
+						<div class="price-label">배송비</div>
+						<div class="price-box"><span>2,500원</span></div>
+					</li>
+				</ul>
+			</div>
+			<div class="select-option-area">
+				<div class="slc-option">
+					<span class="t-mint">무료배송</span>
+					<span>2일소요</span>
+				</div>
+				<div class="quantity-area">
+					<button type="button" class="btn-minus">-</button>
+					<input type="text" id="" name="" value="1">
+					<button type="button" class="btn-plus">+</button>
+				</div>
+			</div>
+			<div class="select-total-area">
+				<p class="total-label">총주문금액 (VAT 포함)</p>
+				<div class="total-price">
+					<div class="dc-area"><strong>54</strong>%</div>
+					<div class="price-area"><strong>23,500</strong><span class="unit">원</span></div>
+				</div>
+			</div>
+			<div class="btn-area">
+				<button type="button" class="btn btn-line"><strong>장바구니 담기</strong></button>
+				<button type="button" class="btn btn-comp"><strong>구매하기</strong></button>
+			</div>
+		</div>
+	</div><!-- //detail-pop-fix -->
+
+
+
+	<!-- footer -->
+	<div id="footer">
+		<div class="section">
+			<div class="foot-menu">
+				<a href="#"><span>1:1문의</span></a>
+				<a href="#"><span>고객센터</span></a>
+				<a href="#"><span>파트너센터</span></a>
+			</div>
+			<div class="foot-etc">
+				<a href="#"><span>회사소개</span></a>
+				<a href="#"><span>서비스소개</span></a>
+				<a href="#"><span>안전거래보장</span></a>
+				<a href="#"><span>이용약관</span></a>
+				<a href="#"><span class="t-red">개인정보처리방침</span></a>
+				<a href="#"><span>공지사항</span></a>
+			</div>
+			<div class="foot-cs">
+				<div class="cs-num">1644 <i class="circle"></i> 2653</div>
+				<div class="cs-time">
+					<dl>
+						<dt>평일</dt>
+						<dd>08:30 ~ 17:30</dd>
+					</dl>
+					<dl>
+						<dt>점심시간</dt>
+						<dd>12:00~13:00</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="foot-info">
+				<strong>㈜캐스팅엔     CEO : 용성남, 최준혁</strong> <br/><br/>
+				통신판매신고 : 제 2019-인천부평-1343 호 고객섬김센터 : Tel. 1644-2653 Fax. 070-4032-2523 사업자등록번호 : 423-86-00075 [사업자정보]<br/>
+				주소 : 서울지점 - 서울특별시 마포구 백범로31길 21 서울창업허브 809호 | 본점 - 인천광역시 부평구 대정로 66, 4층 408호(부평동, 다운타운일레븐)
+			</div>
+			<p class="foot-copy">ⓒ 2017 CastingN. All rights reserved.</p>
+			<p class="foot-logo"><img src="https://resource.mall.castingn.com/static/images/foot-logo.png" alt=""></p>
+		</div>
+	</div>
+	<!-- //footer -->
+
+	<div class="right-fix m-hide">
+		<a href="#" class="btn-estimate"><span>비<br/>교<br/>견<br/>적</span><i class="ico-pen"></i></a>
+		<button type="button" class="btn-top"><img src="https://resource.mall.castingn.com/static/images/btn-top.png" alt=""></button>
+	</div><!-- //right-fix -->
+</div>
+
+
+<link rel="stylesheet" href="https://unpkg.com/swiper@6/swiper-bundle.min.css" />
+<script src="https://unpkg.com/swiper@6/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="../../../static/js/Chart.bundle.min.js"></script>
+<script type="text/javascript" src="../../../static/js/Chart.min.js"></script>
+<link rel="stylesheet" href="../../../static/css/Chart.css">
+
+
+<script>
+$(document).ready(function(){
+
+	//1018 우측영역 위치값조정
+	$('.right-fix').bind("click",function(){
+		var _t = $(this).data('scroll')
+		var offset = $(_t).offset();
+		$('html').animate({scrollTop : offset.top}, 400);
+	});
+	$(window).bind("scroll",function(){
+		var _st = $(document).scrollTop();
+		var _h = $(window).height();
+		var _f = _h
+
+		if($('#footer').length > 0){
+			_f = parseInt($('#footer').offset().top);
+		}
+		if(_st >= (_f-_h)){
+			var mt = _st - (_f - _h);
+			$('.right-fix').css({'bottom':(80+mt)+'px'})
+		}
+		if(_st < 500){
+			$('.right-fix').addClass('hide')
+		}else{
+			$('.right-fix').removeClass('hide')
+		}
+		if(_st < 100){
+			$('#header').removeClass('scrolled');
+		}else{
+			$('#header').addClass('scrolled');
+		}
+	});
+
+	$('.gnb-left .btn-cate-view').on('click',function(){
+		$('.all-cate-wrap').toggleClass('show-cate');
+		$(this).toggleClass('active-gnb');
+
+	});
+
+	$('.all-cate-wrap .btn-close').on('click',function(){
+		$('.all-cate-wrap').removeClass('show-cate');
+	});
+
+
+
+	$('.detail-tab-area01 .btn-tab').click(function(){
+		var tab_id = $(this).attr('data-tab');
+
+		$('.detail-tab-area01 .btn-tab').removeClass('active-tab');
+		$('.tab-cont').removeClass('active-cont');
+
+		$(this).addClass('active-tab');
+		$("#"+tab_id).addClass('active-cont');
+	});
+
+	$('.btn-wish').on('click',function(){
+		$(this).toggleClass('on');
+	});
+	$('.tab-cont .btn-more-view').on('click',function(){
+		$(this).prev('.cont-detail-img').addClass('all-view');
+		$(this).hide();
+	});
+	$('.detail-right-sec .btn-right-more').on('click',function(){
+		$(this).parents('.detail-right-sec').toggleClass('right-all-view');
+	});
+	$('.mobile-btn-area .btn-pop-area').on('click',function(){
+		$('.detail-pop-fix').addClass('show-pop');
+	});
+	$('.detail-pop-fix .pop-control').on('click',function(){
+		$('.detail-pop-fix').removeClass('show-pop');
+	});
+
+});
+
+var tP = $(".detail-top-wrap");
+var mBa = $(".mobile-btn-area");
+var tPoffset = tP.offset();
+var mBaoffset = mBa.offset();
+var moHeight =$('.top-area').outerHeight() - 62;
+var win = $(window);
+
+win.on('scroll',function() {
+
+	if (win.scrollTop() > tPoffset.top) {
+		tP.addClass("fix"); 
+	
+	} else {
+		tP.removeClass("fix"); 
+	};
+	if (win.scrollTop() > mBaoffset.top - moHeight) {
+		mBa.addClass("fix"); 
+	
+	} else {
+		mBa.removeClass("fix"); 
+	};
+});
+
+
+
+
+</script>
+
+</body>
+</html>
+
+
+

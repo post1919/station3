@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>업무마켓9</title>
+	<script type="text/javascript" async="" src="../../js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" async="" src="../../js/form.js"></script>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<link rel="stylesheet" href="../../css/layout.css">
+	<link rel="stylesheet" href="../../css/styles.css">
+	<link rel="stylesheet" href="../../css/mypage.css" />
+</head>
+<body>
+
+<div id="wrap">
+
+</div>
+
+
+<!--s:  배송지선택 팝업-->
+<div class="layer-bg">
+	<div class="layer-pop deliver-pop drif-type">
+		<div class="pop-head">나의 배송지 정보 입력</div>
+		<div class="pop-con">
+			<div class="pop-con-part2">
+
+				<div class="label">배송지 명칭</div>
+				<div class="form-item-wrap">
+					<input type="text" class="inp" placeholder="배송지 명칭을 입력해주세요." />
+				</div>
+				<div class="label">받는 사람</div>
+				<div class="form-item-wrap">
+					<input type="text" class="inp" placeholder="받는 사람을 입력해주세요." />
+				</div>
+				<div class="label">휴대폰 번호</div>
+				<div class="form-item-wrap">
+					<input type="text" class="inp" placeholder="배송시 연락받으실 휴대폰 번호를 입력해주세요." />
+				</div>
+				<div class="label">배송지 주소</div>
+				<div class="form-item-wrap">
+					<input type="text" class="inp" placeholder="주소를 입력해주세요." />
+				</div>
+				<div class="form-item-wrap">
+					<input type="text" class="inp" placeholder="상세주소를 입력해주세요." />
+				</div>
+
+				<div class="chk-msg"><input type="checkbox" id="base-deliver"><label for="base-deliver">기본 배송지로 지정</label></div>
+
+				<div class="delivery-btn-area btn-part1" >
+					<a href="#" class="btn-comp"><span>확인</span></a>
+				</div>
+
+			</div>
+		</div>
+		<a href="#" class="pop-close po1">팝업창 닫기</a>
+	</div>
+</div>
+<!--e:  배송지선택 팝업-->
+
+<link rel="stylesheet" href="https://unpkg.com/swiper@6/swiper-bundle.min.css" />
+<script src="https://unpkg.com/swiper@6/swiper-bundle.min.js"></script>
+<script>
+    $(document).ready(function(){
+
+        //1018 우측영역 위치값조정
+        $('.right-fix').bind("click",function(){
+            var _t = $(this).data('scroll')
+            var offset = $(_t).offset();
+            $('html').animate({scrollTop : offset.top}, 400);
+        });
+        $(window).bind("scroll",function(){
+            var _st = $(document).scrollTop();
+            var _h = $(window).height();
+            var _f = _h
+
+            if($('#footer').length > 0){
+                _f = parseInt($('#footer').offset().top);
+            }
+            if(_st >= (_f-_h)){
+                var mt = _st - (_f - _h);
+                $('.right-fix').css({'bottom':(80+mt)+'px'})
+            }
+            if(_st < 500){
+                $('.right-fix').addClass('hide')
+            }else{
+                $('.right-fix').removeClass('hide')
+            }
+            if(_st < 100){
+                $('#header').removeClass('scrolled');
+            }else{
+                $('#header').addClass('scrolled');
+            }
+        });
+
+        $('.gnb-left .btn-cate-view').on('click',function(){
+            $('.all-cate-wrap').toggleClass('show-cate');
+            $(this).toggleClass('active-gnb');
+
+        });
+
+        $('.all-cate-wrap .btn-close').on('click',function(){
+            $('.all-cate-wrap').removeClass('show-cate');
+        });
+
+        //11-15 장바구니 품목등록 셀렉트박스 toggle
+        $('.purchase-sel .btn-select').on('click',function(){
+            $('.select-list').toggleClass('select-on');
+            $(this).toggleClass('on');
+        });
+
+        var upRoute = $("#file");
+        upRoute.on('change', function(){
+            var cur =$(".approve-ipt2 input[type='file']").val();
+            $(".file-upload").val(cur);
+        });
+
+    });
+
+
+</script>
+
+
+
+</body>
+</html>
+
+
+
+
+

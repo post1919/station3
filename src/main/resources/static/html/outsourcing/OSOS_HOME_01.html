@@ -1,0 +1,772 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>업무마켓9</title>
+	<script type="text/javascript" async="" src="../../js/jquery-3.3.1.min.js"></script>
+	<link rel="stylesheet" href="../../css/reset.css" />
+	<link rel="stylesheet" href="../../css/layout.css" />
+	<link rel="stylesheet" href="../../css/mall.css" />
+	<link rel="stylesheet" href="https://unpkg.com/swiper@6/swiper-bundle.min.css" />
+	<script type="text/javascript" async="" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/js/swiper.min.js"></script>
+<body>
+
+<div id="wrap">
+	<!-- header -->
+	<div id="header-mall" class="subpage">
+		<div class="header-top m-hide">
+			<div class="inner">
+                <span class="header-top-left">
+                  <a href="/casting/intro">업무마켓나인 소개</a>
+                </span>
+				<span class="header-top-right">
+
+                                    <a href="javascript:void(0);" id="loginBtn" onclick="loginFormOn();">로그인</a>
+                  <a href="javascript:void(0);" onclick="loginchangeStep3();">회원가입</a>
+                  <a href="/casting/Buyr/Interaction/?menu=inquery">1:1문의</a>
+                  <div class="layer-wrap">
+                    <a href="javascript:void(0);" class="last center-bt">공급사 통합센터</a>
+                    <div class="head-layer-pop head-layer-1">
+                      <ul class="center-list">
+                        <li><a href="/casting/Buyr/?page_mode=partner">공급사 입점신청</a></li>
+                        <li><a href="/casting/Manage/Auth/index.php">공급사 통합 로그인</a></li>
+                        <li><a href="https://www.castingn.com/join/partner/formnew?workmarket9HeaderRemove=OK" target="_blank">소싱 파트너 로그인</a></li>
+                      </ul>
+                    </div>
+                  </div>
+
+
+
+                </span>
+			</div>
+			<!-- login후 나오는 팝업 -->
+		</div>
+
+		<div class="header-center m-hide">
+			<div class="inner">
+				<h1 class="logo">
+					<a href="#"><img src="https://resource.mall.castingn.com/static/images/etc-mall-logo.png" alt="" class="m-hide"></a>
+				</h1>
+
+				<div class="header-search">
+					<input type="text" id="q" placeholder="업무에 필요한 상품을 빠르게 검색해보세요!" value="" onkeydown="if(event.keyCode == 13) schcheck();" onclick="wordcheck();">
+					<button type="button" onclick="schcheck();">검색</button>
+				</div>
+
+				<div class="header-category">
+					<a href="javascript:loginFormOn();" class="category-menu1">내정보</a>
+					<a href="/casting/Mypage/?mode=cart" class="category-menu2">장바구니</a>
+					<a href="javascript:loginFormOn();" class="category-menu3">배송정보</a>
+					<a href="javascript:loginFormOn();" class="category-menu4">채팅</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="header-bottom m-hide">
+			<div class="inner">
+				<ul class="gnb">
+					<li class="menu-1 ">
+						<a href="javascript:void(0)" class="btn-toggle-menu">비품,사무용품 <i class="el-icon-arrow-down"></i></a>
+					</li>
+					<li class="menu-2">
+						<span class="tool-tip">전문업체매칭</span>
+						<i class="ico-maching">👊</i>
+						<a href="javascript:void(0)">파워매칭</a>
+					</li>
+					<li class="menu-3">
+						<span class="tool-tip">기업형구독서비스</span>
+						<i class="ico-pin"></i>
+						<a href="javascript:void(0)">핀스퀘어</a>
+					</li>
+					<li class="menu-4 ">
+						<i class="ico-smart"></i>
+						<a href="javascript:void(0)">스마트핀클럽</a>
+					</li>
+					<li class="menu-5 "><a href="javascript:void(0)">C노트</a></li>
+					<li class="menu-6 "><a href="javascript:void(0)">이벤트</a></li>
+
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- //header -->
+
+	<!-- header-sub -->
+	<div class="mo-sub-head p-hide">
+		<button type="button" class="btn-history-back" onclick="javascript:history.go(-1);">back</button>
+		<strong class="header-tit">비품,사무용품</strong>
+
+		<div class="header-category">
+			<a href="#" class="cate-menu1" id="dev_search_button">검색</a>
+			<a href="javascript:void(0)" class="cate-menu2">장바구니 </a>
+		</div>
+	</div>
+	<!-- //header-sub -->
+
+	<!-- container -->
+	<div id="container" class="container-favorite">
+
+		<section class="outsc-fmenu-wrap">
+			<div class="lt-item">
+				<ul>
+					<li><a href="javascript:void(0)">IT 개발</a></li>
+					<li><a href="javascript:void(0)">마케팅</a></li>
+					<li><a href="javascript:void(0)">영상·콘텐츠</a></li>
+					<li><a href="javascript:void(0)">사무환경</a></li>
+					<li><a href="javascript:void(0)">디자인</a></li>
+					<li><a href="javascript:void(0)">전문서비스</a></li>
+				</ul>
+			</div>
+			<div class="rt-item">
+				<button type="button">소싱의뢰하기</button>
+				<button type="button">소싱의뢰리스트</button>
+			</div>
+		</section>
+
+		<section class="outsc-slide-wrap">
+			<!-- Swiper -->
+			<div id="outsc-slide-wrap" class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<a href="javascript:void(0)">
+							<div class="scont">
+								<div class="mtit">지금 소싱을 신청하시면, 30분이내 전담 소싱디렉터가 연락을 드립니다.
+									영역별 수년간 상담해 온 전문가가 <strong>전문업체 선정</strong>을 <strong>무료</strong>로
+									컨설팅해드립니다.</div>
+								<div class="mdesc">수년간 누적된 전문 업체 평가 데이터 분석을 통해 최적의 전문업체 매칭을 제공받으실 수 있습니다.</div>
+							</div>
+							<div class="spic"><img src="https://resource.mall.castingn.com/static/images/etc-outsc-slide-list01.png" /></div>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="javascript:void(0)">
+							<div class="scont">
+								<div class="mtit">소싱 신청부터 프로젝트 마무리까지! <strong>전담 소싱디렉터1인</strong>이 처음부터 끝까지! 프로젝트 <strong>완성</strong>에 <strong>함께</strong> 해드립니다.</div>
+								<div class="mdesc">전문업체 선정이 고민되시나요? 고민하지 마세요. 전담 소싱디렉터 1인이
+									시작부터 마무리까지 막힘없이 커뮤니케이션합니다!</div>
+							</div>
+							<div class="spic"><img src="https://resource.mall.castingn.com/static/images/etc-outsc-slide-list02.png" /></div>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="javascript:void(0)">
+							<div class="scont">
+								<div class="mtit"><strong>5분</strong> 등록 & <strong>48시간</strong> 내 <strong>3개</strong> 이상 <strong>전문업체</strong>로부터
+									무료로 견적 받고, <strong>믿을 수 있는 가격비교</strong>를 해보세요!</div>
+								<div class="mdesc">믿을 수 있는 전문업체 선정이 필요하신가요?
+									쉽게 시작하는 믿을 수 있는 구매를 컨설팅 받아보세요!</div>
+							</div>
+							<div class="spic"><img src="https://resource.mall.castingn.com/static/images/etc-outsc-slide-list03.png" /></div>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="javascript:void(0)">
+							<div class="scont">
+								<div class="mtit">프리랜서가 아닌 완성도 높은 <strong>검증된 전문업체만</strong> 매칭해드립니다!
+									개인과의 거래를 통한 <strong>사전 사고 완벽 차단!</strong> 평가 시스템을 통한
+									전문 업체 <strong>안정성 검증!</strong></div>
+								<div class="mdesc">수년간 누적된 전문 업체 평가 데이터 분석을 통해 최적의 전문업체 매칭을 제공받으실 수 있습니다.</div>
+							</div>
+							<div class="spic"><img src="https://resource.mall.castingn.com/static/images/etc-outsc-slide-list04.png" /></div>
+						</a>
+					</div>
+				</div>
+				<div class="slide-func-wrap">
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-button-next"></div>
+				</div>
+				<div class="swiper-pagination"></div>
+
+			</div>
+			<script>
+                var outscSlide = new Swiper("#outsc-slide-wrap", {
+                    pagination: {
+                        el: "#outsc-slide-wrap .swiper-pagination",
+                        clickable: true,
+                    },
+                    navigation: {
+                        nextEl: "#outsc-slide-wrap .swiper-button-next",
+                        prevEl: "#outsc-slide-wrap .swiper-button-prev",
+                    },
+                });
+			</script>
+		</section>
+
+		<section class="mob-outsc-fmenu-wrap">
+			<button type="button">소싱의뢰하기</button>
+			<button type="button">소싱의뢰리스트</button>
+		</section>
+
+		<section class="outsc-top5-wrap">
+			<div class="otit">
+				<strong>전문업체 TOP 5</strong>
+				<div class="tooltip">업무마켓나인 활동정보와 실제 이용한 고객의 데이터로 노출됩니다</div>
+			</div>
+			<div class="scrolls">
+				<ul class="list-service">
+					<li>
+						<div class="box-img">
+							<img src="https://workmarket9.com/images/goods/img_logo_business01.png" alt="">
+						</div>
+						<div class="descs">
+							<div class="corpNm">
+							<span>
+								<img src="" alt="">
+							</span>
+								모멘티
+							</div>
+							<div class="desc">
+								웹사이트&amp;애플리케이션 제작 (디자인 및 개발) 스튜디오
+							</div>
+							<div class="tags">
+								#앱개발 #홈페이지구축 #플랫폼구축
+							</div>
+						</div>
+
+					</li>
+
+					<li>
+						<div class="box-img">
+							<img src="https://workmarket9.com/images/goods/img_logo_business02.png" alt="">
+						</div>
+						<div class="descs">
+							<div class="corpNm">
+							<span>
+								<img src="" alt="">
+							</span>
+								메가로아스
+							</div>
+							<div class="desc">
+								325개의 대기업, 중견기업 온라인/오프라인 마케팅을 경험한 온라인 광고 대행사
+							</div>
+							<div class="tags">
+								#앱개발 #홈페이지구축 #플랫폼구축
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div class="box-img">
+							<img src="https://workmarket9.com/images/goods/img_logo_business03.png" alt="">
+						</div>
+						<div class="descs">
+							<div class="corpNm">
+							<span>
+								<img src="" alt="">
+							</span>
+								빌드앤드
+							</div>
+							<div class="desc">
+								공간디자인 , 제품 3D / 2D 디자인과 시공까지 폭 넓은 작업을 진행하는 공간디자인 회사
+							</div>
+							<div class="tags">
+								#팝업스토어 #매장인테리어 #인테리어 #기업홍보관
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div class="box-img">
+							<img src="https://workmarket9.com/images/goods/img_logo_business04.png" alt="">
+						</div>
+						<div class="descs">
+							<div class="corpNm">
+							<span>
+								<img src="" alt="">
+							</span>
+								아날로공
+							</div>
+							<div class="desc">
+								아날로공은 브랜드의 가치를 영상, 사진으로 표현하는 이미징 프로덕션
+							</div>
+							<div class="tags">
+								#기업영상 #영상광고 #홍보영상제작 #브랜드영상
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div class="box-img">
+							<img src="https://workmarket9.com/images/goods/img_logo_business05.png" alt="">
+						</div>
+						<div class="descs">
+							<div class="corpNm">
+							<span>
+								<img src="" alt="">
+							</span>
+								로웰앤컴퍼니
+							</div>
+							<div class="desc">
+								로웰앤컴퍼니는 IT 통합 브랜딩/디자인/개발 컨설팅 업체
+							</div>
+							<div class="tags">
+								#앱개발 #홈페이지구축 #플랫폼구축
+							</div>
+						</div>
+					</li>
+
+				</ul>
+			</div>
+		</section>
+
+		<section class="outsc-compare-wrap">
+			<div class="rela">
+				<div class="otit">
+					<strong>전문업체들이 제공한 비교견적을 확인하세요</strong>
+					<div class="tabmenu-list-wrap">
+						<ul>
+							<li><a href="javascript:void(0)" class="on">IT개발</a></li>
+							<li><a href="javascript:void(0)">마케팅</a></li>
+							<li><a href="javascript:void(0)">영상콘텐츠</a></li>
+							<li><a href="javascript:void(0)">사무환경</a></li>
+							<li><a href="javascript:void(0)">디자인</a></li>
+							<li><a href="javascript:void(0)">전문서비스</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="compare-list-wrap">
+					<ul>
+						<li>
+							<a href="javascript:void(0)">
+								<div class="mtit">A사 공유킥보드 앱 개발</div>
+								<div class="mdesc">전문업체 <strong>4</strong>개사 비교</div>
+								<ul>
+									<li>
+										<div class="key">프로젝트 기간</div>
+										<div class="value"><strong>4</strong>개월</div>
+									</li>
+									<li>
+										<div class="key">최저가</div>
+										<div class="value"><strong>42,532,000</strong> 원</div>
+									</li>
+									<li>
+										<div class="key">절감액</div>
+										<div class="value"><strong>25,468,000</strong> 원</div>
+									</li>
+								</ul>
+
+							</a>
+							<div class="cnt"><span class="msg-box">비교견적 보기</span>4.</div>
+						</li>
+						<li>
+							<a href="javascript:void(0)">
+								<div class="mtit">A사 공유킥보드 앱 개발</div>
+								<div class="mdesc">전문업체 <strong>4</strong>개사 비교</div>
+								<ul>
+									<li>
+										<div class="key">프로젝트 기간</div>
+										<div class="value"><strong>4</strong>개월</div>
+									</li>
+									<li>
+										<div class="key">최저가</div>
+										<div class="value"><strong>42,532,000</strong> 원</div>
+									</li>
+									<li>
+										<div class="key">절감액</div>
+										<div class="value"><strong>25,468,000</strong> 원</div>
+									</li>
+								</ul>
+								<div class="cnt"><span class="msg-box">비교견적 보기</span>4.</div>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)">
+								<div class="mtit">A사 공유킥보드 앱 개발</div>
+								<div class="mdesc">전문업체 <strong>4</strong>개사 비교</div>
+								<ul>
+									<li>
+										<div class="key">프로젝트 기간</div>
+										<div class="value"><strong>4</strong>개월</div>
+									</li>
+									<li>
+										<div class="key">최저가</div>
+										<div class="value"><strong>42,532,000</strong> 원</div>
+									</li>
+									<li>
+										<div class="key">절감액</div>
+										<div class="value"><strong>25,468,000</strong> 원</div>
+									</li>
+								</ul>
+								<div class="cnt"><span class="msg-box">비교견적 보기</span>4.</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="compare-list-wrap02">
+					<ul>
+						<li>
+							<div class="per">
+								<strong>25%</strong>
+								<span>프로젝트에 드는 기회비용 손실감소</span>
+							</div>
+						</li>
+						<li>
+							<div class="per">
+								<strong>53%</strong>
+								<span>업체를 찾는데 드는 시간 손실 감소</span>
+							</div>
+						</li>
+						<li>
+							<div class="per">
+								<strong>22%</strong>
+								<span>계약대로 하지 않는 사고 사전 차단</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+		</section>
+
+		<section class="outsc-partner-wrap">
+			<div class="otit">
+				<strong>리뷰만점 전문 파트너</strong>
+			</div>
+			<div class="group-best">
+				<div class="box-best">
+					<a href="https://www.castingn.com/sourcing/kkultip_detail/98?catecode=IT" target="_blank">
+						<img src="https://workmarket9.com/images/goods/img_partner_01.png" alt="">
+						<div class="desc">
+							<p>
+								"업무마켓나인을 통해 다양한 개발 프로젝트에 참여할 수 있어요"
+							</p>
+							<h6>-앱포스터 경성현 대표-   </h6>
+						</div>
+					</a>
+				</div>
+				<div class="box-best">
+					<a href="https://www.castingn.com/sourcing/kkultip_detail/97?catecode=HR" target="_blank">
+						<img src="https://workmarket9.com/images/goods/img_partner_02.png" alt="">
+						<div class="desc">
+							<p>고객 영업과 연결을 해주는 다리 역할이 좋아, 영업이 필요없어요.</p>
+							<h6>-서초크린 박동빈 대표-</h6>
+						</div>
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<section class="outsc-review-wrap">
+			<div class="otit">
+				<strong>인터뷰로 살펴보는 소싱의뢰 고객 후기</strong>
+			</div>
+			<div class="scrolls">
+				<ul class="list-case">
+					<li>
+						<a href="https://www.castingn.com/sourcing/kkultip_detail/159?catecode=IT" target="_blank">
+							<h5>못하는 부분을 채워줘요~</h5>
+							<div class="desc">
+								기획부터 디자인, 개발까지 포함해 어플리케이션 제작 을 위해 모든 걸 해줘 너무 좋았어요.
+							</div>
+							<div class="tags">
+								<button>앱개발</button>
+								<button class="on">웹기획</button>
+							</div>
+							<div class="corpInfo">
+								<img src="https://workmarket9.com/images/goods/partner-logo01.png" class="corpNmImg">
+								<div class="ceo">배효준 대표   </div>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.castingn.com/sourcing/kkultip_detail/175?catecode=MKT" target="_blank">
+							<h5>스타트업 필수 툴</h5>
+							<div class="desc">
+								시간과 인력이 부족한 스타트업에게 필수 플랫폼이에요. 손발 잘 맞는 팀원이 하나 생긴 것 같아요!
+							</div>
+							<div class="tags">
+								<button>영상제작</button>
+								<button class="on">인터뷰</button>
+							</div>
+							<div class="corpInfo">
+								<img src="https://workmarket9.com/images/goods/partner-logo02.png" class="corpNmImg">
+								<div class="ceo">김수정 과장   </div>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.castingn.com/sourcing/kkultip_detail/174?catecode=HR" target="_blank">
+							<h5>10점 만점에 9점</h5>
+							<div class="desc">
+								업체 탐색 시간이 줄어 업무 효율이 높아졌고, 업력 포트폴리오 등 업체 데이터를 볼 수 있어 선정이 수월했어요.
+							</div>
+							<div class="tags">
+								<button>건물관리</button>
+								<button class="on">창고이전</button>
+							</div>
+							<div class="corpInfo">
+								<img src="https://workmarket9.com/images/goods/partner-logo03.png" class="corpNmImg">
+								<div class="ceo">김상우 책임   </div>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+
+		</section>
+
+		<section class="outsc-tip-wrap">
+			<div class="otit">
+				<strong>아웃소싱 꿀팁</strong>
+				<span>신규회원을 위한 업무마켓나인의 초특가 이벤트 ! 5가지 상품 중 택1 (3월 한달간 사용 가능)</span>
+			</div>
+			<div class="scrolls">
+				<ul class="list-case">
+					<li>
+						<div class="box-img">
+							<a href="https://www.castingn.com/sourcing/kkultip_detail/173?catecode=HR" target="_blank">
+								<img src="https://workmarket9.com/images/goods/img_outsourcing_tip01.png" alt="">
+							</a>
+						</div>
+						<div class="desc">
+							<h5>급여명세서 의무화, 어렵지않아요!</h5>
+							<div class="tags">#급여명세서  #급여명세서의무화  #급여명세서 #임금명세서교부의무 #급여명세서교부</div>
+						</div>
+					</li>
+					<li>
+						<div class="box-img">
+							<a href="https://www.castingn.com/sourcing/kkultip_detail/168?catecode=IT" target="_blank">
+								<img src="https://workmarket9.com/images/goods/img_outsourcing_tip02.png" alt="">
+							</a>
+						</div>
+						<div class="desc">
+							<h5>앱개발 비용 산정의 필수요소, 맨먼스 계산하기</h5>
+							<div class="tags">#앱개발
+								#맨먼스
+								#앱개발비용
+								#앱제작비용
+								#어플개발비용
+								#어플제작비용
+								#개발견적
+								#개발견적서</div>
+						</div>
+					</li>
+					<li>
+						<div class="box-img">
+							<a href="https://www.castingn.com/sourcing/kkultip_detail/164?catecode=MKT" target="_blank">
+								<img src="https://workmarket9.com/images/goods/img_outsourcing_tip03.png" alt="">
+							</a>
+						</div>
+						<div class="desc">
+							<h5>이탈률↓ 체류시간↑ 성과 높이는 홍보영상 기획안</h5>
+							<div class="tags">#영상기획안
+								#홍보영상기획안
+								#영상기획
+								#영상스토리보드
+								#홍보영상스토리보드
+								#홍보영상
+								#홍보영상제작</div>
+						</div>
+					</li>
+					<li>
+						<div class="box-img">
+							<a href="https://www.castingn.com/sourcing/kkultip_detail/152?catecode=IT" target="_blank">
+								<img src="https://workmarket9.com/images/goods/img_outsourcing_tip04.png" alt="">
+							</a>
+						</div>
+						<div class="desc">
+							<h5>모바일앱개발, '이것'부터 준비하세요.</h5>
+							<div class="tags">#모바일앱개발
+								#앱개발
+								#앱제작
+								#어플개발
+								#어플제작
+								#시장조사
+								#사용자조사</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+		</section>
+
+
+
+
+
+	</div>
+	<!-- //container -->
+
+	<!-- footer -->
+	<div id="footer">
+		<div class="section">
+			<div class="foot-menu">
+				<a href="#"><span>1:1문의</span></a>
+				<a href="#"><span>고객센터</span></a>
+				<a href="#"><span>파트너센터</span></a>
+			</div>
+			<div class="foot-etc">
+				<a href="#"><span>회사소개</span></a>
+				<a href="#"><span>서비스소개</span></a>
+				<a href="#"><span>안전거래보장</span></a>
+				<a href="#"><span>이용약관</span></a>
+				<a href="#"><span class="t-red">개인정보처리방침</span></a>
+				<a href="#"><span>공지사항</span></a>
+			</div>
+			<div class="foot-cs">
+				<div class="cs-num">1644 <i class="circle"></i> 2653</div>
+				<div class="cs-time">
+					<dl>
+						<dt>평일</dt>
+						<dd>08:30 ~ 17:30</dd>
+					</dl>
+					<dl>
+						<dt>점심시간</dt>
+						<dd>12:00~13:00</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="foot-info">
+				<strong>㈜캐스팅엔     CEO : 용성남, 최준혁</strong> <br/><br/>
+				통신판매신고 : 제 2019-인천부평-1343 호 고객섬김센터 : Tel. 1644-2653 Fax. 070-4032-2523 사업자등록번호 : 423-86-00075 [사업자정보]<br/>
+				주소 : 서울지점 - 서울특별시 마포구 백범로31길 21 서울창업허브 809호 | 본점 - 인천광역시 부평구 대정로 66, 4층 408호(부평동, 다운타운일레븐)
+			</div>
+			<p class="foot-copy">ⓒ 2017 CastingN. All rights reserved.</p>
+			<p class="foot-logo"><img src="https://resource.mall.castingn.com/static/images/foot-logo.png" alt=""></p>
+		</div>
+	</div>
+	<!-- //footer -->
+
+	<div class="right-fix m-hide">
+		<a href="#" class="btn-estimate"><span>비<br/>교<br/>견<br/>적</span><i class="ico-pen"></i></a>
+		<button type="button" class="btn-top"><img src="https://resource.mall.castingn.com/static/images/btn-top.png" alt=""></button>
+	</div><!-- //right-fix -->
+</div>
+
+
+<script>
+    $(document).ready(function(){
+
+        $("body").on("click", ".cnt-wrap .btn-mius", function(){
+            var n = parseInt($(this).parents(".cnt-wrap").eq(0).find("input").val());
+            if(n > 0){
+                $(this).parents(".cnt-wrap").eq(0).find("input").val(n-1);
+            }
+        });
+        $("body").on("click", ".cnt-wrap .btn-plus", function(){
+            var n = parseInt($(this).parents(".cnt-wrap").eq(0).find("input").val());
+            $(this).parents(".cnt-wrap").eq(0).find("input").val(n+1);
+        });
+
+        var lastHeight = $("body").prop("scrollHeight") - 483;
+        $(window).scroll(function(){
+            var st = $(this).scrollTop();
+            var cartHeight = $(".cart-item-wrap").height()-40;
+            //console.log(st, lastHeight);
+            if(st > 500 && (st+483) < lastHeight){
+                $(".cart-item-wrap").css("margin-top",(st-cartHeight)+"px")
+			}else if(st < 500){
+                $(".cart-item-wrap").css("margin-top","0");
+			}
+
+		});
+
+        $("body").on("click", ".mob-category-slide-wrap a", function(){
+			$(".mob-category-slide-wrap a").removeClass("on");
+            $(this).addClass("on");
+		});
+        $("body").on("click", ".special-slide-wrap .swiper-container .swiper-slide a", function(){
+            $(".special-slide-wrap .swiper-container .swiper-slide a").removeClass("on");
+            $(this).addClass("on");
+        });
+
+        $("body").on("click", ".info .btn-info", function(){
+            var ck = $(this).hasClass("on");
+            if(ck){
+                $(this).removeClass("on");
+                $(this).parents("li").eq(0).find(".delivery-item-wrap").removeClass("on");
+            }else{
+                $(this).addClass("on");
+                $(this).parents("li").eq(0).find(".delivery-item-wrap").addClass("on");
+            }
+        });
+        $("body").on("click", ".delivery-item-wrap a", function(){
+            $(".info .btn-info").removeClass("on");
+            $(this).parents(".delivery-item-wrap").eq(0).removeClass("on");
+        });
+        $("body").on("click", ".bt-toggle", function(){
+            var ck = $(".brand-box").hasClass("toggle-on");
+            if(ck){
+                $(".brand-box").removeClass("toggle-on");
+            }else{
+                $(".brand-box").addClass("toggle-on");
+            }
+        });
+
+        //옵션 선택 Add
+        $(document).on("click",".btn-slc-brand-add",function(){
+            var p_brand_name = $(this).attr('data-brand-name');
+            var p_brand_code = $(this).attr('data-brand-code');
+            var data_type = $(this).attr('data-type');
+
+            if($(this).hasClass("select")) {
+                $(this).removeClass("select");
+                //삭제해야 됨.
+                $(".result-box .dep2[data-brand-code='"+p_brand_code+"']").each(function(){
+                    $(this).remove();
+                });
+            } else {
+                $(this).addClass('select');
+                $('.result-box .dep1').after("<span class='dep2' data-type='"+data_type+"' data-brand-code='"+p_brand_code+"'>"+p_brand_name+"<a href='javascript:void(0);' class='menu-close'>메뉴 닫기</a></span>");
+            }
+
+            //callItemList();
+
+        });
+
+        //옵션 선택 Del
+        $(document).on("click",".result-box .menu-close",function(){
+            $(this).parents('.dep2').remove();
+            var p_brand_code = $(this).parents().attr('data-brand-code');
+
+            //속성값 선택도 삭제함
+            $(".chk-bt-ty1[data-brand-code="+p_brand_code+"]").each(function(){
+                $(this).removeClass("select");
+            });
+            //callItemList(1);
+        });
+
+
+        var tP = $(".outsc-fmenu-wrap");
+        var mP = $(".mob-outsc-fmenu-wrap");
+        var tPoffset = tP.offset();
+        var mPoffset = mP.offset();
+        var win = $(window);
+
+        win.on('scroll',function() {
+
+            if (win.scrollTop() > tPoffset.top) {
+                tP.addClass("on");
+
+            } else {
+                tP.removeClass("on");
+            };
+
+            if (win.scrollTop() > mPoffset.top) {
+                mP.addClass("on");
+
+            } else {
+                mP.removeClass("on");
+            };
+
+        });
+
+
+
+
+    });
+
+
+
+</script>
+
+</body>
+</html>
+
+
+
+
+

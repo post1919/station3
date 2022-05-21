@@ -1,0 +1,412 @@
+
+
+.row-input {
+  overflow: hidden;
+  margin-bottom: 13px;
+}
+
+.row-input.mb-type1{
+  margin-bottom: -5px;
+}
+
+.row-caption {
+  overflow: hidden;
+  margin-bottom: 13px;
+}
+
+
+.kit-input {
+  overflow: hidden;
+  position: relative;
+  height: 64px;
+  border-radius: 8px;
+  border: solid 1px #d9d9d9;
+  background-color: #fff;
+}
+
+.kit-input.type1{
+  height: 48px;
+}
+
+.kit-input.type1 input{
+  font-size: 16px;
+}
+
+.kit-input.type1 input::placeholder{
+  color: #b3b7ba;
+}
+
+
+
+.kit-input input {
+  width: 100%;
+  height: 100%;
+  padding: 0 23px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #000;
+}
+.kit-input input + label {
+  position: absolute;
+  left: 23px;
+  top: 21px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #999;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+.kit-input.disabled input + label,
+.kit-input input:focus + label,
+.kit-input input.valued + label {
+  top: 6px;
+  font-size: 13px;
+}
+
+
+.box-input {
+  width: 500px;
+  margin: 0 auto;
+  padding: 48px 0 0;
+}
+
+.box-input2 {
+  width: 500px;
+  margin: 0 auto;
+  padding: 25px 0 0;
+}
+
+
+
+.kit-input.check {
+  position: relative;
+  height: 30px;
+  margin-right: 7px;
+
+  font-size: 14px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.57;
+  letter-spacing: normal;
+  text-align: left;
+  color: #999;
+  border: 0 none;
+}
+.kit-input.check input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.kit-input.check  label,
+.kit-input.check input:focus + label,
+.kit-input.check input.valued + label {
+  position: static;
+  vertical-align: top;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+}
+.kit-input.check label:before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-right: 6px;
+  vertical-align: middle;
+  border-radius: 50%;
+  border: solid 1px #999;
+}
+.kit-input.check input:checked + label:before {
+  background: #0e89e8 url(https://resource.mall.castingn.com/static/images/ico-rd-chk.png) center no-repeat;
+  border: solid 1px #0e89e8;
+}
+
+dl.column-view {
+  overflow: hidden;
+  line-height: 30px;
+}
+dl.column-view > dt {
+  float: left;
+  padding-right: 10px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #999;
+}
+dl.column-view > dd {
+  overflow: hidden;
+  font-size: 18px;
+  font-weight: 500;
+  color: #000000;
+}
+
+.btn {
+  height: 40px;
+  line-height: 40px;
+  padding: 0 22px;
+  font-size: 16px;
+  border: 1px solid #c8c8c8;
+  border-radius: 20px;
+  color: #000000;
+  box-sizing: border-box;
+}
+.btn.small {
+  height: 32px;
+  line-height: 32px;
+  border-radius: 16px;
+  font-size: 13px;
+}
+.btn.blue {
+  border: 1px solid #0e89e8;
+  background: #0e89e8;
+  color: #ffffff;
+}
+.btn.non-border {
+  height: auto;
+  line-height: initial;
+  font-size: 14px;
+  font-weight: 500;
+  color: #666;
+  border: 0 none;
+}
+.btn.arrow-right {
+  background: transparent url() no-repeat right 3px center;
+}
+.btn.min-width {
+  min-width: 135px;
+}
+
+
+
+.row-input {
+  
+}
+.row-input h6 {
+  margin-bottom: 24px;
+  font-size: 18px;
+  text-align: center;
+  color: #000000;
+}
+
+ul.list-checkSquare {
+  overflow: hidden;
+}
+ul.list-checkSquare > li {
+  position: relative;
+  float: left;
+  width: 25%;
+  height: 70px;
+  padding: 6px;
+  text-align: center;
+  box-sizing: border-box;
+  background: #fff;
+}
+ul.list-checkSquare > li.all {
+  overflow: hidden;
+  float: none;
+  width: initial;
+}
+ul.list-checkSquare > li input[type="checkbox"] {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: 0 none;
+}
+ul.list-checkSquare > li input[type="checkbox"]:before {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  border: solid 1px #d9d9d9;
+  background: #fff;
+}
+ul.list-checkSquare > li input[type="checkbox"]:checked:before {
+  border: solid 1px #0e89e8;
+}
+ul.list-checkSquare > li input[type="checkbox"]:checked:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #0e89e8 url(https://resource.mall.castingn.com/static/images/ico-rd-chk.png) center no-repeat;
+  background-size: 65%;
+}
+ul.list-checkSquare > li span {
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  line-height: 70px;
+  z-index: 2;
+  pointer-events: none;
+
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  color: #999;
+}
+ul.list-checkSquare > li input[type="checkbox"]:checked + span {
+  color: #0e89e8;
+}
+
+hr {
+  border: 1px solid #ececec;
+  margin: 23px 0;
+}
+
+
+
+ul.list-checkBlock {
+  overflow: hidden;
+}
+ul.list-checkBlock > li {
+  position: relative;
+  min-height: 70px;
+  padding: 6px;
+  text-align: center;
+  box-sizing: border-box;
+  background: #fff;
+}
+ul.list-checkBlock > li input[type="checkbox"] {
+  position: absolute;
+  left: 6px;
+  top: 6px;
+  width: calc(100% - 12px);
+  height: calc(100% - 12px);
+  background: transparent;
+  border: 0 none;
+}
+ul.list-checkBlock > li input[type="checkbox"]:before {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  border: solid 1px #d9d9d9;
+  background: #fff;
+}
+ul.list-checkBlock > li input[type="checkbox"]:checked:before {
+  border: solid 1px #0e89e8;
+}
+ul.list-checkBlock > li input[type="checkbox"]:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 24px;
+  top: 50%;
+  width: 12px;
+  height: 12px;
+  margin: -6px 0 0;
+  border-radius: 50%;
+  border: 1px solid #999;
+  background-size: 65%;
+}
+ul.list-checkBlock > li input[type="checkbox"]:checked:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 24px;
+  top: 50%;
+  width: 12px;
+  height: 12px;
+  margin: -6px 0 0;
+  border-radius: 50%;
+  background: #0e89e8 url(https://resource.mall.castingn.com/static/images/ico-rd-chk.png) center no-repeat;
+  background-size: 65%;
+}
+ul.list-checkBlock > li span {
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  line-height: 70px;
+  z-index: 2;
+  pointer-events: none;
+
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  color: #999;
+}
+ul.list-checkBlock > li input[type="checkbox"]:checked + span {
+  color: #0e89e8;
+}
+ul.list-checkBlock > li > dl {
+  position: relative;
+  overflow: hidden;
+  margin: 0 0 0 65px;
+  padding: 20px 0;
+  text-align: left;
+
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.57;
+  color: #000;
+  z-index: 3;
+  pointer-events: none;
+}
+ul.list-checkBlock > li > dl > dt {
+  float: left;
+}
+ul.list-checkBlock > li > dl > dd {
+  overflow: hidden;
+}
+
+
+.kit-customCheckbox {
+  position: relative;
+  box-sizing: border-box;
+  height: 29px;
+  line-height: 28px;
+  margin: 0 0 16px;
+}
+.kit-customCheckbox input[type="checkbox"] {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+.kit-customCheckbox label {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: auto;
+  height: inherit;
+  line-height: inherit;
+  padding: 0px 10px 0 32px;
+  color: #000000;
+  border: solid 1px #787878;
+  border-radius: 14.5px;
+  z-index: 1;
+  box-sizing: border-box;
+}
+.kit-customCheckbox input[type="checkbox"]:checked + label {
+  height: inherit;
+  line-height: inherit;
+  color: #0e89e8;
+  border: solid 1px #0e89e8;
+  background: transparent url(https://resource.mall.castingn.com/static/images/ico_check.png) no-repeat 8px center / 15px auto;
+}

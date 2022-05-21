@@ -1,0 +1,1839 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>업무마켓9</title>
+	<script type="text/javascript" async="" src="../../js/jquery-3.3.1.min.js"></script>
+	<link rel="stylesheet" href="../../css/reset.css" />
+	<link rel="stylesheet" href="../../css/layout.css" />
+	<link rel="stylesheet" href="../../css/mall.css" />
+	<link rel="stylesheet" href="https://unpkg.com/swiper@6/swiper-bundle.min.css" />
+	<script type="text/javascript" async="" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/js/swiper.min.js"></script>
+<body>
+
+<div id="wrap">
+	<!-- header -->
+	<div id="header-mall" class="subpage">
+		<div class="header-top m-hide">
+			<div class="inner">
+                <span class="header-top-left">
+                  <a href="/casting/intro">업무마켓나인 소개</a>
+                </span>
+				<span class="header-top-right">
+
+                                    <a href="javascript:void(0);" id="loginBtn" onclick="loginFormOn();">로그인</a>
+                  <a href="javascript:void(0);" onclick="loginchangeStep3();">회원가입</a>
+                  <a href="/casting/Buyr/Interaction/?menu=inquery">1:1문의</a>
+                  <div class="layer-wrap">
+                    <a href="javascript:void(0);" class="last center-bt">공급사 통합센터</a>
+                    <div class="head-layer-pop head-layer-1">
+                      <ul class="center-list">
+                        <li><a href="/casting/Buyr/?page_mode=partner">공급사 입점신청</a></li>
+                        <li><a href="/casting/Manage/Auth/index.php">공급사 통합 로그인</a></li>
+                        <li><a href="https://www.castingn.com/join/partner/formnew?workmarket9HeaderRemove=OK" target="_blank">소싱 파트너 로그인</a></li>
+                      </ul>
+                    </div>
+                  </div>
+
+
+
+                </span>
+			</div>
+			<!-- login후 나오는 팝업 -->
+		</div>
+
+		<div class="header-center m-hide">
+			<div class="inner">
+				<h1 class="logo">
+					<a href="#"><img src="https://resource.mall.castingn.com/static/images/etc-mall-logo.png" alt="" class="m-hide"></a>
+				</h1>
+
+				<div class="header-search">
+					<input type="text" id="q" placeholder="업무에 필요한 상품을 빠르게 검색해보세요!" value="" onkeydown="if(event.keyCode == 13) schcheck();" onclick="wordcheck();">
+					<button type="button" onclick="schcheck();">검색</button>
+				</div>
+
+				<div class="header-category">
+					<a href="javascript:loginFormOn();" class="category-menu1">내정보</a>
+					<a href="/casting/Mypage/?mode=cart" class="category-menu2">장바구니</a>
+					<a href="javascript:loginFormOn();" class="category-menu3">배송정보</a>
+					<a href="javascript:loginFormOn();" class="category-menu4">채팅</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="header-bottom m-hide">
+			<div class="inner">
+				<ul class="gnb">
+					<li class="menu-1 ">
+						<a href="javascript:void(0)" class="btn-toggle-menu">비품,사무용품 <i class="el-icon-arrow-down"></i></a>
+					</li>
+					<li class="menu-2">
+						<span class="tool-tip">전문업체매칭</span>
+						<i class="ico-maching">👊</i>
+						<a href="javascript:void(0)">파워매칭</a>
+					</li>
+					<li class="menu-3">
+						<span class="tool-tip">기업형구독서비스</span>
+						<i class="ico-pin"></i>
+						<a href="javascript:void(0)">핀스퀘어</a>
+					</li>
+					<li class="menu-4 ">
+						<i class="ico-smart"></i>
+						<a href="javascript:void(0)">스마트핀클럽</a>
+					</li>
+					<li class="menu-5 "><a href="javascript:void(0)">C노트</a></li>
+					<li class="menu-6 "><a href="javascript:void(0)">이벤트</a></li>
+
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- //header -->
+
+	<!-- header-sub -->
+	<div class="mo-sub-head p-hide">
+		<button type="button" class="btn-history-back" onclick="javascript:history.go(-1);">back</button>
+		<strong class="header-tit">비품,사무용품</strong>
+
+		<div class="header-category">
+			<a href="#" class="cate-menu1" id="dev_search_button">검색</a>
+			<a href="javascript:void(0)" class="cate-menu2">장바구니 </a>
+		</div>
+	</div>
+	<!-- //header-sub -->
+
+	<!-- container -->
+	<div id="container" class="container-favorite">
+
+		<section class="outsc-fmenu-wrap">
+			<div class="lt-item">
+				<ul>
+					<li>
+						<a href="javascript:void(0)" class="on">
+							<span>IT 개발</span>
+							<i class="el-icon-arrow-down"></i>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)">
+							<span>마케팅</span>
+							<i class="el-icon-arrow-down"></i>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)">
+							<span>영상·콘텐츠</span>
+							<i class="el-icon-arrow-down"></i>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)">
+							<span>사무환경</span>
+							<i class="el-icon-arrow-down"></i>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)">
+							<span>디자인</span>
+							<i class="el-icon-arrow-down"></i>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)">
+							<span>전문서비스</span>
+							<i class="el-icon-arrow-down"></i>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="rt-item">
+				<button type="button">소싱의뢰하기</button>
+				<button type="button">소싱의뢰리스트</button>
+			</div>
+		</section>
+
+		<section class="outsc-category-wrap">
+			<div class="osc-info-area">
+				<div class="osc-info">
+					<div class="info-left">
+						<p class="info-tt1">유능하고 디테일한 <strong>IT개발사</strong>를
+							<br />찾고 계신가요?</p>
+						<!--<a href="/casting/event/?MODE=E-72" class="btn-link1" target="_blank">전문서비스 소싱 의뢰 자세히보기</a>-->
+						<p class="info-tt2">실력 있는 전문 파트너사를 매칭 받고 인정받는 IT 프로젝트를 시작해보세요.</p>
+					</div>
+
+					<div class="info-right">
+						<dl>
+							<dt>소싱의뢰건</dt>
+							<dd><span class="count-num">29,969</span>  <b>건</b></dd>
+						</dl>
+						<dl>
+							<dt>거래금액</dt>
+							<dd><span class="count-num2">68,751</span> <b>백만원</b></dd>
+						</dl>
+						<dl>
+							<dt>전문업체</dt>
+							<dd><span class="count-num3">4,936</span> <b>개</b></dd>
+						</dl>
+					</div>
+
+					<div class="result-tt-area">
+						<div class="result-tt">
+							<strong>25%</strong>
+							<span>프로젝트에 드는 <br> 기회비용 손실감소</span>
+						</div>
+
+						<div class="result-tt">
+							<strong>53%</strong>
+							<span>업체를 찾는데 드는 <br> 시간 손실 감소</span>
+						</div>
+
+						<div class="result-tt">
+							<strong>22%</strong>
+							<span>계약대로 하지 않는 <br> 사고 사전 차단</span>
+						</div>
+					</div>
+
+				</div>
+				<div class="osc-visual swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide slide-01">
+							<p class="osc-visual-tt1">지금 소싱을 의뢰하시면, 30분이내 전담 소싱디렉터가 연락을 드립니다. <br>영역별 수년간 상담해 온 <span>전문가가 전문업체 선정</span>을 <span>무료</span>로 <span>컨설팅</span>해드립니다.</p>
+							<p class="osc-visual-tt2">부담 없이 소싱 의뢰해 보세요. 전문가들의 친절한 상담이 시작됩니다!</p>
+						</div>
+						<div class="swiper-slide slide-02">
+							<p class="osc-visual-tt1">소싱 의뢰부터 프로젝트 마무리까지! <span>전담 소싱디렉터1인</span>이<br> 처음부터 끝까지! 프로젝트 <span>완성</span>에 <span>함께</span> 해드립니다.</p>
+							<p class="osc-visual-tt2">전문업체 선정이 고민되시나요? 고민하지 마세요. 전담 소싱디렉터 1인이 <br> 시작부터 마무리까지 막힘없이 커뮤니케이션합니다!</p>
+						</div>
+						<div class="swiper-slide slide-03">
+							<p class="osc-visual-tt1"><span>5분</span> 등록 & <span>48시간</span> 내 <span>3개</span> 이상 <span>전문업체</span>로부터 <br> 무료로 견적 받고, <span>믿을 수 있는 가격비교</span>를 해보세요!</p>
+							<p class="osc-visual-tt2">믿을 수 있는 전문업체 선정이 필요하신가요? <br> 쉽게 시작하는 믿을 수 있는 구매를 컨설팅 받아보세요!</p>
+						</div>
+						<div class="swiper-slide slide-04">
+							<p class="osc-visual-tt1">프리랜서가 아닌 완성도 높은 <span>검증된 전문업체만</span> 매칭해드립니다! <br> 개인과의 거래를 통한 <span>사전 사고 완벽 차단</span>! 평가 시스템을 통한<br> 전문 업체 <span>안정성 검증</span>!</p>
+							<p class="osc-visual-tt2">수년간 누적된 전문 업체 평가 데이터 분석을 통해 최적의 전문업체 매칭을 제공받으실 수 있습니다.</p>
+						</div>
+					</div>
+					<div class="osc-pagination"></div>
+					<div class="swiper-button-next"></div>
+				</div>
+
+				<section class="mob-outsc-fmenu-wrap">
+					<button type="button">소싱의뢰하기</button>
+					<button type="button">소싱의뢰리스트</button>
+				</section>
+
+			</div>
+			<div class="chksel-box chksel-type1">
+				<div class="ctit">소싱의뢰가 부담스러우신가요?</div>
+
+				<div class="cdesc01">전문업체의 서비스를 살펴보고, 채팅으로 문의하고, 직접 견적 받아보세요.</div>
+				<p class="cdesc02">분야별 MD가 선별한 전문업체 서비스를 살펴보고 상담해보세요. 자세한 상담 후 견적을 제공받을 수 있습니다.</p>
+
+				<div class="osc-tab-menu">
+					<ul>
+
+						<!--<a href="#" class="chk-bt select">앱개발</a>-->
+
+						<li class="dev-chk-bt on" data-catecode="658" data-catename="급여/연말정산"><a href="javascript:void(0);">급여/연말정산</a></li>
+						<!--<a href="#" class="chk-bt select">앱개발</a>-->
+
+						<li class="dev-chk-bt" data-catecode="660" data-catename="노무관리"><a href="javascript:void(0);">노무관리</a></li>
+						<!--<a href="#" class="chk-bt select">앱개발</a>-->
+
+						<li class="dev-chk-bt" data-catecode="662" data-catename="상표권/특허권"><a href="javascript:void(0);">상표권/특허권</a></li>
+						<!--<a href="#" class="chk-bt select">앱개발</a>-->
+
+						<li class="dev-chk-bt" data-catecode="665" data-catename="번역/통역"><a href="javascript:void(0);">번역/통역</a></li>
+
+						<!--<li class="on"><a href="#">앱개발</a></li>
+                        <li><a href="#">게임개발</a></li>
+                        <li><a href="#">쇼핑몰구축</a></li>
+                        <li><a href="#">플랫폼구축</a></li>-->
+					</ul>
+				</div>
+
+
+				<div class="osc-tab-con tab1" style="display: block;">
+					<div class="tab-total-menu dev-result-box" style="display:none;">
+						<strong>급여/연말정산</strong>
+						<ul class="m1 dev-dep1"></ul>
+						<ul class="m2"></ul>
+						<ul class="m3"></ul>
+						<ul class="m4"></ul>
+						<ul class="m5"></ul>
+						<ul class="m6"></ul>
+						<ul class="m7"></ul>
+						<ul class="m8"></ul>
+						<ul class="m9"></ul>
+						<ul class="m10"></ul>
+					</div>
+
+					<div class="tab-detail-menu fst">
+						<span class="detail-tit">유형</span>
+						<ul>
+							<li class="on dev-chk-bt-ty2 menu-all dev-chk-bt-all1" data-dir="3947" data-obj="1" data-type="property1" data-brand-code="all"><a href="javascript:void(0);">전체</a></li>
+							<li class="dev-chk-bt-ty1" data-dir="3947" data-obj="1" data-type="property1" data-brand-code="511082" data-brand-name="연말 정산"><a href="javascript:void(0);">연말 정산</a></li>
+							<li class="dev-chk-bt-ty1" data-dir="3947" data-obj="1" data-type="property1" data-brand-code="511030" data-brand-name="급여대행"><a href="javascript:void(0);">급여대행</a></li>
+						</ul>
+					</div>
+
+					<a href="#" class="btn-tab-toggle on">탭토글 버튼</a>
+				</div>
+
+				<div class="osc-tab-con tab2" style="display: none;">
+					<div class="tab-total-menu dev-result-box" style="display:none;">
+						<strong>노무관리</strong>
+						<ul class="m1 dev-dep1"></ul>
+						<ul class="m2"></ul>
+						<ul class="m3"></ul>
+						<ul class="m4"></ul>
+						<ul class="m5"></ul>
+						<ul class="m6"></ul>
+						<ul class="m7"></ul>
+						<ul class="m8"></ul>
+						<ul class="m9"></ul>
+						<ul class="m10"></ul>
+					</div>
+
+					<div class="tab-detail-menu fst">
+						<span class="detail-tit">유형</span>
+						<ul>
+							<li class="on dev-chk-bt-ty2 menu-all dev-chk-bt-all1" data-dir="3949" data-obj="1" data-type="property1" data-brand-code="all"><a href="javascript:void(0);">전체</a></li>
+							<li class="dev-chk-bt-ty1" data-dir="3949" data-obj="1" data-type="property1" data-brand-code="511032" data-brand-name="노무 업무"><a href="javascript:void(0);">노무 업무</a></li>
+							<li class="dev-chk-bt-ty1" data-dir="3949" data-obj="1" data-type="property1" data-brand-code="511084" data-brand-name="급여 관리"><a href="javascript:void(0);">급여 관리</a></li>
+							<li class="dev-chk-bt-ty1" data-dir="3949" data-obj="1" data-type="property1" data-brand-code="511126" data-brand-name="컨설팅"><a href="javascript:void(0);">컨설팅</a></li>
+						</ul>
+					</div>
+
+					<a href="#" class="btn-tab-toggle on">탭토글 버튼</a>
+				</div>
+
+				<div class="osc-tab-con tab3" style="display: none;">
+					<div class="tab-total-menu dev-result-box" style="display:none;">
+						<strong>상표권/특허권</strong>
+						<ul class="m1 dev-dep1"></ul>
+						<ul class="m2"></ul>
+						<ul class="m3"></ul>
+						<ul class="m4"></ul>
+						<ul class="m5"></ul>
+						<ul class="m6"></ul>
+						<ul class="m7"></ul>
+						<ul class="m8"></ul>
+						<ul class="m9"></ul>
+						<ul class="m10"></ul>
+					</div>
+
+					<div class="tab-detail-menu fst">
+						<span class="detail-tit">유형</span>
+						<ul>
+							<li class="on dev-chk-bt-ty2 menu-all dev-chk-bt-all1" data-dir="3950" data-obj="1" data-type="property1" data-brand-code="all"><a href="javascript:void(0);">전체</a></li>
+							<li class="dev-chk-bt-ty1" data-dir="3950" data-obj="1" data-type="property1" data-brand-code="511033" data-brand-name="상표권"><a href="javascript:void(0);">상표권</a></li>
+							<li class="dev-chk-bt-ty1" data-dir="3950" data-obj="1" data-type="property1" data-brand-code="511085" data-brand-name="특허권"><a href="javascript:void(0);">특허권</a></li>
+						</ul>
+					</div>
+
+					<div class="tab-detail-menu fst">
+						<span class="detail-tit">출원/등록</span>
+						<ul>
+							<li class="on dev-chk-bt-ty2 menu-all dev-chk-bt-all2" data-dir="3951" data-obj="2" data-type="property2" data-brand-code="all"><a href="javascript:void(0);">전체</a></li>
+							<li class="dev-chk-bt-ty1" data-dir="3951" data-obj="2" data-type="property2" data-brand-code="511034" data-brand-name="출원"><a href="javascript:void(0);">출원</a></li>
+							<li class="dev-chk-bt-ty1" data-dir="3951" data-obj="2" data-type="property2" data-brand-code="511086" data-brand-name="등록"><a href="javascript:void(0);">등록</a></li>
+						</ul>
+					</div>
+
+					<a href="#" class="btn-tab-toggle on">탭토글 버튼</a>
+				</div>
+
+				<div class="osc-tab-con tab4" style="display: none;">
+					<div class="tab-total-menu dev-result-box" style="display:none;">
+						<strong>번역/통역</strong>
+						<ul class="m1 dev-dep1"></ul>
+						<ul class="m2"></ul>
+						<ul class="m3"></ul>
+						<ul class="m4"></ul>
+						<ul class="m5"></ul>
+						<ul class="m6"></ul>
+						<ul class="m7"></ul>
+						<ul class="m8"></ul>
+						<ul class="m9"></ul>
+						<ul class="m10"></ul>
+					</div>
+
+					<div class="tab-detail-menu fst">
+						<span class="detail-tit">언어</span>
+						<ul>
+							<li class="on dev-chk-bt-ty2 menu-all dev-chk-bt-all1" data-dir="3953" data-obj="1" data-type="property1" data-brand-code="all"><a href="javascript:void(0);">전체</a></li>
+							<li class="dev-chk-bt-ty1" data-dir="3953" data-obj="1" data-type="property1" data-brand-code="511036" data-brand-name="영어"><a href="javascript:void(0);">영어</a></li>
+							<li class="dev-chk-bt-ty1" data-dir="3953" data-obj="1" data-type="property1" data-brand-code="511150" data-brand-name="기타"><a href="javascript:void(0);">기타</a></li>
+							<li class="dev-chk-bt-ty1" data-dir="3953" data-obj="1" data-type="property1" data-brand-code="511127" data-brand-name="일본어"><a href="javascript:void(0);">일본어</a></li>
+							<li class="dev-chk-bt-ty1" data-dir="3953" data-obj="1" data-type="property1" data-brand-code="511088" data-brand-name="중국어"><a href="javascript:void(0);">중국어</a></li>
+						</ul>
+					</div>
+
+					<div class="tab-detail-menu fst">
+						<span class="detail-tit">유형</span>
+						<ul>
+							<li class="on dev-chk-bt-ty2 menu-all dev-chk-bt-all2" data-dir="3952" data-obj="2" data-type="property2" data-brand-code="all"><a href="javascript:void(0);">전체</a></li>
+							<li class="dev-chk-bt-ty1" data-dir="3952" data-obj="2" data-type="property2" data-brand-code="511035" data-brand-name="번역"><a href="javascript:void(0);">번역</a></li>
+							<li class="dev-chk-bt-ty1" data-dir="3952" data-obj="2" data-type="property2" data-brand-code="511087" data-brand-name="통역"><a href="javascript:void(0);">통역</a></li>
+						</ul>
+					</div>
+
+					<a href="#" class="btn-tab-toggle on">탭토글 버튼</a>
+				</div>
+
+
+				<form id="searchForm" name="searchForm" action="/casting/service/index.php">
+					<input type="hidden" name="lcate" id="lcate" value="658">
+					<input type="hidden" name="cate_mode" value="list_v2">
+					<input type="hidden" id="p_brand" name="p_brand" value="">
+					<input type="hidden" id="p_price" name="p_price" value="">
+					<input type="hidden" id="p_delivery" name="p_delivery" value="">
+					<input type="hidden" id="p_property1" name="p_property1" value="">
+					<input type="hidden" id="p_property2" name="p_property2" value="">
+					<input type="hidden" id="p_property3" name="p_property3" value="">
+					<input type="hidden" id="p_property4" name="p_property4" value="">
+					<input type="hidden" id="p_property5" name="p_property5" value="">
+					<input type="hidden" id="p_property6" name="p_property6" value="">
+					<input type="hidden" id="p_property7" name="p_property7" value="">
+					<input type="hidden" id="p_property8" name="p_property8" value="">
+					<input type="hidden" id="p_property9" name="p_property9" value="">
+					<input type="hidden" id="p_property10" name="p_property10" value="">
+					<input type="hidden" id="CURRENT_PAGE" name="CURRENT_PAGE" value="1">
+
+					<div class="chksel-tit2">서비스 목록 <span class="dev_total_cnt">(7)</span></div>
+
+					<div class="srv-detail-list">
+						<ul id="dev_srv_detail_list">
+							<li>
+								<a href="/casting/service/?cate_mode=view_renew&amp;no=933&amp;lcate=658">
+									<div class="srv-thum">
+										<img src="/casting/data/casting/Product_images/2021-09/1631088805.jpg" onerror="this.src='https://mall.castingn.com/img/no_img.jpg'">
+									</div>
+								</a><div class="srv-bottom">
+
+								<a href="/casting/service/?cate_mode=view_renew&amp;no=933&amp;lcate=658">
+									<div class="srv-line1">
+										<div class="srv-co-thum">
+											<img src="https://mall.castingn.com/img/no_img.jpg" onerror="this.src='https://mall.castingn.com/img/no_img.jpg'">
+										</div>
+										<div class="srv-co-info">
+											<strong class="srv-co-name">뉴젠피엔피</strong>
+											<span class="srv-rating">
+												<i class="ico-star"></i>
+												상품만족도 8.5
+												<b class="rating-num">(0건)</b>
+											</span>
+										</div>
+									</div>
+									<div class="srv-line2">연말정산 대행 서비스</div>
+									<div class="srv-line3">예상 작업일: 일</div>
+									<div class="srv-line4">
+										<ul>
+											<li class="srv-price1">
+												<span>일반판매가</span>
+												<span>  10,000원</span>
+											</li>
+											<li class="srv-price2">
+												<span>업무마켓9가</span>   8,800원
+											</li>
+											<li class="srv-price3">
+												<span>
+													<i class="ico-pin"></i>
+													스마트핀클럽가
+												</span>
+												<span> 8,800원</span>
+											</li>
+										</ul>
+									</div>
+								</a>
+								<a href="javascript:void(0)" class="srv-bt">
+									<span class="connect"></span>전문업체와 직접상담
+								</a>
+								<div class="time-tt">상담가능시간:09시~17시</div>
+							</div>
+							</li>
+							<li>
+								<a href="/casting/service/?cate_mode=view_renew&amp;no=933&amp;lcate=658">
+									<div class="srv-thum">
+										<img src="/casting/data/casting/Product_images/2021-09/1631088805.jpg" onerror="this.src='https://mall.castingn.com/img/no_img.jpg'">
+									</div>
+								</a><div class="srv-bottom">
+
+								<a href="/casting/service/?cate_mode=view_renew&amp;no=933&amp;lcate=658">
+									<div class="srv-line1">
+										<div class="srv-co-thum">
+											<img src="https://mall.castingn.com/img/no_img.jpg" onerror="this.src='https://mall.castingn.com/img/no_img.jpg'">
+										</div>
+										<div class="srv-co-info">
+											<strong class="srv-co-name">뉴젠피엔피</strong>
+											<span class="srv-rating">
+												<i class="ico-star"></i>
+												상품만족도 8.5
+												<b class="rating-num">(0건)</b>
+											</span>
+										</div>
+									</div>
+									<div class="srv-line2">연말정산 대행 서비스</div>
+									<div class="srv-line3">예상 작업일: 일</div>
+									<div class="srv-line4">
+										<ul>
+											<li class="srv-price1">
+												<span>일반판매가</span>
+												<span>  10,000원</span>
+											</li>
+											<li class="srv-price2">
+												<span>업무마켓9가</span>   8,800원
+											</li>
+											<li class="srv-price3">
+												<span>
+													<i class="ico-pin"></i>
+													스마트핀클럽가
+												</span>
+												<span> 8,800원</span>
+											</li>
+										</ul>
+									</div>
+								</a>
+								<a href="javascript:void(0)" class="srv-bt">
+									<span class="connect"></span>전문업체와 직접상담
+								</a>
+								<div class="time-tt">상담가능시간:09시~17시</div>
+							</div>
+							</li>
+							<li>
+								<a href="/casting/service/?cate_mode=view_renew&amp;no=933&amp;lcate=658">
+									<div class="srv-thum">
+										<img src="/casting/data/casting/Product_images/2021-09/1631088805.jpg" onerror="this.src='https://mall.castingn.com/img/no_img.jpg'">
+									</div>
+								</a><div class="srv-bottom">
+
+								<a href="/casting/service/?cate_mode=view_renew&amp;no=933&amp;lcate=658">
+									<div class="srv-line1">
+										<div class="srv-co-thum">
+											<img src="https://mall.castingn.com/img/no_img.jpg" onerror="this.src='https://mall.castingn.com/img/no_img.jpg'">
+										</div>
+										<div class="srv-co-info">
+											<strong class="srv-co-name">뉴젠피엔피</strong>
+											<span class="srv-rating">
+												<i class="ico-star"></i>
+												상품만족도 8.5
+												<b class="rating-num">(0건)</b>
+											</span>
+										</div>
+									</div>
+									<div class="srv-line2">연말정산 대행 서비스</div>
+									<div class="srv-line3">예상 작업일: 일</div>
+									<div class="srv-line4">
+										<ul>
+											<li class="srv-price1">
+												<span>일반판매가</span>
+												<span>  10,000원</span>
+											</li>
+											<li class="srv-price2">
+												<span>업무마켓9가</span>   8,800원
+											</li>
+											<li class="srv-price3">
+												<span>
+													<i class="ico-pin"></i>
+													스마트핀클럽가
+												</span>
+												<span> 8,800원</span>
+											</li>
+										</ul>
+									</div>
+								</a>
+								<a href="javascript:void(0)" class="srv-bt">
+									<span class="connect"></span>전문업체와 직접상담
+								</a>
+								<div class="time-tt">상담가능시간:09시~17시</div>
+							</div>
+							</li>
+							<li>
+								<a href="/casting/service/?cate_mode=view_renew&amp;no=933&amp;lcate=658">
+									<div class="srv-thum">
+										<img src="/casting/data/casting/Product_images/2021-09/1631088805.jpg" onerror="this.src='https://mall.castingn.com/img/no_img.jpg'">
+									</div>
+								</a><div class="srv-bottom">
+
+								<a href="/casting/service/?cate_mode=view_renew&amp;no=933&amp;lcate=658">
+									<div class="srv-line1">
+										<div class="srv-co-thum">
+											<img src="https://mall.castingn.com/img/no_img.jpg" onerror="this.src='https://mall.castingn.com/img/no_img.jpg'">
+										</div>
+										<div class="srv-co-info">
+											<strong class="srv-co-name">뉴젠피엔피</strong>
+											<span class="srv-rating">
+												<i class="ico-star"></i>
+												상품만족도 8.5
+												<b class="rating-num">(0건)</b>
+											</span>
+										</div>
+									</div>
+									<div class="srv-line2">연말정산 대행 서비스</div>
+									<div class="srv-line3">예상 작업일: 일</div>
+									<div class="srv-line4">
+										<ul>
+											<li class="srv-price1">
+												<span>일반판매가</span>
+												<span>  10,000원</span>
+											</li>
+											<li class="srv-price2">
+												<span>업무마켓9가</span>   8,800원
+											</li>
+											<li class="srv-price3">
+												<span>
+													<i class="ico-pin"></i>
+													스마트핀클럽가
+												</span>
+												<span> 8,800원</span>
+											</li>
+										</ul>
+									</div>
+								</a>
+								<a href="javascript:void(0)" class="srv-bt">
+									<span class="connect"></span>전문업체와 직접상담
+								</a>
+								<div class="time-tt">상담가능시간:09시~17시</div>
+							</div>
+							</li>
+							<li>
+								<a href="/casting/service/?cate_mode=view_renew&amp;no=933&amp;lcate=658">
+									<div class="srv-thum">
+										<img src="/casting/data/casting/Product_images/2021-09/1631088805.jpg" onerror="this.src='https://mall.castingn.com/img/no_img.jpg'">
+									</div>
+								</a><div class="srv-bottom">
+
+								<a href="/casting/service/?cate_mode=view_renew&amp;no=933&amp;lcate=658">
+									<div class="srv-line1">
+										<div class="srv-co-thum">
+											<img src="https://mall.castingn.com/img/no_img.jpg" onerror="this.src='https://mall.castingn.com/img/no_img.jpg'">
+										</div>
+										<div class="srv-co-info">
+											<strong class="srv-co-name">뉴젠피엔피</strong>
+											<span class="srv-rating">
+												<i class="ico-star"></i>
+												상품만족도 8.5
+												<b class="rating-num">(0건)</b>
+											</span>
+										</div>
+									</div>
+									<div class="srv-line2">연말정산 대행 서비스</div>
+									<div class="srv-line3">예상 작업일: 일</div>
+									<div class="srv-line4">
+										<ul>
+											<li class="srv-price1">
+												<span>일반판매가</span>
+												<span>  10,000원</span>
+											</li>
+											<li class="srv-price2">
+												<span>업무마켓9가</span>   8,800원
+											</li>
+											<li class="srv-price3">
+												<span>
+													<i class="ico-pin"></i>
+													스마트핀클럽가
+												</span>
+												<span> 8,800원</span>
+											</li>
+										</ul>
+									</div>
+								</a>
+								<a href="javascript:void(0)" class="srv-bt">
+									<span class="connect"></span>전문업체와 직접상담
+								</a>
+								<div class="time-tt">상담가능시간:09시~17시</div>
+							</div>
+							</li>
+						</ul>
+
+						<div class="paging" id="paging">
+							<span class="current">1</span>
+							<a href="javascript:movePage(2)">2</a>
+							<a href="javascript:movePage(3)">3</a>
+							<a href="javascript:movePage(4)">4</a>
+							<a href="javascript:movePage(5)">5</a>
+							<a href="javascript:void(0);" class="page-more" style="cursor:default;">...</a>
+							<a href="javascript:movePage(43)">43</a>
+							<a href="javascript:movePage(11)" class="page-next">다음 페이지</a>
+						</div>
+					</div>
+
+
+				</form>
+
+			</div>
+		</section>
+
+
+
+
+
+	</div>
+	<!-- //container -->
+
+	<!-- footer -->
+	<div id="footer">
+		<div class="section">
+			<div class="foot-menu">
+				<a href="#"><span>1:1문의</span></a>
+				<a href="#"><span>고객센터</span></a>
+				<a href="#"><span>파트너센터</span></a>
+			</div>
+			<div class="foot-etc">
+				<a href="#"><span>회사소개</span></a>
+				<a href="#"><span>서비스소개</span></a>
+				<a href="#"><span>안전거래보장</span></a>
+				<a href="#"><span>이용약관</span></a>
+				<a href="#"><span class="t-red">개인정보처리방침</span></a>
+				<a href="#"><span>공지사항</span></a>
+			</div>
+			<div class="foot-cs">
+				<div class="cs-num">1644 <i class="circle"></i> 2653</div>
+				<div class="cs-time">
+					<dl>
+						<dt>평일</dt>
+						<dd>08:30 ~ 17:30</dd>
+					</dl>
+					<dl>
+						<dt>점심시간</dt>
+						<dd>12:00~13:00</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="foot-info">
+				<strong>㈜캐스팅엔     CEO : 용성남, 최준혁</strong> <br/><br/>
+				통신판매신고 : 제 2019-인천부평-1343 호 고객섬김센터 : Tel. 1644-2653 Fax. 070-4032-2523 사업자등록번호 : 423-86-00075 [사업자정보]<br/>
+				주소 : 서울지점 - 서울특별시 마포구 백범로31길 21 서울창업허브 809호 | 본점 - 인천광역시 부평구 대정로 66, 4층 408호(부평동, 다운타운일레븐)
+			</div>
+			<p class="foot-copy">ⓒ 2017 CastingN. All rights reserved.</p>
+			<p class="foot-logo"><img src="https://resource.mall.castingn.com/static/images/foot-logo.png" alt=""></p>
+		</div>
+	</div>
+	<!-- //footer -->
+
+	<div class="right-fix m-hide">
+		<a href="#" class="btn-estimate"><span>비<br/>교<br/>견<br/>적</span><i class="ico-pen"></i></a>
+		<button type="button" class="btn-top"><img src="https://resource.mall.castingn.com/static/images/btn-top.png" alt=""></button>
+	</div><!-- //right-fix -->
+</div>
+
+
+<div class="layer-bg" style="display:none;">
+	<div class="layer-pop osc-pop dev_pop">
+		<div class="pop-head">
+			<strong>A사 공유킥보드 앱 개발</strong>
+			<span>프로젝트 기간  4개월 <b>|</b> 견적 개수  4개</span>
+		</div>
+		<div class="pop-con">
+			<div class="osc-co-area">
+				<ul class="co-list">
+					<li class="co-type1">
+						<strong>A사</strong>
+						<span>총 56,000,000원</span>
+				</ul>
+			</div>
+
+			<div class="osc-tbl-area">
+				<table>
+					<colgroup>
+						<col width="17%">
+					</colgroup>
+					<thead>
+					<tr>
+						<th scope="col" class="th-tit">업무 항목 및 내용</th>
+						<th scope="col" class="b-type1">A사</th>
+					</tr>
+					</thead>
+					<tfoot>
+					<tr>
+						<td class="tdf-tit">최종 견적 금액</td>
+						<td>56,000,000</td>
+					</tr>
+					</tfoot>
+					<tbody>
+					<tr>
+						<td class="td-tit">기획비 <br> 작가, 콘티, 스토리보드</td>
+						<td>7,200,000</td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="pop-btn-area">
+			<button type="button">확인</button>
+		</div>
+		<a href="#" class="btn-close">팝업창 닫기</a>
+	</div>
+
+</div>
+
+
+<script>
+    function quickChat( c_uid, p_uid, c_id ){
+        var uPk = ":"+c_uid+"";//고객PK:파트너PK
+        var stndCd = p_uid;//상품아이디
+        var cmChatType = "CR10";//채팅 타입, 고정
+        var svcCd = "SVC10";//서비스 구분, 고정
+        var pUpk = ":"+c_id+"";//로그인 아이디
+        var P_uid = p_uid;//품목코드
+        var options = 'top=10, left=10, width=1600, height=1100, status=no, menubar=no, toolbar=no, resizable=no';
+
+        window.open("https://chat.castingn.com:28443/customer?uPk="+ uPk +"&stndCd="+ stndCd +"&cmChatType="+ cmChatType +"&svcCd="+ svcCd +"&pUpk="+ pUpk +"&P_uid="+P_uid+"","chat", options);
+    }
+
+    $(document).ready(function(){
+
+        $('.header-tit').text('전문서비스');
+
+        $('.gnb-left .btn-cate-view').on('click',function(){
+            $('.all-cate-wrap').toggleClass('show-cate');
+            $(this).toggleClass('active-gnb');
+
+        });
+
+        $('.all-cate-wrap .btn-close').on('click',function(){
+            $('.all-cate-wrap').removeClass('show-cate');
+        });
+
+        $('.detail-tab-area .btn-tab').click(function(){
+            var tab_id = $(this).attr('data-tab');
+
+            $('.detail-tab-area .btn-tab').removeClass('active-tab');
+            $('.tab-cont').removeClass('active-cont');
+
+            $(this).addClass('active-tab');
+            $("#"+tab_id).addClass('active-cont');
+
+            $( ".faq-cont dl" ).accordion({
+                heightStyle: "content"
+            });
+
+        });
+
+        $('.option-slc-box .btn-slc-op').on('click',function(){
+            $(this).parents('.option-slc-box').toggleClass('open-slc');
+        });
+
+
+        $('.btn-wish').on('click',function(){
+            $(this).toggleClass('on');
+        });
+        $('.tab-cont .btn-more-view').on('click',function(){
+            $(this).prev('.cont-detail-img').addClass('all-view');
+            $(this).hide();
+        });
+        $('.detail-right-sec .btn-right-more').on('click',function(){
+            $(this).parents('.detail-right-sec').toggleClass('right-all-view');
+        });
+
+        //외주,아웃소싱 체크버튼 셀렉트
+        var csBox = $('.chksel-box');
+        var tblBox = $('.chksel-tbl table td')
+
+        csBox.each(function(){
+            var csBt = $(this).find('.dev-chk-bt');
+            csBt.on("click", function(e){
+                e.preventDefault();
+                csBt.removeClass('on');
+                $(this).addClass('on');
+
+                var cateCode = $(this).data('catecode');
+                $('#lcate').val(cateCode);
+
+                var cateName = $(this).data('catename');
+                $('.result-box .dep1').text(cateName);
+                $('.result-box .dep2').remove();
+
+                callItemList();
+
+            });
+        });
+
+        //옵션 전체 선택 Add
+        $(document).on("click",".dev-chk-bt-ty2",function(){
+
+            var p_obj = $(this).attr('data-obj');
+
+            if($(this).hasClass("on")) {
+                //$(this).removeClass("on");
+            } else {
+                $(this).addClass('on');
+
+                $(".dev-chk-bt-ty1[data-obj='"+p_obj+"']").each(function(){
+                    //$(this).remove();
+                    $(this).removeClass("on");
+                });
+
+                $(".dev-chk-bt-ty1[data-obj='"+p_obj+"']").each(function(){
+                    $(this).removeClass("on");
+
+                    $(".dev-result-box .dev-dep1 li[data-obj='"+p_obj+"']").each(function(){
+                        $(this).remove();
+                    });
+
+                });
+
+            }
+
+
+            callItemList(1);
+        });
+
+        //옵션 선택 Add
+        $(document).on("click",".dev-chk-bt-ty1",function(){
+            var p_brand_name = $(this).attr('data-brand-name');
+            var p_brand_code = $(this).attr('data-brand-code');
+            var p_obj = $(this).attr('data-obj');
+            var data_type = $(this).attr('data-type');
+
+            if($(this).hasClass("on")) {
+                $(this).removeClass("on");
+                //삭제해야 됨.
+                $(".dev-result-box .dev-dep1 li[data-brand-code='"+p_brand_code+"']").each(function(){
+                    $(this).remove();
+                });
+            } else {
+                $(this).addClass('on');
+                //$('.dev-result-box .dev-dep1').after("<ul class='m1' data-type='"+data_type+"' data-brand-code='"+p_brand_code+"'>"+p_brand_name+"<a href='javascript:void(0);' class='menu-close'>메뉴 닫기</a></ul>");
+                $('.dev-result-box .dev-dep1').append("<li class='dep2' data-obj='"+p_obj+"' data-type='"+data_type+"' data-brand-code='"+p_brand_code+"'><span>" + p_brand_name + "</span><a href='javascript:void(0);' class='btn-menu-close'>메뉴닫기</a></li>");
+                $('.dev-chk-bt-all'+p_obj).removeClass("on");
+            }
+            callItemList(1);
+        });
+
+        //옵션 선택 Del
+        $(document).on("click",".dev-result-box .dev-dep1 li .btn-menu-close",function(){
+            $(this).parents('li').remove();
+            var p_brand_code = $(this).parents().attr('data-brand-code');
+            //속성값 선택도 삭제함
+            $(".dev-chk-bt-ty1[data-brand-code="+p_brand_code+"]").each(function(){
+                $(this).removeClass("on");
+            });
+            callItemList(1);
+        });
+
+        //페이징
+        $(document).on("click",".dev_page_no",function(){
+            var curr_page_no = $(this).attr('data-page-no');
+            $('#CURRENT_PAGE').val(curr_page_no);
+
+            var offset = $('.chksel-box').offset(); //선택한 태그의 위치를 반환
+            $('html').animate({scrollTop : offset.top}, 0);//0.7 sec
+            callItemList();
+        });
+
+        //상품 리스트 AJAX로 구현
+        function callItemList(flag) {
+            //브랜드 선택값 세팅
+            //가격
+            //배송옵션
+            var selected_brand = "";
+            var selected_price = "";
+            var selected_delivery = "";
+            var selected_property1 = "";
+            var selected_property2 = "";
+            var selected_property3 = "";
+            var selected_property4 = "";
+            var selected_property5 = "";
+            var selected_property6 = "";
+            var selected_property7 = "";
+            var selected_property8 = "";
+            var selected_property9 = "";
+            var selected_property10 = "";
+
+            $('.dep2').each(function() {
+                if( $(this).attr('data-type') == 'brand'){
+                    selected_brand += $(this).attr('data-brand-code')+"|";
+                }
+                if( $(this).attr('data-type') == 'price'){
+                    selected_price += $(this).attr('data-brand-code')+"|";
+                }
+
+                if( $(this).attr('data-type') == 'property1'){
+                    selected_property1 += $(this).attr('data-brand-code')+"|";
+                }
+                if( $(this).attr('data-type') == 'property2'){
+                    selected_property2 += $(this).attr('data-brand-code')+"|";
+                }
+                if( $(this).attr('data-type') == 'property3'){
+                    selected_property3 += $(this).attr('data-brand-code')+"|";
+                }
+                if( $(this).attr('data-type') == 'property4'){
+                    selected_property4 += $(this).attr('data-brand-code')+"|";
+                }
+                if( $(this).attr('data-type') == 'property5'){
+                    selected_property5 += $(this).attr('data-brand-code')+"|";
+                }
+                if( $(this).attr('data-type') == 'property6'){
+                    selected_property6 += $(this).attr('data-brand-code')+"|";
+                }
+                if( $(this).attr('data-type') == 'property7'){
+                    selected_property7 += $(this).attr('data-brand-code')+"|";
+                }
+                if( $(this).attr('data-type') == 'property8'){
+                    selected_property8 += $(this).attr('data-brand-code')+"|";
+                }
+                if( $(this).attr('data-type') == 'property9'){
+                    selected_property9 += $(this).attr('data-brand-code')+"|";
+                }
+                if( $(this).attr('data-type') == 'property10'){
+                    selected_property10 += $(this).attr('data-brand-code')+"|";
+                }
+                if( $(this).attr('data-type') == 'delivery'){
+                    selected_delivery += $(this).attr('data-brand-code')+"|";
+                }
+            });
+
+            $('#p_brand').val(selected_brand);
+            $('#p_price').val(selected_price);
+            $('#p_delivery').val(selected_delivery);
+            $('#p_property1').val(selected_property1);
+            $('#p_property2').val(selected_property2);
+            $('#p_property3').val(selected_property3);
+            $('#p_property4').val(selected_property4);
+            $('#p_property5').val(selected_property5);
+            $('#p_property6').val(selected_property6);
+            $('#p_property7').val(selected_property7);
+            $('#p_property8').val(selected_property8);
+            $('#p_property9').val(selected_property9);
+            $('#p_property10').val(selected_property10);
+
+            var params = $('#searchForm').serialize();
+
+            $.ajax({
+                url: '/casting/service/goods_info_data/goods_list_renew_data.php',
+                data: params,
+                type: 'POST',
+                dataType:'json',
+                success: function (json) {
+                    var data = json.list;
+                    var data2 = json.list2;
+
+                    var totalCount = json.totalCount;
+                    //totalCount = comma(totalCount.toString());
+                    var rStr_attr = '';//속성 세팅
+                    var totalCnt = comma(totalCount);
+                    var rStr_list = '';//리스트
+                    var rStr_page = '';//페이지
+
+                    //속성 세팅
+                    if( flag == 1 ) {
+                    } else {
+                        //rStr_attr += makeAttrList(data2);
+
+                        //console.log(rStr_attr);
+
+                        //$('#dev_attr_list').html(rStr_attr);
+                        //$('.osc-tab-menu').append(rStr_attr);
+                    }
+
+                    //카운트
+                    $('.dev_total_cnt').text("("+totalCnt+")");
+
+                    //상품리스트
+                    rStr_list += makeItemList(data);
+                    $('#dev_srv_detail_list').html(rStr_list);
+
+                    //페이징
+                    rStr_page += makePaging(totalCount);
+                    $('.paging').html(rStr_page);
+
+                },
+                error: function (xhr) {
+                    console.log(xhr);
+                }
+            });
+        }
+
+        function makeItemList(data) {
+            var rStr = '';
+
+            if(data.length > 0) {
+                for (var i = 0; i < data.length; i++) {
+                    var item = data[i];
+
+                    var P_discount_rate1 = Math.round((1 - (eval(item.standard_price) / eval(item.P_price))) * 100,1);
+                    var P_discount_add_price = Math.round(( eval(item.standard_price) * 3 / 100 )/1000)*1000;//백원단위 절사
+
+                    rStr += '<li>';
+                    rStr += '<a href="/casting/service/?cate_mode=view_renew&no='+item.P_uid+'&lcate='+item.P_dir+'">';
+                    rStr += '<div class="srv-thum"><img src="/casting/data/casting/Product_images/'+ item.P_image_dir+'/'+ item.P_image+'" onerror="this.src=\'https://mall.castingn.com/img/no_img.jpg\'"></div>';
+                    rStr += '<div class="srv-bottom">                                                                                                                       ';
+                    rStr += '    <div class="srv-line1">                                                                                                                    ';
+                    rStr += '        <div class="srv-co-thum"><img src="/casting/data/casting/Bizimg/'+item.C_logoimg+'" onerror="this.src=\'https://mall.castingn.com/img/no_img.jpg\'"></div>';
+                    rStr += '        <div class="srv-co-info">                                                                                                              ';
+                    rStr += '            <strong class="srv-co-name">' + item.C_name + '</strong>                                                                                  ';
+                    rStr += '            <span class="srv-rating"><i class="ico-star"></i> 상품만족도 ' + item.Review_point + ' <b class="rating-num">(' + item.Review_cnt + '건)</b></span>';
+                    rStr += '        </div>                                                                                                                                 ';
+                    rStr += '    </div>                                                                                                                                     ';
+                    rStr += '    <div class="srv-line2">' + item.P_name.substring(0,20) + '</div>                                                                         ';
+                    rStr += '    <div class="srv-line3">예상 작업일: ' + item.P_workdate + '일</div>';
+                    rStr += '    <div class="srv-line4">                                                                                                                    ';
+                    rStr += '        <ul>                                                                                                                                   ';
+                    rStr += '            <li class="srv-price1"><span>일반판매가</span> <span>  ' + comma(item.P_price) + '원</span></li>';
+                    rStr += '            <li class="srv-price2"><span>업무마켓9가</span>   ' + comma(item.standard_price) + '원</span></li>';
+                    //rStr += '            <li class="srv-price3"><span><i class="ico-pin"></i> 스마트핀클럽가 <b> ' + (P_discount_rate1+3) + '%</b></span> <span> ' + comma(item.standard_price - P_discount_add_price ) + '원</span></li>';
+                    rStr += '            <li class="srv-price3"><span><i class="ico-pin"></i> 스마트핀클럽가 </span> <span> ' + comma(item.standard_price - P_discount_add_price ) + '원</span></li>';
+                    rStr += '        </ul>                                                                                                                                  ';
+                    rStr += '    </div>                                                                                                                                     ';
+                    rStr += '    </a>                                                                                                                                       ';
+
+                    rStr += '<a href="javascript:alert(\"로그인후 이용해주세요.\");loginFormOn();" class="srv-bt"><span class="connect"></span>전문업체와 직접상담</a>';
+                    rStr += '   <div class="time-tt">상담가능시간:09시~17시</div>';
+                    rStr += '   </div>';
+                    rStr += '</li>';
+
+                }
+            } else {
+                rStr += '<div class="goods-no-list">';
+                rStr += '    <div class="no-list-alert">';
+                rStr += '        <i class="ico-no"></i>';
+                rStr += '        <span>검색 결과가 존재하지 않습니다.</span>';
+                rStr += '    </div>';
+                rStr += '</div>';
+            }
+            return rStr;
+        }
+
+        function makeAttrList(data2) {
+            var rStr = '';
+            var osc_cnt = 1;
+
+            console.log("osc_cnt:"+osc_cnt)
+            //rStr += '<div class="tab-detail-menu fst" id="dev_attr_list">';
+
+            rStr += '<div class="osc-tab-con tab'+osc_cnt+'">';
+            rStr += '    <div class="tab-total-menu" style="display:none;">';
+            rStr += '        <strong>앱개발</strong>';
+            rStr += '        <ul class="m1"></ul>';
+            rStr += '        <ul class="m2"></ul>';
+            rStr += '        <ul class="m3"></ul>';
+            rStr += '    </div>';
+
+            if(data2.length > 0) {
+                var attrseq = 1;
+                for (var i = 0; i < data2.length; i++) {
+                    var item = data2[i];
+                    rStr += '<div class="tab-detail-menu fst" id="dev_attr_list">';
+                    rStr += '<span class="detail-tit">주요기능</span>';
+                    rStr += '<ul>';
+                    rStr += '<li class="on"><a href="javascript:void(0);">전체</a></li>';
+
+                    var rStr2 = "";
+                    var attr_item = "";
+                    for (var j = 0; j < item.list22.length; j++) {
+                        attr_item = item.list22[j];
+                        rStr2 += '<li class=""><a href="javascript:void(0);" class="chk-bt-ty1" data-type="property' + attrseq + '" data-brand-code="' + attr_item.DPV_PK + '" data-brand-name="' + attr_item.DPV_NAME + '">' + attr_item.DPV_NAME + '</a></li>';
+                    }
+                    rStr += rStr2;
+
+                    rStr += '</ul>';
+                    rStr += '</div>';
+                    attrseq++;
+                }
+
+            }
+            //rStr += '</ul>';
+            //rStr += '</div>';
+
+            rStr += '<a href="#" class="btn-tab-toggle on">탭토글 버튼</a>';
+            rStr += '</div>';
+
+            osc_cnt++;
+
+            return rStr;
+        }
+
+        //모바일 여부
+        function isMobile() {return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);}
+
+        function makePaging(totalCount){
+            var rStr = '';
+
+            var MAX_PAGE = 10;
+            //var MAX_ROWS = $('#MAX_ROWS option:selected').val();
+            var MAX_ROWS = 9;
+            var HalfMaxPage = 0;
+            //var HeadBackIMG = "<img src='/img/page/prevEnd01.gif'>";
+            var BackIMG = "<img src='/img/page/prev01.gif'>";
+            var NextIMG = "<img src='/img/page/next01.gif'>";
+            //var TailNextIMG = "<img src='/img/page/nextEnd01.gif'>";
+            var CURRENT_PAGE = $('#CURRENT_PAGE').val();
+            var TotalPages = eval( Math.ceil( totalCount / MAX_ROWS ) );
+
+            var LinkFirstPage = 1;
+            var BackMaxPage = 1;
+            var LinkLastPage = 1;
+            var PageNo = 1;
+            var NextMaxPage = 1;
+
+            if( totalCount > 0 ){
+                if(isMobile()) MAX_PAGE = MAX_PAGE / 2;
+                //rStr += "<div class='paginate'>";
+
+                HalfMaxPage = eval(Math.floor( MAX_PAGE / 2 ));	 // 한 화면당 보여줄 페이지 수를 반으로 나눈다.
+
+                //rStr += "<a href='javascript:void(0);' OnFocus='this.blur();' class='prevEnd page_no' data-page-no='1'>"+HeadBackIMG+"</a>";
+
+                if( CURRENT_PAGE > MAX_PAGE ){
+                    BackMaxPage = CURRENT_PAGE - MAX_PAGE;
+                    //echo(" BackMaxPage : $BackMaxPage <br>");
+                    rStr += "<a href='javascript:void(0);' OnFocus='this.blur();' class='prev dev_page_no' data-page-no='"+BackMaxPage+"'>"+BackIMG+"</a>";
+                }
+
+                //rStr += "<span>";
+                if( CURRENT_PAGE < MAX_PAGE ) {
+                    LinkFirstPage = 1;
+                } else if( CURRENT_PAGE >= TotalPages - HalfMaxPage ) {
+                    LinkFirstPage = TotalPages - MAX_PAGE + 1;
+                } else {
+                    LinkFirstPage = CURRENT_PAGE - HalfMaxPage;
+                }
+
+                if( TotalPages < MAX_PAGE ) {
+                    LinkLastPage = TotalPages;
+                } else {
+                    LinkLastPage = MAX_PAGE;
+                }
+
+                for( i = 0; i < LinkLastPage; i++ ){
+
+                    PageNo = LinkFirstPage + i;
+                    if( PageNo != CURRENT_PAGE ){
+                        rStr += "<a href='javascript:void(0);' class='dev_page_no' data-page-no='"+PageNo+"' OnFocus='this.blur();'>"+PageNo+"</a>";
+                    } else {
+                        rStr += "<span class='current'>"+PageNo+"</span>";
+                    }
+                }
+
+                //rStr += "</span>";
+
+                if( CURRENT_PAGE <= TotalPages - MAX_PAGE ){
+                    NextMaxPage = CURRENT_PAGE + MAX_PAGE ;
+                    rStr += "<a href='javascript:void(0);' OnFocus='this.blur();' class='next dev_page_no' data-page-no='"+NextMaxPage+"'>"+NextIMG+"</a>";
+                }
+
+                //rStr += "<a href='javascript:void(0);' OnFocus='this.blur();'  class='nextEnd dev_page_no' data-page-no='"+TotalPages+"'>"+TailNextIMG+"</a>";
+                //rStr += "</div>";
+            }
+            return rStr;
+        }
+
+        //콤마찍기
+        function comma(str) {
+            str = String(str);
+            return str.replace(/(\d)(?=(?:\d{3})+(?!\d))/g, '$1,');
+        }
+
+        /*var tblBt = $(this).find('.chk-bt-ty1');
+        tblBt.on("click", function(e){
+            e.preventDefault();
+            $(this).addClass('select');
+        });*/
+
+        //lnb 영역
+        var dep2 = $('.dep2 > li > a');
+        var dep2M = $('.dep2-menu');
+
+        dep2M.hide();
+
+        dep2.on("click" , function(e){
+            e.preventDefault;
+            if($(this).hasClass('select')){
+                $(this).next('.dep2-menu').slideUp(200);
+                $(this).removeClass('select');
+            }else{
+                dep2.removeClass('select');
+                dep2M.hide();
+
+                $(this).next('.dep2-menu').slideDown(200);
+                $(this).addClass('select');
+            }
+        });
+
+        //숫자 카운트
+        var num1 = $(".count-num").text();
+        var num2 = $(".count-num2").text();
+        var num3 = $(".count-num3").text();
+        var str = parseInt(num1);
+        var str2 = parseInt(num2);
+        var str3 = parseInt(num3);
+
+        $({ val : 0 }).animate({ val : str }, {
+            duration: 1500,
+            step: function() {
+                var num = numberWithCommas(Math.floor(this.val));
+                $(".count-num").text(num);
+            },
+            complete: function() {
+                var num = numberWithCommas(Math.floor(this.val));
+                $(".count-num").text(num);
+            }
+        });
+
+        $({ val : 0 }).animate({ val : str2 }, {
+            duration: 1500,
+            step: function() {
+                var num = numberWithCommas(Math.floor(this.val));
+                $(".count-num2").text(num);
+            },
+            complete: function() {
+                var num = numberWithCommas(Math.floor(this.val));
+                $(".count-num2").text(num);
+            }
+        });
+
+        $({ val : 0 }).animate({ val : str3 }, {
+            duration: 1500,
+            step: function() {
+                var num = numberWithCommas(Math.floor(this.val));
+                $(".count-num3").text(num);
+            },
+            complete: function() {
+                var num = numberWithCommas(Math.floor(this.val));
+                $(".count-num3").text(num);
+            }
+        });
+
+        //비주얼 슬라이드
+        var oscSwiper = undefined;
+        function initSwiper() {
+            oscSwiper = new Swiper('.osc-visual', {
+                autoplay: {
+                    delay: 6000,
+                    disableOnInteraction: false,
+                },
+                loop: true,
+                pagination: {
+                    el: ".osc-visual .osc-pagination",
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.osc-visual .swiper-button-next',
+                    prevEl: '.osc-prev',
+                },
+            });
+        }
+
+        //탭 토글
+        $(".btn-tab-toggle").click(function(e){
+            e.preventDefault();
+            if($(this).hasClass('on')){
+                $(".tab-detail-menu").hide();
+                $(".tab-total-menu").show();
+                $(this).removeClass('on');
+            }else{
+                $(".tab-detail-menu").show();
+                $(".tab-total-menu").hide();
+                $(this).addClass('on');
+            }
+        })
+
+        //탭 컨텐츠 전환
+        var otM = $(".osc-tab-menu ul li");
+
+        otM.click(function(e){
+            e.preventDefault();
+            e.stopPropagation();
+
+            otM.removeClass("on");
+            $(this).addClass("on");
+
+            var dtM = $('.tab-total-menu').find("ul");
+            dtM.empty();
+
+            $(".osc-tab-con").hide();
+
+            var idx = $(this).index();
+
+            if(idx === 0){
+                $(".osc-tab-con").eq(0).show();
+            }
+            if(idx === 1){
+                $(".osc-tab-con").eq(1).show();
+            }
+            if(idx === 2){
+                $(".osc-tab-con").eq(2).show();
+            }
+            if(idx === 3){
+                $(".osc-tab-con").eq(3).show();
+            }
+            if(idx === 4){
+                $(".osc-tab-con").eq(4).show();
+            }
+            if(idx === 5){
+                $(".osc-tab-con").eq(5).show();
+            }
+            if(idx === 6){
+                $(".osc-tab-con").eq(6).show();
+            }
+            if(idx === 7){
+                $(".osc-tab-con").eq(7).show();
+            }
+            if(idx === 8){
+                $(".osc-tab-con").eq(8).show();
+            }
+            if(idx === 9){
+                $(".osc-tab-con").eq(9).show();
+            }
+        });
+
+        //디테일 탭메뉴 선택
+        $(".tab-detail-menu").each(function(){
+            var dtM = $(this).find("ul > li");
+            var ttM1 = $(".tab-total-menu > ul.m1");
+            var ttM2 = $(".tab-total-menu > ul.m2");
+            var ttM3 = $(".tab-total-menu > ul.m3");
+            var ttM4 = $(".tab-total-menu > ul.m4");
+            var ttM5 = $(".tab-total-menu > ul.m5");
+            var ttM6 = $(".tab-total-menu > ul.m6");
+            var ttM7 = $(".tab-total-menu > ul.m7");
+            var ttM8 = $(".tab-total-menu > ul.m8");
+            var ttM9 = $(".tab-total-menu > ul.m9");
+            var ttM10 = $(".tab-total-menu > ul.m10");
+
+            dtM.on("click", function(e){
+                e.preventDefault();
+
+
+                //dtM.removeClass('on');
+                //$(this).addClass('on');
+
+                /*if($(this).hasClass("on")) {
+                    $(this).removeClass("on");
+                    $(".result-box .dep2[data-brand-code='"+p_brand_code+"']").each(function(){
+                        $(this).remove();
+                    });
+                } else {
+                    $(this).addClass('on');
+                    $('.result-box .dep1').after("<span class='dep2' data-type='"+data_type+"' data-brand-code='"+p_brand_code+"'>"+p_brand_name+"<a href='javascript:void(0);' class='menu-close'>메뉴 닫기</a></span>");
+                }
+
+
+                var tt = $(this).text();
+
+                var idx = $(this).parents(".tab-detail-menu").index();
+
+                if(idx === 1){
+                    //ttM1.empty();
+                    ttM1.append("<li><span>" + tt + "</span><a href='#' class='btn-menu-close'>메뉴닫기</a></li>");
+                }else if(idx === 2){
+                    //ttM2.empty();
+                    ttM2.append("<li><span>" + tt + "</span><a href='#' class='btn-menu-close'>메뉴닫기</a></li>");
+                }else if(idx === 3){
+                    //ttM3.empty();
+                    ttM3.append("<li><span>" + tt + "</span><a href='#' class='btn-menu-close'>메뉴닫기</a></li>");
+                }else if(idx === 4){
+                    ttM4.empty();
+                    ttM4.append("<li><span>" + tt + "</span><a href='#' class='btn-menu-close'>메뉴닫기</a></li>");
+                }else if(idx === 5){
+                    ttM5.empty();
+                    ttM5.append("<li><span>" + tt + "</span><a href='#' class='btn-menu-close'>메뉴닫기</a></li>");
+                }else if(idx === 6){
+                    ttM6.empty();
+                    ttM6.append("<li><span>" + tt + "</span><a href='#' class='btn-menu-close'>메뉴닫기</a></li>");
+                }else if(idx === 7){
+                    ttM7.empty();
+                    ttM7.append("<li><span>" + tt + "</span><a href='#' class='btn-menu-close'>메뉴닫기</a></li>");
+                }else if(idx === 8){
+                    ttM8.empty();
+                    ttM8.append("<li><span>" + tt + "</span><a href='#' class='btn-menu-close'>메뉴닫기</a></li>");
+                }else if(idx === 9){
+                    ttM9.empty();
+                    ttM9.append("<li><span>" + tt + "</span><a href='#' class='btn-menu-close'>메뉴닫기</a></li>");
+                }else if(idx === 10){
+                    ttM10.empty();
+                    ttM10.append("<li><span>" + tt + "</span><a href='#' class='btn-menu-close'>메뉴닫기</a></li>");
+                }
+
+                $(".btn-menu-close").on("click", function(e){
+                    e.preventDefault();
+                    $(this).parents("ul").empty();
+
+
+                });
+
+                $("ul.m1 .btn-menu-close").on("click", function(e){
+                    $(".tab-detail-menu").eq(0).find("ul > li").removeClass('on');
+                });
+
+                $("ul.m2 .btn-menu-close").on("click", function(e){
+                    $(".tab-detail-menu").eq(1).find("ul > li").removeClass('on');
+                });
+
+                $("ul.m3 .btn-menu-close").on("click", function(e){
+                    $(".tab-detail-menu").eq(2).find("ul > li").removeClass('on');
+                });
+                $("ul.m4 .btn-menu-close").on("click", function(e){
+                    $(".tab-detail-menu").eq(3).find("ul > li").removeClass('on');
+                });
+                $("ul.m5 .btn-menu-close").on("click", function(e){
+                    $(".tab-detail-menu").eq(4).find("ul > li").removeClass('on');
+                });
+                $("ul.m6 .btn-menu-close").on("click", function(e){
+                    $(".tab-detail-menu").eq(5).find("ul > li").removeClass('on');
+                });
+                $("ul.m7 .btn-menu-close").on("click", function(e){
+                    $(".tab-detail-menu").eq(6).find("ul > li").removeClass('on');
+                });
+                $("ul.m8 .btn-menu-close").on("click", function(e){
+                    $(".tab-detail-menu").eq(7).find("ul > li").removeClass('on');
+                });
+                $("ul.m9 .btn-menu-close").on("click", function(e){
+                    $(".tab-detail-menu").eq(8).find("ul > li").removeClass('on');
+                });
+                $("ul.m10 .btn-menu-close").on("click", function(e){
+                    $(".tab-detail-menu").eq(9).find("ul > li").removeClass('on');
+                });*/
+
+                //callItemList();
+            });
+        });
+
+        var dev_data_length = 0;
+
+        //레이어팝업 토글
+        $('.osc-item').on('click' , function(e){
+            e.preventDefault();
+            e.stopPropagation();
+            $(".layer-bg").show();
+            $(".layer-bg > div").hide();
+            $("body").addClass("lock-bg");
+
+
+            //팝업
+            var em_pk = $(this).attr('data-pk');
+
+            var rStr_info = "";
+            var params = "em_pk="+em_pk;
+            $.ajax({
+                url: '/casting/service/goods_info_data/estimate_info_data.php',
+                data: params,
+                type: 'POST',
+                dataType:'json',
+                success: function (json) {
+                    var data = json.list;
+                    var data1 = json.list1;
+
+                    console.log(data)
+                    console.log(data1)
+                    //업체정보
+                    rStr_info += makeEstimateInfo(data,data1);
+                    $('.layer-bg').html(rStr_info);
+                    $(".dev_pop").show();
+
+                    //모바일에서 화면 처리
+                    if(isMobile()) {
+                        if (data.length > 0) {
+                            for (var i = 0; i < data.length; i++) {
+                                $(".dev-type" + i).css("display", "none");
+                            }
+                        }
+                        $(".dev-type0").css("display", "");
+                        $(".dev-btn-before").css("display", "none");
+
+                    }
+
+                    dev_data_length = data.length;
+
+                },
+                error: function (xhr) {
+                    console.log(xhr);
+                }
+            });
+            /*
+                if($(this).hasClass("pop-open1")){
+                  $(".pop1").show();
+                } else if($(this).hasClass("pop-open2")){
+                  $(".pop2").show();
+                } else{
+                  $(".pop3").show();
+                }*/
+        });
+
+
+
+        $(document).on("click",".btn-close",function(e) {
+            e.preventDefault();
+            $("body").removeClass("lock-bg");
+            $(".layer-bg > div").hide();
+            $(".layer-bg").hide();
+        });
+
+        $(document).on("click",".dev_btn_close",function(e) {
+            e.preventDefault();
+            $("body").removeClass("lock-bg");
+            $(".layer-bg > div").hide();
+            $(".layer-bg").hide();
+        });
+
+        initSwiper();
+
+        //비교견적 팝업
+        function makeEstimateInfo(data,data1) {
+            var rStr = '';
+
+            var em_title = '';
+            var em_cnt = '0';
+            var em_period = '';
+            var ecp_partner = '';
+            var ecp_price = '0';
+            var em_category = "";
+            var cateTtile = "프로젝트 기간";
+
+            if(data.length > 0) {
+                for (var i = 0; i < data.length; i++) {
+                    var item = data[i];
+
+                    em_title = item.EM_TITLE;
+                    em_cnt = data.length;
+                    em_period = item.EM_PERIOD;
+                    em_category = item.EM_CATEGORY;
+
+                }
+            }
+
+            if( em_category == "565" ){
+                cateTtile = "영상길이";
+            } else if( em_category == "650" ){
+                cateTtile = "필요업무";
+            }  else if( em_category == "657" ){
+                cateTtile = "직원수";
+            }
+
+            rStr += '<div class="layer-pop osc-pop dev_pop">                                 ';
+            rStr += '    <div class="pop-head">                                              ';
+            rStr += '      <strong>'+em_title+'</strong>                           ';
+            rStr += '      <span>'+cateTtile+'  '+em_period+' <b>|</b> 견적 개수  '+em_cnt+'개</span>         ';
+            rStr += '    </div>                                                              ';
+            rStr += '    <div class="pop-con">                                               ';
+            rStr += '      <div class="osc-co-area">                                         ';
+            rStr += '        <ul class="co-list">                                            ';
+
+            if(data.length > 0) {
+                for (var i = 0; i < data.length; i++) {
+                    var item = data[i];
+
+                    ecp_partner = item.ECP_PARTNER;
+                    ecp_price = item.PRICE;
+
+                    rStr += '          <li class="co-type'+i+'">                                         ';
+                    rStr += '            <strong>'+ecp_partner+'사</strong>                                        ';
+                    rStr += '            <span>총 '+numberWithCommas(ecp_price)+'원</span>                                ';
+                    rStr += '          </li>                                                         ';
+
+                }
+            }
+
+            rStr += '        </ul>                                                           ';
+            rStr += '      </div>                                                            ';
+            rStr += '                                                                        ';
+            rStr += '      <div class="osc-tbl-area">                                        ';
+            rStr += '        <table>                                                         ';
+            rStr += '          <colgroup>                                                    ';
+            rStr += '            <col width="17%">                                           ';
+
+            for (var i = 0; i < data.length; i++) {
+                rStr += '            <col width="">                                              ';
+            }
+            rStr += '          </colgroup>                                                   ';
+            rStr += '          <thead>                                                       ';
+            rStr += '            <tr>                                                        ';
+
+            rStr += '              <th scope="col" class="th-tit">업무 항목 및 내용</th>     ';
+
+            for (var i = 0; i < data.length; i++) {
+                var item = data[i];
+
+                ecp_partner = item.ECP_PARTNER;
+                rStr += '              <th scope="col" class="b-type'+i+' dev-type'+i+'">'+ecp_partner+'사</th>                  ';
+            }
+            rStr += '            </tr>                                                       ';
+            rStr += '          </thead>                                                      ';
+
+            rStr += '          <tfoot>                                                       ';
+            rStr += '            <tr>                                                        ';
+            rStr += '              <td class="tdf-tit">최종 견적 금액</td>                   ';
+
+            for (var i = 0; i < data.length; i++) {
+                var item = data[i];
+
+                ecp_price = item.PRICE;
+                rStr += '              <td class="dev-type'+i+'">'+numberWithCommas(ecp_price)+' 원</td>                                       ';
+            }
+
+            rStr += '            </tr>                                                       ';
+            rStr += '          </tfoot>                                                      ';
+            rStr += '          <tbody>                                                       ';
+
+            for (var i = 0; i < data1.length; i++) {
+                var item1 = data1[i];
+
+                var iCnt = 0;
+
+                ecp_partner = item.ECP_PARTNER;
+
+                rStr += '            <tr>                                                        ';
+                rStr += '              <td class="td-tit">'+item1.EC_LEVLE1+' <br> '+item1.EC_LEVLE2+'</td>';
+
+                rStr += '              <td class="dev-type'+iCnt+'">'+comma(item1.A)+' 원</td>                                        ';
+                iCnt++;
+                rStr += '              <td class="dev-type'+iCnt+'">'+comma(item1.B)+' 원</td>                                        ';
+                iCnt++;
+                rStr += '              <td class="dev-type'+iCnt+'">'+comma(item1.C)+' 원</td>                                        ';
+                iCnt++;
+                if( data.length >= 4 ){
+                    rStr += '              <td class="dev-type'+iCnt+'">'+comma(item1.D)+' 원</td>                                        ';
+                    iCnt++;
+                }
+
+                if( data.length >= 5 ){
+                    rStr += '              <td class="dev-type'+iCnt+'">'+comma(item1.E)+' 원</td>                                        ';
+                    iCnt++;
+                }
+
+                if( data.length >= 6 ){
+                    rStr += '              <td class="dev-type'+iCnt+'">'+comma(item1.F)+' 원</td>                                        ';
+                    iCnt++;
+                }
+
+                rStr += '            </tr>                                                       ';
+            }
+            rStr += '          </tbody>                                                      ';
+            rStr += '        </table>                                                        ';
+
+            rStr += '        <div class="tbl-btn-area">';
+
+            var view_cnt = $("#dev_curr_cnt").val();
+            rStr += '            <a href="javascript:void(0);" data-view-prev="'+(view_cnt-1)+'" class="btn-before dev-btn-before p-hide">이전</a>';
+            if( data.length > 1 ) {
+                rStr += '            <a href="javascript:void(0);" data-view-next="'+view_cnt+'" class="btn-next dev-btn-next p-hide">다음</a>';
+            }
+
+            rStr += '        </div>';
+
+            rStr += '      </div>                                                            ';
+            rStr += '    </div>                                                              ';
+            rStr += '    <div class="pop-btn-area">                                          ';
+            rStr += '      <button type="button" class="dev_btn_close">확인</button>    <input type="hidden" id="dev_curr_cnt" value="1">                           ';
+            rStr += '    </div>                                                              ';
+            rStr += '    <a href="javascript:void(0);" class="btn-close">팝업창 닫기</a>                       ';
+
+            return rStr;
+        }
+
+        $(document).on("click", ".dev-btn-next", function(){
+            var tab_id = $('#dev_curr_cnt').val();
+
+            if( tab_id ==  0){
+                tab_id = 1;
+            }
+
+            $("[class*='dev-type']").css("display","none");
+            $(".dev-type"+tab_id).css("display","");
+
+            $("#dev_curr_cnt").val(eval(tab_id)+1);
+
+            if( eval(tab_id)+1 < dev_data_length  ){
+                $(".dev-btn-next").css('display','');
+            } else {
+                $(".dev-btn-next").css('display','none');
+            }
+
+            if( eval(tab_id)-1 < dev_data_length  ){
+                $(".dev-btn-before").css('display','');
+            } else {
+                $(".dev-btn-before").css('display','none');
+            }
+
+        });
+
+        $(document).on("click", ".dev-btn-before", function(){
+            var tab_id = $('#dev_curr_cnt').val();
+            $("[class*='dev-type']").css("display","none");
+
+            if( tab_id >=  dev_data_length){
+                tab_id = tab_id-1;
+            }
+
+            $(".dev-type"+(tab_id-1)).css("display","");
+
+            if( tab_id > 0 ){
+                $("#dev_curr_cnt").val(eval(tab_id)-1);
+
+                if( eval(tab_id) < dev_data_length  ){
+                    $(".dev-btn-before").css('display','');
+                } else {
+                    $(".dev-btn-before").css('display','none');
+                }
+
+                if( eval(tab_id) < dev_data_length  ){
+                    $(".dev-btn-next").css('display','');
+                } else {
+                    $(".dev-btn-next").css('display','none');
+                }
+
+                if( tab_id == 1 ) {
+                    $(".dev-btn-before").css('display','none');
+                }
+
+            } else {
+                $(".dev-btn-before").css('display','none');
+            }
+
+        });
+
+        var tP = $(".outsc-fmenu-wrap");
+        var mP = $(".mob-outsc-fmenu-wrap");
+        var tPoffset = tP.offset();
+        var mPoffset = mP.offset();
+        var win = $(window);
+
+        win.on('scroll',function() {
+
+            if (win.scrollTop() > tPoffset.top) {
+                tP.addClass("on");
+
+            } else {
+                tP.removeClass("on");
+            };
+
+            if (win.scrollTop() > mPoffset.top) {
+                mP.addClass("on");
+
+            } else {
+                mP.removeClass("on");
+            };
+
+        });
+
+    });
+</script>
+
+<script>
+    $(document).ready(function(){
+
+    });
+
+    //콤마찍기
+    function comma(str) {
+        str = String(str);
+        return str.replace(/(\d)(?=(?:\d{3})+(?!\d))/g, '$1,');
+    }
+
+    function numberWithCommas(x) {
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+</script>
+</body>
+</html>
+
+
+
+
+

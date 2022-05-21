@@ -1,0 +1,1125 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>업무마켓9</title>
+	<script type="text/javascript" async="" src="../../js/jquery-3.3.1.min.js"></script>
+	<link rel="stylesheet" href="../../css/reset.css" />
+	<link rel="stylesheet" href="../../css/layout.css" />
+	<link rel="stylesheet" href="../../css/mall.css" />
+	<link rel="stylesheet" href="https://unpkg.com/swiper@6/swiper-bundle.min.css" />
+	<script type="text/javascript" async="" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/js/swiper.min.js"></script>
+<body>
+
+<div id="wrap">
+	<!-- header -->
+	<div id="header-mall" class="subpage">
+		<div class="header-top m-hide">
+			<div class="inner">
+                <span class="header-top-left">
+                  <a href="/casting/intro">업무마켓나인 소개</a>
+                </span>
+				<span class="header-top-right">
+
+                                    <a href="javascript:void(0);" id="loginBtn" onclick="loginFormOn();">로그인</a>
+                  <a href="javascript:void(0);" onclick="loginchangeStep3();">회원가입</a>
+                  <a href="/casting/Buyr/Interaction/?menu=inquery">1:1문의</a>
+                  <div class="layer-wrap">
+                    <a href="javascript:void(0);" class="last center-bt">공급사 통합센터</a>
+                    <div class="head-layer-pop head-layer-1">
+                      <ul class="center-list">
+                        <li><a href="/casting/Buyr/?page_mode=partner">공급사 입점신청</a></li>
+                        <li><a href="/casting/Manage/Auth/index.php">공급사 통합 로그인</a></li>
+                        <li><a href="https://www.castingn.com/join/partner/formnew?workmarket9HeaderRemove=OK" target="_blank">소싱 파트너 로그인</a></li>
+                      </ul>
+                    </div>
+                  </div>
+
+
+
+                </span>
+			</div>
+			<!-- login후 나오는 팝업 -->
+		</div>
+
+		<div class="header-center m-hide">
+			<div class="inner">
+				<h1 class="logo">
+					<a href="#"><img src="https://resource.mall.castingn.com/static/images/etc-mall-logo.png" alt="" class="m-hide"></a>
+				</h1>
+
+				<div class="header-search">
+					<input type="text" id="q" placeholder="업무에 필요한 상품을 빠르게 검색해보세요!" value="" onkeydown="if(event.keyCode == 13) schcheck();" onclick="wordcheck();">
+					<button type="button" onclick="schcheck();">검색</button>
+				</div>
+
+				<div class="header-category">
+					<a href="javascript:loginFormOn();" class="category-menu1">내정보</a>
+					<a href="/casting/Mypage/?mode=cart" class="category-menu2">장바구니</a>
+					<a href="javascript:loginFormOn();" class="category-menu3">배송정보</a>
+					<a href="javascript:loginFormOn();" class="category-menu4">채팅</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="header-bottom m-hide">
+			<div class="inner">
+				<ul class="gnb">
+					<li class="menu-1 ">
+						<a href="javascript:void(0)" class="btn-toggle-menu">비품,사무용품 <i class="el-icon-arrow-down"></i></a>
+					</li>
+					<li class="menu-2">
+						<span class="tool-tip">전문업체매칭</span>
+						<i class="ico-maching">👊</i>
+						<a href="javascript:void(0)">파워매칭</a>
+					</li>
+					<li class="menu-3">
+						<span class="tool-tip">기업형구독서비스</span>
+						<i class="ico-pin"></i>
+						<a href="javascript:void(0)">핀스퀘어</a>
+					</li>
+					<li class="menu-4 ">
+						<i class="ico-smart"></i>
+						<a href="javascript:void(0)">스마트핀클럽</a>
+					</li>
+					<li class="menu-5 "><a href="javascript:void(0)">C노트</a></li>
+					<li class="menu-6 "><a href="javascript:void(0)">이벤트</a></li>
+
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- //header -->
+
+	<!-- header-sub -->
+	<div class="mo-sub-head p-hide">
+		<button type="button" class="btn-history-back" onclick="javascript:history.go(-1);">back</button>
+		<strong class="header-tit">비품,사무용품</strong>
+
+		<div class="header-category">
+			<a href="#" class="cate-menu1" id="dev_search_button">검색</a>
+			<a href="javascript:void(0)" class="cate-menu2">장바구니 </a>
+		</div>
+	</div>
+	<!-- //header-sub -->
+
+	<!-- container -->
+	<div id="container" class="container-favorite">
+
+		<div class="mob-category-slide-wrap">
+			<!-- Swiper -->
+			<div id="slide-mob-category" class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<a href="javascript:void(0)" class="on">특가100</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="javascript:void(0)">사무용품</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="javascript:void(0)">식음료/탕비실</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="javascript:void(0)">생활/화장실용품</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="javascript:void(0)">전산용품</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="javascript:void(0)">PC/디지털/가전</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="javascript:void(0)">소프트웨어</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="javascript:void(0)">공구/안전/산업</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="javascript:void(0)">청소용품</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="javascript:void(0)">판촉물</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="javascript:void(0)">화환/꽃배달</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="javascript:void(0)">금고/가구</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="javascript:void(0)">구독/공유서비스</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="javascript:void(0)">결재전용상품</a>
+					</div>
+				</div>
+			</div>
+
+			<script>
+                var mobCategory = new Swiper("#slide-mob-category", {
+                    slidesPerView: 'auto',
+                    spaceBetween:0,
+                    observer: true,
+                    observeParents: true,
+                });
+			</script>
+		</div>
+
+		<section class="mall-subpage-wrap">
+			<div class="detail-side-wrap on">
+				<div class="lnb m-hide">
+					<div class="lnb-group">
+						<ul class="dep1 type1">
+							<li><a href="/casting/best/">특가100</a></li>
+							<li><a href="/casting/product/?lcate=1094">사무용품</a>
+								<div class="dep1-1-box">
+									<ul>
+										<li><a href="/casting/product/?lcate=1100">라벨지/기타지류</a>
+											<div class="dep1-2-box">
+												<ul>
+													<li><a href="/casting/product/?lcate=1101">OA라벨지</a></li>
+													<li><a href="/casting/product/?lcate=1103">롤지/트레싱지</a></li>
+													<li><a href="/casting/product/?lcate=1104">잉크젯용지</a></li>
+													<li><a href="/casting/product/?lcate=1106">컬러OA용지</a></li>
+													<li><a href="/casting/product/?lcate=1107">컬러레이저용지</a></li>
+													<li><a href="/casting/product/?lcate=1110">포토/팩스용지</a></li>
+													<li><a href="/casting/product/?lcate=1111">플로터용지</a></li>
+													<li><a href="/casting/product/?lcate=1112">기타지류</a></li>
+												</ul>
+											</div>
+										</li>
+										<li><a href="/casting/product/?lcate=1095">복사용지</a>
+											<div class="dep1-2-box">
+												<ul>
+													<li><a href="/casting/product/?lcate=1096">A4</a></li>
+													<li><a href="/casting/product/?lcate=1097">A3</a></li>
+													<li><a href="/casting/product/?lcate=1098">B4</a></li>
+													<li><a href="/casting/product/?lcate=1099">B5</a></li>
+												</ul>
+											</div>
+										</li>
+										<li><a href="/casting/product/?lcate=1127">화일/바인더</a>
+											<div class="dep1-2-box">
+												<ul>
+													<li><a href="/casting/product/?lcate=1132">바인더</a></li>
+													<li><a href="/casting/product/?lcate=1128">PP화일</a></li>
+													<li><a href="/casting/product/?lcate=1138">클리어화일</a></li>
+													<li><a href="/casting/product/?lcate=1134">스프링화일</a></li>
+													<li><a href="/casting/product/?lcate=1136">종이/쫄대화일</a></li>
+													<li><a href="/casting/product/?lcate=1141">홀더/시스템/클립화일</a></li>
+													<li><a href="/casting/product/?lcate=1129">결재판/리포트파일</a></li>
+													<li><a href="/casting/product/?lcate=1130">다큐먼트화일</a></li>
+													<li><a href="/casting/product/?lcate=1140">특수화일/포트폴리오/도면화일</a></li>
+													<li><a href="/casting/product/?lcate=1139">클립보드</a></li>
+													<li><a href="/casting/product/?lcate=1131">명함철</a></li>
+													<li><a href="/casting/product/?lcate=1133">상장용품/방명록</a></li>
+													<li><a href="/casting/product/?lcate=1135">앨범</a></li>
+													<li><a href="/casting/product/?lcate=1142">화일케이스</a></li>
+												</ul>
+											</div>
+										</li>
+										<li><a href="/casting/product/?lcate=1113">필기구</a>
+											<div class="dep1-2-box">
+												<ul>
+													<li><a href="/casting/product/?lcate=1114">볼펜</a></li>
+													<li><a href="/casting/product/?lcate=1115">멀티볼펜</a></li>
+													<li><a href="/casting/product/?lcate=1116">멀티중성펜</a></li>
+													<li><a href="/casting/product/?lcate=1117">만년필/잉크</a></li>
+													<li><a href="/casting/product/?lcate=1118">보드마카</a></li>
+													<li><a href="/casting/product/?lcate=1119">샤프/샤프심</a></li>
+													<li><a href="/casting/product/?lcate=1120">수성펜</a></li>
+													<li><a href="/casting/product/?lcate=1121">연필</a></li>
+													<li><a href="/casting/product/?lcate=1122">매직/마카펜</a></li>
+													<li><a href="/casting/product/?lcate=1123">네임펜</a></li>
+													<li><a href="/casting/product/?lcate=1124">유성펜</a></li>
+													<li><a href="/casting/product/?lcate=1125">중성펜</a></li>
+													<li><a href="/casting/product/?lcate=1126">형광펜</a></li>
+												</ul>
+											</div>
+										</li>
+										<li><a href="/casting/product/?lcate=1557">데스크용품</a>
+											<div class="dep1-2-box">
+												<ul>
+													<li><a href="/casting/product/?lcate=1558">견출지/접착메모지</a></li>
+													<li><a href="/casting/product/?lcate=1559">노트/다이어리/수첩</a></li>
+													<li><a href="/casting/product/?lcate=1631">독서대/PC받침대</a></li>
+													<li><a href="/casting/product/?lcate=1566">계산기/라벨기</a></li>
+													<li><a href="/casting/product/?lcate=1561">메모꽂이/자석</a></li>
+													<li><a href="/casting/product/?lcate=1560">서류받침/서류꽂이/책꽂이</a></li>
+													<li><a href="/casting/product/?lcate=1563">수정용품/지우개</a></li>
+													<li><a href="/casting/product/?lcate=1562">스탬프/인주/인장함</a></li>
+													<li><a href="/casting/product/?lcate=1564">스테이플러/펀치</a></li>
+													<li><a href="/casting/product/?lcate=1565">집게/크립/책철/핀</a></li>
+													<li><a href="/casting/product/?lcate=1567">칼/가위/자/연필깍기</a></li>
+													<li><a href="/casting/product/?lcate=1569">테이프/테이프커터</a></li>
+													<li><a href="/casting/product/?lcate=1568">풀/접착제</a></li>
+													<li><a href="/casting/product/?lcate=1570">기타데스크용품</a></li>
+												</ul>
+											</div>
+										</li>
+										<li><a href="/casting/product/?lcate=1143">사무용잡화</a>
+											<div class="dep1-2-box">
+												<ul>
+													<li><a href="/casting/product/?lcate=1147">봉투/서식/장부/명찰</a></li>
+													<li><a href="/casting/product/?lcate=1148">사물함/서류함</a></li>
+													<li><a href="/casting/product/?lcate=1149">시트지/케이스</a></li>
+													<li><a href="/casting/product/?lcate=1150">신문걸이/다용도함</a></li>
+													<li><a href="/casting/product/?lcate=1151">펜꽃이/메모홀더</a></li>
+													<li><a href="/casting/product/?lcate=1152">쇼핑백/자물쇠</a></li>
+													<li><a href="/casting/product/?lcate=1153">실내화/신발주머니</a></li>
+													<li><a href="/casting/product/?lcate=1154">화이트보드/보드용품/게시판</a></li>
+													<li><a href="/casting/product/?lcate=1155">지구의/스톱워치</a></li>
+													<li><a href="/casting/product/?lcate=1156">데코/만들기재료/지점토</a></li>
+													<li><a href="/casting/product/?lcate=1157">보드게임/젠카</a></li>
+													<li><a href="/casting/product/?lcate=1158">인형/장식물/퍼즐/기타</a></li>
+												</ul>
+											</div>
+										</li>
+										<li><a href="/casting/product/?lcate=1165">사무기기</a>
+											<div class="dep1-2-box">
+												<ul>
+													<li><a href="/casting/product/?lcate=1166">OHP필름</a></li>
+													<li><a href="/casting/product/?lcate=1167">계수기</a></li>
+													<li><a href="/casting/product/?lcate=1168">기타사무기기</a></li>
+													<li><a href="/casting/product/?lcate=1169">라미네이터(코팅기)</a></li>
+													<li><a href="/casting/product/?lcate=1170">라벨프린터/리본</a></li>
+													<li><a href="/casting/product/?lcate=1171">세단기</a></li>
+													<li><a href="/casting/product/?lcate=1172">열제본기</a></li>
+													<li><a href="/casting/product/?lcate=1173">와이어제본기</a></li>
+													<li><a href="/casting/product/?lcate=1176">재단기</a></li>
+													<li><a href="/casting/product/?lcate=1177">제본소모품</a></li>
+													<li><a href="/casting/product/?lcate=1178">출퇴근 기록기</a></li>
+													<li><a href="/casting/product/?lcate=1179">프리젠터/레이저포인터</a></li>
+													<li><a href="/casting/product/?lcate=1180">플라스틱링 제본기</a></li>
+												</ul>
+											</div>
+										</li>
+										<li><a href="/casting/product/?lcate=1175">디자인용품</a>
+											<div class="dep1-2-box">
+												<ul>
+													<li><a href="/casting/product/?lcate=1181">라인테이프</a></li>
+													<li><a href="/casting/product/?lcate=1182">물감/포스터칼라</a></li>
+													<li><a href="/casting/product/?lcate=1183">미술/서예용품</a></li>
+													<li><a href="/casting/product/?lcate=1184">색연필/파스텔/크레파스</a></li>
+													<li><a href="/casting/product/?lcate=1185">우드보드/폼보드</a></li>
+													<li><a href="/casting/product/?lcate=1186">제도용품</a></li>
+													<li><a href="/casting/product/?lcate=1187">캔버스/스케치북/이젤</a></li>
+													<li><a href="/casting/product/?lcate=1188">DIY/취미용품/팰트</a></li>
+												</ul>
+											</div>
+										</li>
+										<li><a href="/casting/product/?lcate=1162">주문제작상품</a>
+											<div class="dep1-2-box">
+												<ul>
+													<li><a href="/casting/product/?lcate=1163">도장고무인</a></li>
+													<li><a href="/casting/product/?lcate=1164">상패간판</a></li>
+													<li><a href="/casting/product/?lcate=1508">게시판</a></li>
+												</ul>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</li>
+
+							<li><a href="javascript:void(0)">식음료/탕비실</a>
+								<div class="dep1-1-box">
+									<ul>
+										<li><a href="/casting/product/?lcate=1100">라벨지/기타지류</a>
+											<div class="dep1-2-box">
+												<ul>
+													<li><a href="/casting/product/?lcate=1101">OA라벨지</a></li>
+													<li><a href="/casting/product/?lcate=1103">롤지/트레싱지</a></li>
+													<li><a href="/casting/product/?lcate=1104">잉크젯용지</a></li>
+													<li><a href="/casting/product/?lcate=1106">컬러OA용지</a></li>
+													<li><a href="/casting/product/?lcate=1107">컬러레이저용지</a></li>
+													<li><a href="/casting/product/?lcate=1110">포토/팩스용지</a></li>
+													<li><a href="/casting/product/?lcate=1111">플로터용지</a></li>
+													<li><a href="/casting/product/?lcate=1112">기타지류</a></li>
+												</ul>
+											</div>
+										</li>
+										<li><a href="/casting/product/?lcate=1095">복사용지</a>
+											<div class="dep1-2-box">
+												<ul>
+													<li><a href="/casting/product/?lcate=1096">A4</a></li>
+													<li><a href="/casting/product/?lcate=1097">A3</a></li>
+													<li><a href="/casting/product/?lcate=1098">B4</a></li>
+													<li><a href="/casting/product/?lcate=1099">B5</a></li>
+												</ul>
+											</div>
+										</li>
+										<li><a href="/casting/product/?lcate=1127">화일/바인더</a>
+											<div class="dep1-2-box">
+												<ul>
+													<li><a href="/casting/product/?lcate=1132">바인더</a></li>
+													<li><a href="/casting/product/?lcate=1128">PP화일</a></li>
+													<li><a href="/casting/product/?lcate=1138">클리어화일</a></li>
+													<li><a href="/casting/product/?lcate=1134">스프링화일</a></li>
+													<li><a href="/casting/product/?lcate=1136">종이/쫄대화일</a></li>
+													<li><a href="/casting/product/?lcate=1141">홀더/시스템/클립화일</a></li>
+													<li><a href="/casting/product/?lcate=1129">결재판/리포트파일</a></li>
+													<li><a href="/casting/product/?lcate=1130">다큐먼트화일</a></li>
+													<li><a href="/casting/product/?lcate=1140">특수화일/포트폴리오/도면화일</a></li>
+													<li><a href="/casting/product/?lcate=1139">클립보드</a></li>
+													<li><a href="/casting/product/?lcate=1131">명함철</a></li>
+													<li><a href="/casting/product/?lcate=1133">상장용품/방명록</a></li>
+													<li><a href="/casting/product/?lcate=1135">앨범</a></li>
+													<li><a href="/casting/product/?lcate=1142">화일케이스</a></li>
+												</ul>
+											</div>
+										</li>
+										<li><a href="/casting/product/?lcate=1113">필기구</a>
+											<div class="dep1-2-box">
+												<ul>
+													<li><a href="/casting/product/?lcate=1114">볼펜</a></li>
+													<li><a href="/casting/product/?lcate=1115">멀티볼펜</a></li>
+													<li><a href="/casting/product/?lcate=1116">멀티중성펜</a></li>
+													<li><a href="/casting/product/?lcate=1117">만년필/잉크</a></li>
+													<li><a href="/casting/product/?lcate=1118">보드마카</a></li>
+													<li><a href="/casting/product/?lcate=1119">샤프/샤프심</a></li>
+													<li><a href="/casting/product/?lcate=1120">수성펜</a></li>
+													<li><a href="/casting/product/?lcate=1121">연필</a></li>
+													<li><a href="/casting/product/?lcate=1122">매직/마카펜</a></li>
+													<li><a href="/casting/product/?lcate=1123">네임펜</a></li>
+													<li><a href="/casting/product/?lcate=1124">유성펜</a></li>
+													<li><a href="/casting/product/?lcate=1125">중성펜</a></li>
+													<li><a href="/casting/product/?lcate=1126">형광펜</a></li>
+												</ul>
+											</div>
+										</li>
+										<li><a href="/casting/product/?lcate=1557">데스크용품</a>
+											<div class="dep1-2-box">
+												<ul>
+													<li><a href="/casting/product/?lcate=1558">견출지/접착메모지</a></li>
+													<li><a href="/casting/product/?lcate=1559">노트/다이어리/수첩</a></li>
+													<li><a href="/casting/product/?lcate=1631">독서대/PC받침대</a></li>
+													<li><a href="/casting/product/?lcate=1566">계산기/라벨기</a></li>
+													<li><a href="/casting/product/?lcate=1561">메모꽂이/자석</a></li>
+													<li><a href="/casting/product/?lcate=1560">서류받침/서류꽂이/책꽂이</a></li>
+													<li><a href="/casting/product/?lcate=1563">수정용품/지우개</a></li>
+													<li><a href="/casting/product/?lcate=1562">스탬프/인주/인장함</a></li>
+													<li><a href="/casting/product/?lcate=1564">스테이플러/펀치</a></li>
+													<li><a href="/casting/product/?lcate=1565">집게/크립/책철/핀</a></li>
+													<li><a href="/casting/product/?lcate=1567">칼/가위/자/연필깍기</a></li>
+													<li><a href="/casting/product/?lcate=1569">테이프/테이프커터</a></li>
+													<li><a href="/casting/product/?lcate=1568">풀/접착제</a></li>
+													<li><a href="/casting/product/?lcate=1570">기타데스크용품</a></li>
+												</ul>
+											</div>
+										</li>
+										<li><a href="/casting/product/?lcate=1143">사무용잡화</a>
+											<div class="dep1-2-box">
+												<ul>
+													<li><a href="/casting/product/?lcate=1147">봉투/서식/장부/명찰</a></li>
+													<li><a href="/casting/product/?lcate=1148">사물함/서류함</a></li>
+													<li><a href="/casting/product/?lcate=1149">시트지/케이스</a></li>
+													<li><a href="/casting/product/?lcate=1150">신문걸이/다용도함</a></li>
+													<li><a href="/casting/product/?lcate=1151">펜꽃이/메모홀더</a></li>
+													<li><a href="/casting/product/?lcate=1152">쇼핑백/자물쇠</a></li>
+													<li><a href="/casting/product/?lcate=1153">실내화/신발주머니</a></li>
+													<li><a href="/casting/product/?lcate=1154">화이트보드/보드용품/게시판</a></li>
+													<li><a href="/casting/product/?lcate=1155">지구의/스톱워치</a></li>
+													<li><a href="/casting/product/?lcate=1156">데코/만들기재료/지점토</a></li>
+													<li><a href="/casting/product/?lcate=1157">보드게임/젠카</a></li>
+													<li><a href="/casting/product/?lcate=1158">인형/장식물/퍼즐/기타</a></li>
+												</ul>
+											</div>
+										</li>
+										<li><a href="/casting/product/?lcate=1165">사무기기</a>
+											<div class="dep1-2-box">
+												<ul>
+													<li><a href="/casting/product/?lcate=1166">OHP필름</a></li>
+													<li><a href="/casting/product/?lcate=1167">계수기</a></li>
+													<li><a href="/casting/product/?lcate=1168">기타사무기기</a></li>
+													<li><a href="/casting/product/?lcate=1169">라미네이터(코팅기)</a></li>
+													<li><a href="/casting/product/?lcate=1170">라벨프린터/리본</a></li>
+													<li><a href="/casting/product/?lcate=1171">세단기</a></li>
+													<li><a href="/casting/product/?lcate=1172">열제본기</a></li>
+													<li><a href="/casting/product/?lcate=1173">와이어제본기</a></li>
+													<li><a href="/casting/product/?lcate=1176">재단기</a></li>
+													<li><a href="/casting/product/?lcate=1177">제본소모품</a></li>
+													<li><a href="/casting/product/?lcate=1178">출퇴근 기록기</a></li>
+													<li><a href="/casting/product/?lcate=1179">프리젠터/레이저포인터</a></li>
+													<li><a href="/casting/product/?lcate=1180">플라스틱링 제본기</a></li>
+												</ul>
+											</div>
+										</li>
+										<li><a href="/casting/product/?lcate=1175">디자인용품</a>
+											<div class="dep1-2-box">
+												<ul>
+													<li><a href="/casting/product/?lcate=1181">라인테이프</a></li>
+													<li><a href="/casting/product/?lcate=1182">물감/포스터칼라</a></li>
+													<li><a href="/casting/product/?lcate=1183">미술/서예용품</a></li>
+													<li><a href="/casting/product/?lcate=1184">색연필/파스텔/크레파스</a></li>
+													<li><a href="/casting/product/?lcate=1185">우드보드/폼보드</a></li>
+													<li><a href="/casting/product/?lcate=1186">제도용품</a></li>
+													<li><a href="/casting/product/?lcate=1187">캔버스/스케치북/이젤</a></li>
+													<li><a href="/casting/product/?lcate=1188">DIY/취미용품/팰트</a></li>
+												</ul>
+											</div>
+										</li>
+										<li><a href="/casting/product/?lcate=1162">주문제작상품</a>
+											<div class="dep1-2-box">
+												<ul>
+													<li><a href="/casting/product/?lcate=1163">도장고무인</a></li>
+													<li><a href="/casting/product/?lcate=1164">상패간판</a></li>
+													<li><a href="/casting/product/?lcate=1508">게시판</a></li>
+												</ul>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</li>
+
+							<li><a href="javascript:void(0)">생활/화장실용품</a></li>
+
+							<li><a href="javascript:void(0)">전산용품</a></li>
+
+							<li><a href="javascript:void(0)">PC/디지털/가전</a></li>
+
+							<li><a href="javascript:void(0)">소프트웨어</a></li>
+
+							<li><a href="javascript:void(0)">공구/안전/산업</a></li>
+
+							<li><a href="javascript:void(0)">청소용품</a></li>
+
+							<li><a href="javascript:void(0)">판촉물</a></li>
+
+							<li><a href="javascript:void(0)">화환/꽃배달</a></li>
+
+							<li><a href="javascript:void(0)">금고/가구</a></li>
+
+							<li><a href="javascript:void(0)">구독/공유서비스</a></li>
+
+							<li><a href="javascript:void(0)">결재전용상품</a></li>
+
+
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="ms-acticle-wrap">
+				<!-- special-slide-wrap -->
+				<div class="subpage-location-wrap">
+					<div class="navi-area">
+						<ul>
+							<li><a href="javascript:void(0);">사무용품 <i class="ico-arrow"></i></a>
+								<div class="navi-box">
+									<ul>
+										<li><a href="javascript:void(0)">사무용품</a></li>
+										<li><a href="javascript:void(0)">사무용품</a></li>
+										<li><a href="javascript:void(0)">사무용품</a></li>
+										<li><a href="javascript:void(0)">사무용품</a></li>
+										<li><a href="javascript:void(0)">사무용품</a></li>
+									</ul>
+								</div>
+							</li>
+							<li><a href="javascript:void(0);">전체 <i class="ico-arrow"></i></a>
+								<div class="navi-box">
+									<ul>
+										<li><a href="javascript:void(0)">라벨지/기타지류</a></li>
+										<li><a href="javascript:void(0)">라벨지/기타지류</a></li>
+									</ul>
+								</div>
+							</li>
+							<li><a href="javascript:void(0);">전체 <i class="ico-arrow"></i></a>
+								<div class="navi-box">
+									<ul>
+										<li><a href="javascript:void(0)">라벨지/기타지류</a></li>
+										<li><a href="javascript:void(0)">라벨지/기타지류</a></li>
+										<li><a href="javascript:void(0)">라벨지/기타지류</a></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="subpage-allcategory-wrap">
+					<div class="brand-box">
+						<div class="brand-tit"><span>브랜드<b>(534)</b></span></div>
+						<div class="brand-list">
+							<ul>
+								<li><a href="javascript:void(0);" class="btn-slc-brand-add">카파워</a></li>
+								<li><a href="javascript:void(0);" class="btn-slc-brand-add">카파워</a></li>
+								<li><a href="javascript:void(0);" class="btn-slc-brand-add">카파워</a></li>
+								<li><a href="javascript:void(0);" class="btn-slc-brand-add">카파워</a></li>
+								<li><a href="javascript:void(0);" class="btn-slc-brand-add">카파워</a></li>
+								<li><a href="javascript:void(0);" class="btn-slc-brand-add">카파워</a></li>
+							</ul>
+						</div>
+						<button class="bt-toggle">메뉴토글</button>
+					</div>
+				</div>
+
+				<div class="subpage-category-reresult">
+					<div class="result-box colr-type1">
+						<span class="dep1">선택항목</span>
+						<span class="dep2" data-type="brand" data-brand-code="0273">카피어랜드<a href="javascript:void(0);" class="menu-close">메뉴 닫기</a></span>
+						<span class="dep2" data-type="brand" data-brand-code="0291">예현<a href="javascript:void(0);" class="menu-close">메뉴 닫기</a></span>
+						<span class="dep2" data-type="brand" data-brand-code="0057">한국폼텍<a href="javascript:void(0);" class="menu-close">메뉴 닫기</a></span>
+						<span class="dep2" data-type="brand" data-brand-code="0618">프린텍<a href="javascript:void(0);" class="menu-close">메뉴 닫기</a></span>
+					</div>
+				</div>
+
+
+
+				<div class="board-header-wrap">
+					<div class="btit">전체상품 <strong>47</strong></div>
+					<div class="side-item-wrap">
+						<ul>
+							<li>
+								<div class="select-item-wrap01">
+									<a href="javascript:void(0)">베스트순</a>
+									<div class="select-result-wrap">
+										<ul>
+											<li>
+												<a href="javascript:void(0)">
+													<span>베스트순</span>
+												</a>
+											</li>
+											<li>
+												<a href="javascript:void(0)">
+													<span>최신등록순</span>
+												</a>
+											</li>
+											<li>
+												<a href="javascript:void(0)">
+													<span>상품명순</span>
+												</a>
+											</li>
+											<li>
+												<a href="javascript:void(0)">
+													<span>높은가격순</span>
+												</a>
+											</li>
+											<li>
+												<a href="javascript:void(0)">
+													<span>낮은가격순</span>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="select-item-wrap01">
+									<a href="javascript:void(0)">5개씩</a>
+									<div class="select-result-wrap">
+										<ul>
+											<li>
+												<a href="javascript:void(0)">
+													<span>5개씩</span>
+												</a>
+											</li>
+											<li>
+												<a href="javascript:void(0)">
+													<span>20개씩</span>
+												</a>
+											</li>
+											<li>
+												<a href="javascript:void(0)">
+													<span>50개씩</span>
+												</a>
+											</li>
+											<li>
+												<a href="javascript:void(0)">
+													<span>80개씩</span>
+												</a>
+											</li>
+											<li>
+												<a href="javascript:void(0)">
+													<span>100개씩</span>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</li>
+							<!--
+							<li>
+								<select class="select">
+									<option>베스트순</option>
+									<option>최신등록순</option>
+									<option>상품명순</option>
+									<option>높은가격순</option>
+									<option>낮은가격순</option>
+								</select>
+							</li>
+							<li>
+								<select class="select">
+									<option>5개씩</option>
+									<option>20개씩</option>
+									<option>50개씩</option>
+									<option>80개씩</option>
+									<option>100개씩</option>
+								</select>
+							</li>
+							-->
+							<li>
+								<a href="javascript:void(0)">썸네일 보기</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="special-price-wrap gallery-type">
+					<div class="list-item-wrap">
+						<div class="special-item-wrap">
+							<ul>
+								<li>
+									<div class="lt-item">
+										<div class="mpic"><img src="https://workmarket9.com/casting/data/casting/Product_images/2022-01/1643328054_list.jpg"></div>
+									</div>
+									<div class="rt-item">
+										<a href="javascript:void(0)" class="mtit">더블에이 복사용지 (A4/80G/500매*5권/ 2,750매/ 수도권만 배송 가능)/ 에이포하우스</a>
+										<div class="rw-item-wrap">
+											<i class="el-icon-star-on"></i>
+											<span class="grade">상품만족도 5.0</span>
+											<span class="cnt">(122건)</span>
+										</div>
+										<div class="lowest-item-wrap">
+											<img src="https://resource.mall.castingn.com/static/images/etc-prod-logo01.png" />
+											<div class="info">
+												<span>최저가구매</span>
+												<button class="btn-info"><img src="https://resource.mall.castingn.com/static/images/ico-lowest01.png" /></button>
+											</div>
+										</div>
+
+
+										<div class="mcont">
+											<div class="delivery-item-wrap">
+												<a href="javascript:void(0)"><i class="el-icon-close"></i></a>
+												<ul>
+													<li>
+														<div class="biz"><img src="https://resource.mall.castingn.com/static/images/etc-biz-logo01.png"></div>
+														<div class="price">270,000원 + 무료배송</div>
+													</li>
+													<li>
+														<div class="biz"><img src="https://resource.mall.castingn.com/static/images/etc-biz-logo01.png"></div>
+														<div class="price">270,000원 + 무료배송</div>
+													</li>
+												</ul>
+											</div>
+											<div class="price-item-wrap">
+												<ul>
+													<li>
+														<div class="key">일반회원가</div>
+														<div class="value">70,000원</div>
+													</li>
+													<li>
+														<div class="key">업무마켓9가</div>
+														<div class="value">3,000,000원</div>
+													</li>
+													<li>
+														<div class="key">
+															<img src="https://resource.mall.castingn.com/static/images/sub/ico-list-item.png" />
+															<strong>스마트핀클럽가</strong>
+															<span>54%</span>
+														</div>
+														<div class="value">
+															<strong>2,700,250원</strong>
+														</div>
+													</li>
+												</ul>
+												<div class="cnt-item-wrap">
+													<div class="cnt-wrap">
+														<button type="button" class="btn-mius"><i class="el-icon-minus"></i></button>
+														<input type="text" class="inp" value="0" />
+														<button type="button" class="btn-plus"><i class="el-icon-plus"></i></button>
+													</div>
+													<a href="javascript:void(0)" class="btn-cart"><img src="https://resource.mall.castingn.com/static/images/ico-mall-cart.svg" /></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="lt-item">
+										<div class="mpic"><img src="https://workmarket9.com/casting/data/casting/Product_images/2022-01/1643328054_list.jpg"></div>
+									</div>
+									<div class="rt-item">
+										<a href="javascript:void(0)" class="mtit">더블에이 복사용지 (A4/80G/500매*5권/ 2,750매/ 수도권만 배송 가능)/ 에이포하우스</a>
+										<div class="rw-item-wrap">
+											<i class="el-icon-star-on"></i>
+											<span class="grade">상품만족도 5.0</span>
+											<span class="cnt">(122건)</span>
+										</div>
+										<div class="lowest-item-wrap">
+											<img src="https://resource.mall.castingn.com/static/images/etc-prod-logo01.png" />
+											<div class="info">
+												<span>최저가구매</span>
+												<button class="btn-info"><img src="https://resource.mall.castingn.com/static/images/ico-lowest01.png" /></button>
+											</div>
+										</div>
+
+
+										<div class="mcont">
+											<div class="delivery-item-wrap">
+												<a href="javascript:void(0)"><i class="el-icon-close"></i></a>
+												<ul>
+													<li>
+														<div class="biz"><img src="https://resource.mall.castingn.com/static/images/etc-biz-logo01.png"></div>
+														<div class="price">270,000원 + 무료배송</div>
+													</li>
+													<li>
+														<div class="biz"><img src="https://resource.mall.castingn.com/static/images/etc-biz-logo01.png"></div>
+														<div class="price">270,000원 + 무료배송</div>
+													</li>
+												</ul>
+											</div>
+											<div class="price-item-wrap">
+												<ul>
+													<li>
+														<div class="key">일반회원가</div>
+														<div class="value">70,000원</div>
+													</li>
+													<li>
+														<div class="key">업무마켓9가</div>
+														<div class="value">3,000,000원</div>
+													</li>
+													<li>
+														<div class="key">
+															<img src="https://resource.mall.castingn.com/static/images/sub/ico-list-item.png" />
+															<strong>스마트핀클럽가</strong>
+															<span>54%</span>
+														</div>
+														<div class="value">
+															<strong>2,700,250원</strong>
+														</div>
+													</li>
+												</ul>
+												<div class="cnt-item-wrap">
+													<div class="cnt-wrap">
+														<button type="button" class="btn-mius"><i class="el-icon-minus"></i></button>
+														<input type="text" class="inp" value="0" />
+														<button type="button" class="btn-plus"><i class="el-icon-plus"></i></button>
+													</div>
+													<a href="javascript:void(0)" class="btn-cart"><img src="https://resource.mall.castingn.com/static/images/ico-mall-cart.svg" /></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="lt-item">
+										<div class="mpic"><img src="https://workmarket9.com/casting/data/casting/Product_images/2022-01/1643328054_list.jpg"></div>
+									</div>
+									<div class="rt-item">
+										<a href="javascript:void(0)" class="mtit">더블에이 복사용지 (A4/80G/500매*5권/ 2,750매/ 수도권만 배송 가능)/ 에이포하우스</a>
+										<div class="rw-item-wrap">
+											<i class="el-icon-star-on"></i>
+											<span class="grade">상품만족도 5.0</span>
+											<span class="cnt">(122건)</span>
+										</div>
+										<div class="lowest-item-wrap">
+											<img src="https://resource.mall.castingn.com/static/images/etc-prod-logo01.png" />
+											<div class="info">
+												<span>최저가구매</span>
+												<button class="btn-info"><img src="https://resource.mall.castingn.com/static/images/ico-lowest01.png" /></button>
+											</div>
+										</div>
+
+
+										<div class="mcont">
+											<div class="delivery-item-wrap">
+												<a href="javascript:void(0)"><i class="el-icon-close"></i></a>
+												<ul>
+													<li>
+														<div class="biz"><img src="https://resource.mall.castingn.com/static/images/etc-biz-logo01.png"></div>
+														<div class="price">270,000원 + 무료배송</div>
+													</li>
+													<li>
+														<div class="biz"><img src="https://resource.mall.castingn.com/static/images/etc-biz-logo01.png"></div>
+														<div class="price">270,000원 + 무료배송</div>
+													</li>
+												</ul>
+											</div>
+											<div class="price-item-wrap">
+												<ul>
+													<li>
+														<div class="key">일반회원가</div>
+														<div class="value">70,000원</div>
+													</li>
+													<li>
+														<div class="key">업무마켓9가</div>
+														<div class="value">3,000,000원</div>
+													</li>
+													<li>
+														<div class="key">
+															<img src="https://resource.mall.castingn.com/static/images/sub/ico-list-item.png" />
+															<strong>스마트핀클럽가</strong>
+															<span>54%</span>
+														</div>
+														<div class="value">
+															<strong>2,700,250원</strong>
+														</div>
+													</li>
+												</ul>
+												<div class="cnt-item-wrap">
+													<div class="cnt-wrap">
+														<button type="button" class="btn-mius"><i class="el-icon-minus"></i></button>
+														<input type="text" class="inp" value="0" />
+														<button type="button" class="btn-plus"><i class="el-icon-plus"></i></button>
+													</div>
+													<a href="javascript:void(0)" class="btn-cart"><img src="https://resource.mall.castingn.com/static/images/ico-mall-cart.svg" /></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="lt-item">
+										<div class="mpic"><img src="https://workmarket9.com/casting/data/casting/Product_images/2022-01/1643328054_list.jpg"></div>
+									</div>
+									<div class="rt-item">
+										<a href="javascript:void(0)" class="mtit">더블에이 복사용지 (A4/80G/500매*5권/ 2,750매/ 수도권만 배송 가능)/ 에이포하우스</a>
+										<div class="rw-item-wrap">
+											<i class="el-icon-star-on"></i>
+											<span class="grade">상품만족도 5.0</span>
+											<span class="cnt">(122건)</span>
+										</div>
+										<div class="lowest-item-wrap">
+											<img src="https://resource.mall.castingn.com/static/images/etc-prod-logo01.png" />
+											<div class="info">
+												<span>최저가구매</span>
+												<button class="btn-info"><img src="https://resource.mall.castingn.com/static/images/ico-lowest01.png" /></button>
+											</div>
+										</div>
+
+
+										<div class="mcont">
+											<div class="delivery-item-wrap">
+												<a href="javascript:void(0)"><i class="el-icon-close"></i></a>
+												<ul>
+													<li>
+														<div class="biz"><img src="https://resource.mall.castingn.com/static/images/etc-biz-logo01.png"></div>
+														<div class="price">270,000원 + 무료배송</div>
+													</li>
+													<li>
+														<div class="biz"><img src="https://resource.mall.castingn.com/static/images/etc-biz-logo01.png"></div>
+														<div class="price">270,000원 + 무료배송</div>
+													</li>
+												</ul>
+											</div>
+											<div class="price-item-wrap">
+												<ul>
+													<li>
+														<div class="key">일반회원가</div>
+														<div class="value">70,000원</div>
+													</li>
+													<li>
+														<div class="key">업무마켓9가</div>
+														<div class="value">3,000,000원</div>
+													</li>
+													<li>
+														<div class="key">
+															<img src="https://resource.mall.castingn.com/static/images/sub/ico-list-item.png" />
+															<strong>스마트핀클럽가</strong>
+															<span>54%</span>
+														</div>
+														<div class="value">
+															<strong>2,700,250원</strong>
+														</div>
+													</li>
+												</ul>
+												<div class="cnt-item-wrap">
+													<div class="cnt-wrap">
+														<button type="button" class="btn-mius"><i class="el-icon-minus"></i></button>
+														<input type="text" class="inp" value="0" />
+														<button type="button" class="btn-plus"><i class="el-icon-plus"></i></button>
+													</div>
+													<a href="javascript:void(0)" class="btn-cart"><img src="https://resource.mall.castingn.com/static/images/ico-mall-cart.svg" /></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+		</section>
+
+
+
+
+
+	</div>
+	<!-- //container -->
+
+	<!-- footer -->
+	<div id="footer">
+		<div class="section">
+			<div class="foot-menu">
+				<a href="#"><span>1:1문의</span></a>
+				<a href="#"><span>고객센터</span></a>
+				<a href="#"><span>파트너센터</span></a>
+			</div>
+			<div class="foot-etc">
+				<a href="#"><span>회사소개</span></a>
+				<a href="#"><span>서비스소개</span></a>
+				<a href="#"><span>안전거래보장</span></a>
+				<a href="#"><span>이용약관</span></a>
+				<a href="#"><span class="t-red">개인정보처리방침</span></a>
+				<a href="#"><span>공지사항</span></a>
+			</div>
+			<div class="foot-cs">
+				<div class="cs-num">1644 <i class="circle"></i> 2653</div>
+				<div class="cs-time">
+					<dl>
+						<dt>평일</dt>
+						<dd>08:30 ~ 17:30</dd>
+					</dl>
+					<dl>
+						<dt>점심시간</dt>
+						<dd>12:00~13:00</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="foot-info">
+				<strong>㈜캐스팅엔     CEO : 용성남, 최준혁</strong> <br/><br/>
+				통신판매신고 : 제 2019-인천부평-1343 호 고객섬김센터 : Tel. 1644-2653 Fax. 070-4032-2523 사업자등록번호 : 423-86-00075 [사업자정보]<br/>
+				주소 : 서울지점 - 서울특별시 마포구 백범로31길 21 서울창업허브 809호 | 본점 - 인천광역시 부평구 대정로 66, 4층 408호(부평동, 다운타운일레븐)
+			</div>
+			<p class="foot-copy">ⓒ 2017 CastingN. All rights reserved.</p>
+			<p class="foot-logo"><img src="https://resource.mall.castingn.com/static/images/foot-logo.png" alt=""></p>
+		</div>
+	</div>
+	<!-- //footer -->
+
+	<div class="right-fix m-hide">
+		<a href="#" class="btn-estimate"><span>비<br/>교<br/>견<br/>적</span><i class="ico-pen"></i></a>
+		<button type="button" class="btn-top"><img src="https://resource.mall.castingn.com/static/images/btn-top.png" alt=""></button>
+	</div><!-- //right-fix -->
+</div>
+
+
+<script>
+    $(document).ready(function(){
+
+        $("body").on("click", ".select-item-wrap01>a", function(){
+            var ck = $(this).parents(".select-item-wrap01").eq(0).hasClass("on");
+            if(ck){
+                $(this).parents(".select-item-wrap01").eq(0).removeClass("on");
+            }else{
+                $(this).parents(".select-item-wrap01").eq(0).addClass("on");
+            }
+        });
+        $("body").on("mouseleave", ".select-item-wrap01", function(){
+            $(".select-item-wrap01").removeClass("on");
+        });
+        $("body").on("click", ".select-item-wrap01>.select-result-wrap ul li a", function(){
+            $(this).parents(".select-result-wrap").eq(0).prev("a").text($(this).find("span").text());
+            $(".select-item-wrap01").removeClass("on");
+        });
+
+        $("body").on("click", ".cnt-wrap .btn-mius", function(){
+            var n = parseInt($(this).parents(".cnt-wrap").eq(0).find("input").val());
+            if(n > 0){
+                $(this).parents(".cnt-wrap").eq(0).find("input").val(n-1);
+            }
+        });
+        $("body").on("click", ".cnt-wrap .btn-plus", function(){
+            var n = parseInt($(this).parents(".cnt-wrap").eq(0).find("input").val());
+            $(this).parents(".cnt-wrap").eq(0).find("input").val(n+1);
+        });
+
+        var lastHeight = $("body").prop("scrollHeight") - 483;
+        $(window).scroll(function(){
+            var st = $(this).scrollTop();
+            var cartHeight = $(".cart-item-wrap").height()-40;
+            //console.log(st, lastHeight);
+            if(st > 500 && (st+483) < lastHeight){
+                $(".cart-item-wrap").css("margin-top",(st-cartHeight)+"px")
+			}else if(st < 500){
+                $(".cart-item-wrap").css("margin-top","0");
+			}
+
+		});
+
+        $("body").on("click", ".mob-category-slide-wrap a", function(){
+			$(".mob-category-slide-wrap a").removeClass("on");
+            $(this).addClass("on");
+		});
+        $("body").on("click", ".special-slide-wrap .swiper-container .swiper-slide a", function(){
+            $(".special-slide-wrap .swiper-container .swiper-slide a").removeClass("on");
+            $(this).addClass("on");
+        });
+
+        $("body").on("click", ".info .btn-info", function(){
+            var ck = $(this).hasClass("on");
+            if(ck){
+                $(this).removeClass("on");
+                $(this).parents("li").eq(0).find(".delivery-item-wrap").removeClass("on");
+            }else{
+                $(this).addClass("on");
+                $(this).parents("li").eq(0).find(".delivery-item-wrap").addClass("on");
+            }
+        });
+        $("body").on("click", ".delivery-item-wrap a", function(){
+            $(".info .btn-info").removeClass("on");
+            $(this).parents(".delivery-item-wrap").eq(0).removeClass("on");
+        });
+        $("body").on("click", ".bt-toggle", function(){
+            var ck = $(".brand-box").hasClass("toggle-on");
+            if(ck){
+                $(".brand-box").removeClass("toggle-on");
+            }else{
+                $(".brand-box").addClass("toggle-on");
+            }
+        });
+
+        //옵션 선택 Add
+        $(document).on("click",".btn-slc-brand-add",function(){
+            var p_brand_name = $(this).attr('data-brand-name');
+            var p_brand_code = $(this).attr('data-brand-code');
+            var data_type = $(this).attr('data-type');
+
+            if($(this).hasClass("select")) {
+                $(this).removeClass("select");
+                //삭제해야 됨.
+                $(".result-box .dep2[data-brand-code='"+p_brand_code+"']").each(function(){
+                    $(this).remove();
+                });
+            } else {
+                $(this).addClass('select');
+                $('.result-box .dep1').after("<span class='dep2' data-type='"+data_type+"' data-brand-code='"+p_brand_code+"'>"+p_brand_name+"<a href='javascript:void(0);' class='menu-close'>메뉴 닫기</a></span>");
+            }
+
+            //callItemList();
+
+        });
+
+        //옵션 선택 Del
+        $(document).on("click",".result-box .menu-close",function(){
+            $(this).parents('.dep2').remove();
+            var p_brand_code = $(this).parents().attr('data-brand-code');
+
+            //속성값 선택도 삭제함
+            $(".chk-bt-ty1[data-brand-code="+p_brand_code+"]").each(function(){
+                $(this).removeClass("select");
+            });
+            //callItemList(1);
+        });
+
+
+    });
+
+
+
+</script>
+
+</body>
+</html>
+
+
+
+
+

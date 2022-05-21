@@ -1,0 +1,84 @@
+spring:
+  profiles:
+    active: dev # 기본 환경 선택
+  devtools:
+    livereload:
+      enabled: true
+    restart:
+      enabled: true #classpath에 속해있는 파일들의 수정을 감지하고 자동으로 재시작
+
+#로그 레벨
+logging:
+  file:
+    name: /var/logs/workmarket9/server.log
+  pattern:
+    dateformat: yyyy-MM-dd HH:mm:ss
+    file: '%d{${LOG_DATEFORMAT_PATTERN:-yyyy-MM-dd HH:mm:ss.SSS}} ${LOG_LEVEL_PATTERN:-%5p}
+      ${PID:- } --- [%t] %-40.40logger{39} : %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}'
+    level: '%5p'
+  logback:
+    rollingpolicy:
+      file-name-pattern: ${LOG_FILE}.%d{yyyy-MM-dd}.%i.gz
+      max-history: 9999999
+      max-file-size: 100MB
+  level:
+    root: INFO
+    com:
+      castingn: INFO
+      #interceptor: DEBUG
+    jdbc:
+      audit: error
+      resultset: error
+      resultsettable: off
+      sqlonly: INFO
+      sqltiming: error
+    org:
+      springframework:
+        web: INFO
+      Apach:
+        Tomcat: INFO
+        catalina: INFO
+    web: info
+
+server:
+  port: 8080
+  error:
+    include-binding-errors: always #바인딩 오류를 포함시킬 때
+    whitelabel:
+      enabled: false #브라우저 요청에 대해 서버 오류시 기본으로 노출할 페이지를 사용할지 여부
+    include-exception: false #예외 내용을 포함시킬 때
+    include-message: always #오류 메시지를 포함시킬 때
+    include-stacktrace: always #stacktrace를 포함시킬 떄
+    path: /error #오류 처리할 컨트롤러 패스
+resources:
+  notload:
+    list: /*.html, /*.js, /*.css, /*.jpg, /*.jpeg, /*.png, /*.gif
+
+# dev 환경
+---
+spring:
+  config:
+    activate:
+      on-profile: dev1, dev2, dev
+  datasource:
+    url: jdbc:log4jdbc:mysql://3.37.238.95:3306/casting?characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
+    driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+    username: root
+    password: sotkfkd0!A
+    dbcp2:
+      validation-query: SELECT 1
+
+# prd 환경
+---
+spring:
+  config:
+    activate:
+      on-profile: real1,real2,prd
+  datasource:
+    url: jdbc:log4jdbc:mysql://castingn-mysql.ck5zpynlgs85.ap-northeast-2.rds.amazonaws.com:3306/casting?characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
+    #url: jdbc:log4jdbc:mysql://13.124.245.226:3306/casting?characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
+    driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+    username: albatross
+    password: sotkfkd0!
+    dbcp2:
+      validation-query: SELECT 1

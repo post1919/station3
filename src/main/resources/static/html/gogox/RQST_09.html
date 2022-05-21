@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>업무마켓9</title>
+	<script type="text/javascript" async="" src="../../../static/js/jquery-3.3.1.min.js"></script>
+	<link rel="stylesheet" href="../../../static/css/reset.css">
+	<link rel="stylesheet" href="../../../static/css/layout.css">
+	<link rel="stylesheet" href="../../css/mall.css" />
+    <link rel="stylesheet" href="../../css/gogox.css" />
+</head>
+<body class="detail-page"><!-- 상세보기 페이지일때 detail-page 넣어주세요. 해당페이지에서 header영역이 가려집니다 -->
+
+<div id="wrap">
+    <!-- header -->
+    <div id="header-mall" class="">
+        <div class="header-top m-hide">
+            <div class="inner">
+                <span class="header-top-left">
+                  <a href="/casting/intro">업무마켓나인 소개</a>
+                </span>
+                <span class="header-top-right">
+
+                                    <a href="javascript:void(0);" id="loginBtn" onclick="loginFormOn();">로그인</a>
+                  <a href="javascript:void(0);" onclick="loginchangeStep3();">회원가입</a>
+                  <a href="/casting/Buyr/Interaction/?menu=inquery">1:1문의</a>
+                  <div class="layer-wrap">
+                    <a href="javascript:void(0);" class="last center-bt">공급사 통합센터</a>
+                    <div class="head-layer-pop head-layer-1">
+                      <ul class="center-list">
+                        <li><a href="/casting/Buyr/?page_mode=partner">공급사 입점신청</a></li>
+                        <li><a href="/casting/Manage/Auth/index.php">공급사 통합 로그인</a></li>
+                        <li><a href="https://www.castingn.com/join/partner/formnew?workmarket9HeaderRemove=OK" target="_blank">소싱 파트너 로그인</a></li>
+                      </ul>
+                    </div>
+                  </div>
+
+
+
+                </span>
+            </div>
+            <!-- login후 나오는 팝업 -->
+        </div>
+
+        <div class="header-center m-hide">
+            <div class="inner">
+                <h1 class="logo">
+                    <a href="#"><img src="https://resource.mall.castingn.com/static/images/etc-mall-logo.png" alt="" class="m-hide"></a>
+                </h1>
+
+                <div class="header-search">
+                    <input type="text" id="q" placeholder="업무에 필요한 상품을 빠르게 검색해보세요!" value="" onkeydown="if(event.keyCode == 13) schcheck();" onclick="wordcheck();">
+                    <button type="button" onclick="schcheck();">검색</button>
+                </div>
+
+                <div class="header-category">
+                    <a href="javascript:loginFormOn();" class="category-menu1">내정보</a>
+                    <a href="/casting/Mypage/?mode=cart" class="category-menu2">장바구니</a>
+                    <a href="javascript:loginFormOn();" class="category-menu3">배송정보</a>
+                    <a href="javascript:loginFormOn();" class="category-menu4">채팅</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-bottom m-hide">
+            <div class="inner">
+                <ul class="gnb">
+                    <li class="menu-1 ">
+                        <a href="javascript:void(0)" class="btn-toggle-menu">비품,사무용품 <i class="el-icon-arrow-down"></i></a>
+                    </li>
+                    <li class="menu-2">
+                        <span class="tool-tip">전문업체매칭</span>
+                        <i class="ico-maching">👊</i>
+                        <a href="javascript:void(0)">파워매칭</a>
+                    </li>
+                    <li class="menu-3">
+                        <span class="tool-tip">기업형구독서비스</span>
+                        <i class="ico-pin"></i>
+                        <a href="javascript:void(0)">핀스퀘어</a>
+                    </li>
+                    <li class="menu-4 ">
+                        <i class="ico-smart"></i>
+                        <a href="javascript:void(0)">스마트핀클럽</a>
+                    </li>
+                    <li class="menu-5 "><a href="javascript:void(0)">C노트</a></li>
+                    <li class="menu-6 "><a href="javascript:void(0)">이벤트</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- //header -->
+
+	<!-- container :: m-hide - 모바일에서 안보임 / p-hide - PC화면에서 안보임 -->
+	<div id="container">
+
+        <section class="gogox-header-wrap">
+            <div class="gtit"><img src="https://castingn-mall.s3.ap-northeast-2.amazonaws.com/static/images/gogox/etc-gogox.svg" /></div>
+            <button type="button">전문업체직접상담</button>
+        </section>
+
+        <section class="gogox-help-msg">아래 운송 서비스를 요청하시겠습니까?</section>
+
+        <section class="gogox-service-info-wrap">
+            <ul>
+                <li>
+                    <div class="lt-item">
+                        <!--
+                        오토바이 : ico-car-case-list01-on
+                        다마스 : ico-car-case-list02-on
+                        라보 : ico-car-case-list03-on
+                        벤 : ico-car-case-list04-on
+                        1통 : ico-car-case-list05-on
+                        2.통 : ico-car-case-list06-on
+                        3통 : ico-car-case-list07-on
+                        5통 : ico-car-case-list08-on
+                        11통 : ico-car-case-list09-on
+                        -->
+                        <div class="spic" style="background:url(https://castingn-mall.s3.ap-northeast-2.amazonaws.com/static/images/gogox/ico-car-case-list01-on.png)"></div>
+                        <div class="stxt">오토바이</div>
+                    </div>
+                    <div class="rt-item">
+                        <div class="rtit">오토바이</div>
+                        <div class="rdesc">
+                            <strong>픽업시간</strong>
+                            <span>YYYY-MM-DD</span>
+                            <span>수요일</span>
+                            <span>오후 03 : 00</span>
+                            <span class="req">픽업요청</span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="lt-item">
+                        <div class="spic" style="background:url(https://castingn-mall.s3.ap-northeast-2.amazonaws.com/static/images/gogox/ico-car-case-list01-on.png)"></div>
+                        <div class="stxt">기사정보</div>
+                    </div>
+                    <div class="rt-item">
+                        <div class="rtit">
+                            <strong>김진영</strong>
+                            <span>기사님/다마스</span>
+                        </div>
+                        <div class="rdesc">
+                            <strong>연락처</strong>
+                            <span>010-1234-5678</span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section class="gogox-status-wrap">
+            <div class="lt-item">
+                <div class="mtit">운송현황</div>
+                <button type="button">
+                    <span>운송서비스 요청취소 </span>
+                    <i class="el-icon-arrow-right"></i>
+                </button>
+            </div>
+            <div class="rt-item">
+                <ul>
+                    <li class="on">
+                        <div class="num">1</div>
+                        <div class="txt">접수중</div>
+                    </li>
+                    <li>
+                        <div class="num">2</div>
+                        <div class="txt">배차확정</div>
+                    </li>
+                    <li>
+                        <div class="num">3</div>
+                        <div class="txt">배송완료</div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="gogox-arrive-wrap">
+            <dl>
+                <dt>
+                    <a href="javascript:void(0)">
+                        <span>도착정보 확인</span>
+                        <i class="el-icon-arrow-down"></i>
+                    </a>
+                </dt>
+                <dd>
+                    <section class="quick-req-form-wrap type02">
+
+                        <div class="rows-item-wrap">
+                            <div class="label">출발지</div>
+                            <div class="form-item-wrap">
+                                <input type="text" class="inp t01" value="업무마켓 나인 강남지점 1" />
+                                <input type="text" class="inp t02" value="서울특별시 강남구 테헤란로 517 12층 06164" />
+                            </div>
+                            <div class="form-item-wrap">
+                                <input type="text" class="inp t01" value="김지은" />
+                                <input type="text" class="inp t02" value="010-1234-5678"/>
+                            </div>
+
+
+                            <ul>
+                                <li>
+                                    <div class="add-form-wrap">
+                                        <div class="rows-item-wrap">
+                                            <div class="label">도착지 1</div>
+                                            <div class="form-item-wrap">
+                                                <input type="text" class="inp t01" value="업무마켓 나인 강남지점 1" />
+                                                <input type="text" class="inp t02" value="서울특별시 강남구 테헤란로 517 12층 06164" />
+                                            </div>
+                                            <div class="form-item-wrap">
+                                                <input type="text" class="inp t01" value="김지은" />
+                                                <input type="text" class="inp t02" value="010-1234-5678" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </section>
+                </dd>
+            </dl>
+        </section>
+
+        <section class="gogox-quick-btn-wrap">
+            <button type="button">확인</button>
+        </section>
+
+
+	</div>
+	<!-- //container -->
+
+
+
+
+
+	<!-- footer -->
+	<div id="footer">
+		<div class="section">
+			<div class="foot-menu">
+				<a href="#"><span>1:1문의</span></a>
+				<a href="#"><span>고객센터</span></a>
+				<a href="#"><span>파트너센터</span></a>
+			</div>
+			<div class="foot-etc">
+				<a href="#"><span>회사소개</span></a>
+				<a href="#"><span>서비스소개</span></a>
+				<a href="#"><span>안전거래보장</span></a>
+				<a href="#"><span>이용약관</span></a>
+				<a href="#"><span class="t-red">개인정보처리방침</span></a>
+				<a href="#"><span>공지사항</span></a>
+			</div>
+			<div class="foot-cs">
+				<div class="cs-num">1644 <i class="circle"></i> 2653</div>
+				<div class="cs-time">
+					<dl>
+						<dt>평일</dt>
+						<dd>08:30 ~ 17:30</dd>
+					</dl>
+					<dl>
+						<dt>점심시간</dt>
+						<dd>12:00~13:00</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="foot-info">
+				<strong>㈜캐스팅엔     CEO : 용성남, 최준혁</strong> <br/><br/>
+				통신판매신고 : 제 2019-인천부평-1343 호 고객섬김센터 : Tel. 1644-2653 Fax. 070-4032-2523 사업자등록번호 : 423-86-00075 [사업자정보]<br/>
+				주소 : 서울지점 - 서울특별시 마포구 백범로31길 21 서울창업허브 809호 | 본점 - 인천광역시 부평구 대정로 66, 4층 408호(부평동, 다운타운일레븐)
+			</div>
+			<p class="foot-copy">ⓒ 2017 CastingN. All rights reserved.</p>
+			<p class="foot-logo"><img src="https://resource.mall.castingn.com/static/images/foot-logo.png" alt=""></p>
+		</div>
+	</div>
+	<!-- //footer -->
+
+	<div class="right-fix m-hide">
+		<a href="#" class="btn-estimate"><span>비<br/>교<br/>견<br/>적</span><i class="ico-pen"></i></a>
+		<button type="button" class="btn-top"><img src="https://resource.mall.castingn.com/static/images/btn-top.png" alt=""></button>
+	</div><!-- //right-fix -->
+</div>
+
+
+<link rel="stylesheet" href="https://unpkg.com/swiper@6/swiper-bundle.min.css" />
+<script src="https://unpkg.com/swiper@6/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="../../../static/js/Chart.bundle.min.js"></script>
+<script type="text/javascript" src="../../../static/js/Chart.min.js"></script>
+<link rel="stylesheet" href="../../../static/css/Chart.css">
+
+
+<script>
+$(document).ready(function(){
+    $("body").on("click", ".gogox-arrive-wrap dl dt a", function(){
+        var ck = $(this).hasClass("on");
+        if(ck){
+            $(this).removeClass("on");
+            $(".gogox-arrive-wrap dl dd").removeClass("on");
+        }else{
+            $(this).addClass("on");
+            $(".gogox-arrive-wrap dl dd").addClass("on");
+        }
+    });
+
+
+});
+
+
+
+
+</script>
+
+</body>
+</html>
+
+
+

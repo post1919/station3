@@ -1,0 +1,905 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>업무마켓9</title>
+	<script type="text/javascript" async="" src="../../../static/js/jquery-3.3.1.min.js"></script>
+	<link rel="stylesheet" href="../../../static/css/reset.css">
+	<link rel="stylesheet" href="../../../static/css/layout.css">
+</head>
+<body class="detail-page"><!-- 상세보기 페이지일때 detail-page 넣어주세요. 해당페이지에서 header영역이 가려집니다 -->
+
+<div id="wrap">
+	<!-- header -->
+	<div id="header">
+		<div class="top-menu m-hide">
+			<!-- 1018 로그인전 -->
+			<a href="#"><i class="ico-lock"></i><span>로그인</span></a>
+			<a href="#"><span>회원가입</span></a>
+			<!-- 1018 로그인후 -->
+			<a href="#"><i class="ico-pp"></i><span>김진영님</span></a>
+			<!-- //1018 로그인후 -->
+
+			<a href="#"><span class="t-blue">기업멤버쉽</span></a>
+			<a href="#"><span>파트너통합센터</span></a>
+		</div>
+		<h1 class="logo"><a href="#"><img src="https://resource.mall.castingn.com/static/images/logo.png" alt="" class="m-hide"><img src="https://resource.mall.castingn.com/static/images/logo-m.png" alt="" class="p-hide"></a></h1>
+		<div class="mobile-top p-hide">
+			<a href="#"><span>파트너 통합센터</span><i class="ico-top-arrow"></i></a>
+			<a href="#"><i class="ico-mem"></i></a>
+		</div>
+		<div class="gnb-section">
+			<div class="gnb-left">
+				<button type="button" class="btn-cate-view"><i class="ico-cate"></i><span>카테고리</span></button> 
+				<a href="#"><i class="ico-service"></i><span>비교견적서비스</span></a><!-- 해당 페이지일 때 active-gnb -->
+				<a href="#" class="p-hide active-gnb"><i class="ico-home"></i><span>업무마켓9</span></a>
+				<a href="#"><i class="ico-sh"></i><span>전문파트너정보</span></a>
+				<a href="#" class="p-hide"><i class="ico-more"></i><span>더보기</span></a>
+			</div>
+			<div class="gnb-right m-hide">
+				<a href="#"><span>업무레시피</span></a>
+				<a href="#"><span>이벤트</span></a>
+			</div>
+		</div>
+		<!-- 1018 카테고리 레이어 -->
+		<div class="all-cate-wrap">
+			<div class="layer-title p-hide">카테고리</div>
+			<button type="button" class="btn-close p-hide">닫기</button>
+			<div class="cate-section">
+				<div class="cate-list">
+					<div class="cate-item active-item">
+						<a href="#" class="cate-link"><i class="ico-cate1 p-hide"></i><span>IT 개발</span></a>
+						<div class="sub-cate-wrap">
+							<div class="sub-cate-list">
+								<ul>
+									<li><a href="#"><span>앱개발</span></a></li>
+									<li><a href="#"><span>쇼핑몰구축</span></a></li>
+									<li><a href="#"><span>홈페이지구축</span></a></li>
+									<li><a href="#"><span>플랫폼구축</span></a></li>
+									<li><a href="#"><span>CRM구축</span></a></li>
+									<li><a href="#"><span>ERP구축</span></a></li>
+									<li><a href="#"><span>WMS구축</span></a></li>
+									<li><a href="#"><span>LMS구축</span></a></li>
+								</ul>
+							</div>
+						</div>
+					</div><!-- //cate-item -->
+					<div class="cate-item">
+						<a href="#" class="cate-link"><i class="ico-cate2 p-hide"></i><span>마케팅</span></a>
+						<div class="sub-cate-wrap">
+							<div class="sub-cate-list">
+								<ul>
+									<li><a href="#"><span>데이터분석</span></a></li>
+									<li><a href="#"><span>검색엔진최적화 (SEO)</span></a></li>
+									<li><a href="#"><span>광고 세팅</span></a></li>
+									<li><a href="#"><span>마케팅솔루션</span></a></li>
+									<li><a href="#"><span>매체광고</span></a></li>
+									<li><a href="#"><span>바이럴마케팅</span></a></li>
+									<li><a href="#"><span>앱마케팅</span></a></li>
+									<li><a href="#"><span>SNS마케팅</span></a></li>
+									<li><a href="#"><span>언론홍보</span></a></li>
+									<li><a href="#"><span>오프라인광고</span></a></li>
+									<li><a href="#"><span>전시기획,대행</span></a></li>
+									<li><a href="#"><span>신제품발표,세일즈행사</span></a></li>
+								</ul>
+							</div>
+						</div>
+					</div><!-- //cate-item -->
+					<div class="cate-item">
+						<a href="#" class="cate-link"><i class="ico-cate3 p-hide"></i><span>영상.콘텐츠</span></a>
+						<div class="sub-cate-wrap">
+							<div class="sub-cate-list">
+								<ul>
+									<li><a href="#"><span>데이터분석</span></a></li>
+									<li><a href="#"><span>검색엔진최적화 (SEO)</span></a></li>
+									<li><a href="#"><span>광고 세팅</span></a></li>
+									<li><a href="#"><span>마케팅솔루션</span></a></li>
+									<li><a href="#"><span>매체광고</span></a></li>
+									<li><a href="#"><span>바이럴마케팅</span></a></li>
+									<li><a href="#"><span>앱마케팅</span></a></li>
+									<li><a href="#"><span>SNS마케팅</span></a></li>
+									<li><a href="#"><span>언론홍보</span></a></li>
+									<li><a href="#"><span>오프라인광고</span></a></li>
+									<li><a href="#"><span>전시기획,대행</span></a></li>
+									<li><a href="#"><span>신제품발표,세일즈행사</span></a></li>
+								</ul>
+							</div>
+						</div>
+					</div><!-- //cate-item -->
+					<div class="cate-item">
+						<a href="#" class="cate-link"><i class="ico-cate4 p-hide"></i><span>디자인</span></a>
+						<div class="sub-cate-wrap">
+							<div class="sub-cate-list">
+								<ul>
+									<li><a href="#"><span>데이터분석</span></a></li>
+									<li><a href="#"><span>검색엔진최적화 (SEO)</span></a></li>
+									<li><a href="#"><span>광고 세팅</span></a></li>
+									<li><a href="#"><span>마케팅솔루션</span></a></li>
+									<li><a href="#"><span>매체광고</span></a></li>
+									<li><a href="#"><span>바이럴마케팅</span></a></li>
+									<li><a href="#"><span>앱마케팅</span></a></li>
+									<li><a href="#"><span>SNS마케팅</span></a></li>
+									<li><a href="#"><span>언론홍보</span></a></li>
+									<li><a href="#"><span>오프라인광고</span></a></li>
+									<li><a href="#"><span>전시기획,대행</span></a></li>
+									<li><a href="#"><span>신제품발표,세일즈행사</span></a></li>
+								</ul>
+							</div>
+						</div>
+					</div><!-- //cate-item -->
+					<div class="cate-item">
+						<a href="#" class="cate-link"><i class="ico-cate5 p-hide"></i><span>전문서비스</span></a>
+						<div class="sub-cate-wrap">
+							<div class="sub-cate-list">
+								<ul>
+									<li><a href="#"><span>데이터분석</span></a></li>
+									<li><a href="#"><span>검색엔진최적화 (SEO)</span></a></li>
+									<li><a href="#"><span>광고 세팅</span></a></li>
+									<li><a href="#"><span>마케팅솔루션</span></a></li>
+									<li><a href="#"><span>매체광고</span></a></li>
+									<li><a href="#"><span>바이럴마케팅</span></a></li>
+									<li><a href="#"><span>앱마케팅</span></a></li>
+									<li><a href="#"><span>SNS마케팅</span></a></li>
+									<li><a href="#"><span>언론홍보</span></a></li>
+									<li><a href="#"><span>오프라인광고</span></a></li>
+									<li><a href="#"><span>전시기획,대행</span></a></li>
+									<li><a href="#"><span>신제품발표,세일즈행사</span></a></li>
+								</ul>
+							</div>
+						</div>
+					</div><!-- //cate-item -->
+					<div class="cate-item">
+						<a href="#" class="cate-link"><i class="ico-cate6 p-hide"></i><span>사무환경</span></a>
+						<div class="sub-cate-wrap">
+							<div class="sub-cate-list">
+								<ul>
+									<li><a href="#"><span>데이터분석</span></a></li>
+									<li><a href="#"><span>검색엔진최적화 (SEO)</span></a></li>
+									<li><a href="#"><span>광고 세팅</span></a></li>
+									<li><a href="#"><span>마케팅솔루션</span></a></li>
+									<li><a href="#"><span>매체광고</span></a></li>
+									<li><a href="#"><span>바이럴마케팅</span></a></li>
+									<li><a href="#"><span>앱마케팅</span></a></li>
+									<li><a href="#"><span>SNS마케팅</span></a></li>
+									<li><a href="#"><span>언론홍보</span></a></li>
+									<li><a href="#"><span>오프라인광고</span></a></li>
+									<li><a href="#"><span>전시기획,대행</span></a></li>
+									<li><a href="#"><span>신제품발표,세일즈행사</span></a></li>
+								</ul>
+							</div>
+						</div>
+					</div><!-- //cate-item -->
+					<div class="cate-item">
+						<a href="#" class="cate-link"><i class="ico-cate7 p-hide"></i><span>기업복지</span></a>
+						<div class="sub-cate-wrap">
+							<div class="sub-cate-list">
+								<ul>
+									<li><a href="#"><span>데이터분석</span></a></li>
+									<li><a href="#"><span>검색엔진최적화 (SEO)</span></a></li>
+									<li><a href="#"><span>광고 세팅</span></a></li>
+									<li><a href="#"><span>마케팅솔루션</span></a></li>
+									<li><a href="#"><span>매체광고</span></a></li>
+									<li><a href="#"><span>바이럴마케팅</span></a></li>
+									<li><a href="#"><span>앱마케팅</span></a></li>
+									<li><a href="#"><span>SNS마케팅</span></a></li>
+									<li><a href="#"><span>언론홍보</span></a></li>
+									<li><a href="#"><span>오프라인광고</span></a></li>
+									<li><a href="#"><span>전시기획,대행</span></a></li>
+									<li><a href="#"><span>신제품발표,세일즈행사</span></a></li>
+								</ul>
+							</div>
+						</div>
+					</div><!-- //cate-item -->
+					<div class="cate-item">
+						<a href="#" class="cate-link"><i class="ico-cate8 p-hide"></i><span>기업교육</span></a>
+						<div class="sub-cate-wrap">
+							<div class="sub-cate-list">
+								<ul>
+									<li><a href="#"><span>데이터분석</span></a></li>
+									<li><a href="#"><span>검색엔진최적화 (SEO)</span></a></li>
+									<li><a href="#"><span>광고 세팅</span></a></li>
+									<li><a href="#"><span>마케팅솔루션</span></a></li>
+									<li><a href="#"><span>매체광고</span></a></li>
+									<li><a href="#"><span>바이럴마케팅</span></a></li>
+									<li><a href="#"><span>앱마케팅</span></a></li>
+									<li><a href="#"><span>SNS마케팅</span></a></li>
+									<li><a href="#"><span>언론홍보</span></a></li>
+									<li><a href="#"><span>오프라인광고</span></a></li>
+									<li><a href="#"><span>전시기획,대행</span></a></li>
+									<li><a href="#"><span>신제품발표,세일즈행사</span></a></li>
+								</ul>
+							</div>
+						</div>
+					</div><!-- //cate-item -->
+					<div class="cate-item">
+						<a href="#" class="cate-link"><i class="ico-cate9 p-hide"></i><span>채용</span></a>
+						<div class="sub-cate-wrap">
+							<div class="sub-cate-list">
+								<ul>
+									<li><a href="#"><span>데이터분석</span></a></li>
+									<li><a href="#"><span>검색엔진최적화 (SEO)</span></a></li>
+									<li><a href="#"><span>광고 세팅</span></a></li>
+									<li><a href="#"><span>마케팅솔루션</span></a></li>
+									<li><a href="#"><span>매체광고</span></a></li>
+									<li><a href="#"><span>바이럴마케팅</span></a></li>
+									<li><a href="#"><span>앱마케팅</span></a></li>
+									<li><a href="#"><span>SNS마케팅</span></a></li>
+									<li><a href="#"><span>언론홍보</span></a></li>
+									<li><a href="#"><span>오프라인광고</span></a></li>
+									<li><a href="#"><span>전시기획,대행</span></a></li>
+									<li><a href="#"><span>신제품발표,세일즈행사</span></a></li>
+								</ul>
+							</div>
+						</div>
+					</div><!-- //cate-item -->
+					<div class="cate-item">
+						<a href="#" class="cate-link"><i class="ico-cate10 p-hide"></i><span>렌탈구독</span></a>
+						<div class="sub-cate-wrap">
+							<div class="sub-cate-list">
+								<ul>
+									<li><a href="#"><span>데이터분석</span></a></li>
+									<li><a href="#"><span>검색엔진최적화 (SEO)</span></a></li>
+									<li><a href="#"><span>광고 세팅</span></a></li>
+									<li><a href="#"><span>마케팅솔루션</span></a></li>
+									<li><a href="#"><span>매체광고</span></a></li>
+									<li><a href="#"><span>바이럴마케팅</span></a></li>
+									<li><a href="#"><span>앱마케팅</span></a></li>
+									<li><a href="#"><span>SNS마케팅</span></a></li>
+									<li><a href="#"><span>언론홍보</span></a></li>
+									<li><a href="#"><span>오프라인광고</span></a></li>
+									<li><a href="#"><span>전시기획,대행</span></a></li>
+									<li><a href="#"><span>신제품발표,세일즈행사</span></a></li>
+								</ul>
+							</div>
+						</div>
+					</div><!-- //cate-item -->
+					<div class="cate-item">
+						<a href="#" class="cate-link"><i class="ico-cate11 p-hide"></i><span>비품</span></a>
+						<div class="sub-cate-wrap">
+							<div class="sub-cate-list">
+								<ul>
+									<li><a href="#"><span>데이터분석</span></a></li>
+									<li><a href="#"><span>검색엔진최적화 (SEO)</span></a></li>
+									<li><a href="#"><span>광고 세팅</span></a></li>
+									<li><a href="#"><span>마케팅솔루션</span></a></li>
+									<li><a href="#"><span>매체광고</span></a></li>
+									<li><a href="#"><span>바이럴마케팅</span></a></li>
+									<li><a href="#"><span>앱마케팅</span></a></li>
+									<li><a href="#"><span>SNS마케팅</span></a></li>
+									<li><a href="#"><span>언론홍보</span></a></li>
+									<li><a href="#"><span>오프라인광고</span></a></li>
+									<li><a href="#"><span>전시기획,대행</span></a></li>
+									<li><a href="#"><span>신제품발표,세일즈행사</span></a></li>
+								</ul>
+							</div>
+						</div>
+					</div><!-- //cate-item -->
+				</div>
+			</div>
+			<div class="bnr-section">
+				<div class="bnr-item"><a href="#"><img src="https://resource.mall.castingn.com/static/images/cate-bnr1.png" alt=""></a></div>
+				<div class="bnr-item"><a href="#"><img src="https://resource.mall.castingn.com/static/images/cate-bnr2.png" alt=""></a></div>
+				<div class="bnr-item"><a href="#"><img src="https://resource.mall.castingn.com/static/images/cate-bnr3.png" alt=""></a></div>
+			</div>
+		</div>
+		<!-- //1018 카테고리 레이어 -->
+
+	</div>
+	<!-- //header -->
+
+	<!-- container :: m-hide - 모바일에서 안보임 / p-hide - PC화면에서 안보임 -->
+	<div id="container">
+		<div class="detail-top-wrap">
+			<div class="mo-head p-hide"> <!-- 해당 페이지에서 헤더 역할을 합니다 -->
+				<button type="button" class="btn-history-back">back</button>
+				<div class="prod-name"><strong>더블에이 복사용지</strong></div>
+				<a href="#" class="btn-home"><i class="ico-home"></i></a>
+			</div>
+			<div class="detail-top">
+				<div class="detail-loca-wrap">
+					<div class="detail-location">
+						<div class="loca-item"><span>비품</span></div>
+						<div class="loca-item"><span>사무용품</span></div>
+						<div class="loca-item"><span>복사용지</span></div>
+						<div class="loca-item"><span>A4</span></div>
+					</div>
+					<button type="button" class="btn-menu p-hide">menu</button>
+				</div>
+				<div class="top-area">
+					<div class="top-left">
+						<div class="main-thumb-area">
+							<div class="thumb-info">
+								<p class="code"><span>상품코드</span><span>C000131227</span></p>
+								<button type="button" class="btn-copy">복사</button>
+							</div>
+							<div class="thumb-box"><img src="https://resource.mall.castingn.com/static/images/sub/detail-main-thumb.png" alt=""></div>
+						</div>
+						<div class="rating-area m-hide">
+							<div class="star-box">
+								<div class="star4"></div> <!-- star0 / star1 / star2 / star3 / star4 / star5 -->
+							</div>
+							<div class="rating-count">
+								<dl>
+									<dt>만족도</dt>
+									<dd>22</dd>
+								</dl>
+							</div>
+						</div>
+					</div>
+					<div class="delivery-area p-hide">
+						<dl>
+							<dt>배송예정일</dt>
+							<dd>평일 오후 4시이전 주문 시 모레도착 <i class="ico-info"></i></dd>
+						</dl>
+					</div>
+
+					<div class="top-right">
+						<div class="top-title">
+							<dl class="title-area">
+								<dt><strong class="t-mint">멤버쉽회원 15% 추가할인</strong><i class="ico-circle"></i><strong class="t-mint">무료배송</strong> <span class="t-right">(~2022.12.31)</span></dt>
+								<dd>더블에이 복사용지</dd>
+							</dl>
+							<a href="#" class="btn-membership"><strong>업무마켓9 멤버쉽 혜택보기</strong><i class="ico-arrow"></i></a>
+						</div>
+						<div class="detail-right-sec">
+							<div class="detail-compare-wrap">
+								<div class="compare-slc-area"> <!-- 이 영역은 display:none 상태였다가 하단으로 스크롤링될때 나타나는 영역입니다, 아래의  detail-compare-table에서 선택된 영역이 나오도록 되어있습니다.-->
+									<div class="seller-market"><input type="radio" id="mrk_slc" name="mrk_slc" checked><label for="mrk_slc"><img src="https://resource.mall.castingn.com/static/images/sub/bi/other-logo8.png" alt=""></label></div>
+									<div><strong>54</strong>%</div>
+									<div><span class="t-line">28,200원</span></div>
+									<div><span>24,200원</span></div>
+									<div><span class="t-mint"><strong>23,500</strong>원</span></div>
+									<div><strong class="t-mint">무료배송</strong></div>
+									<div><span>2일 소요</span></div>
+									<div><div class="result-price t-mint"><span class="low-box">최저가</span><strong>23,500</strong>원</div></div>
+									<div><button type="button" class="btn-table-open">선택영역 다시보기</button></div>
+								</div>
+
+								<div class="detail-compare-table">
+									<table>
+										<thead>
+											<tr>
+												<th><span>판매처</span></th>
+												<th class="m-hide"><span>할인율</span></th>
+												<th><span>일반판매가</span></th>
+												<th><strong>업무마켓9가</strong></th>
+												<th><strong>멤버쉽회원가</strong></th>
+												<th class="m-hide"><strong>배송비</strong></th>
+												<th class="m-hide"><strong>배송시간</strong></th>
+												<th><strong>최종가</strong></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>
+													<div class="seller-market"><input type="radio" id="mrk1" name="mrk" checked><label for="mrk1"><img src="https://resource.mall.castingn.com/static/images/sub/bi/other-logo8.png" alt=""></label></div>
+												</td>
+												<td class="m-hide"><strong>54</strong>%</td>
+												<td><strong class="p-hide t-mint">54%</strong><span class="t-line">28,200원</span></td>
+												<td><span>24,200원</span></td>
+												<td><span class="t-mint"><strong>23,500</strong>원</span></td>
+												<td class="m-hide"><strong class="t-mint">무료배송</strong></td>
+												<td class="m-hide"><span>2일 소요</span></td>
+												<td><div class="result-price t-mint"><span class="low-box">최저가</span><strong>23,500</strong>원</div></td>
+											</tr>
+											<tr>
+												<td>
+													<div class="seller-market"><input type="radio" id="mrk2" name="mrk"><label for="mrk2"><img src="https://resource.mall.castingn.com/static/images/sub/bi/other-logo8.png" alt=""></label></div>
+												</td>
+												<td class="m-hide"><strong>54</strong>%</td>
+												<td><strong class="p-hide">54%</strong><span class="t-line">28,200원</span></td>
+												<td><span>24,200원</span></td>
+												<td><span><strong>23,500</strong>원</span></td>
+												<td class="m-hide"><div class="flex"><span class="t-line">2,000원</span><i class="ico-help"></i></div></td>
+												<td class="m-hide"><span>2일 소요</span></td>
+												<td><div class="result-price t-blue"><span class="fast-box">배송빠름</span><strong>24,500</strong>원</div></td>
+											</tr>
+											<tr>
+												<td>
+													<div class="seller-market"><input type="radio" id="mrk3" name="mrk"><label for="mrk3"><img src="https://resource.mall.castingn.com/static/images/sub/bi/other-logo8.png" alt=""></label></div>
+												</td>
+												<td class="m-hide"><strong>54</strong>%</td>
+												<td><strong class="p-hide">54%</strong><span class="t-gray">28,200원</span></td>
+												<td><span>24,200원</span></td>
+												<td><span><strong>23,500</strong>원</span></td>
+												<td class="m-hide"><span>무료배송</span></td>
+												<td class="m-hide"><span>2일 소요</span></td>
+												<td><div class="result-price"><strong>245,700</strong>원</div></td>
+											</tr>
+											<tr>
+												<td>
+													<div class="seller-market"><input type="radio" id="mrk4" name="mrk"><label for="mrk4"><img src="https://resource.mall.castingn.com/static/images/sub/bi/other-logo8.png" alt=""></label></div>
+												</td>
+												<td class="m-hide"><strong>54</strong>%</td>
+												<td><strong class="p-hide">54%</strong><span class="t-gray">28,200원</span></td>
+												<td><span>24,200원</span></td>
+												<td><span><strong>23,500</strong>원</span></td>
+												<td class="m-hide"><span>2,000원</span></td>
+												<td class="m-hide"><span>2일 소요</span></td>
+												<td><div class="result-price"><strong>24,500</strong>원</div></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="select-area">
+								<div class="select-seller">
+									<div class="seller-name"><i class="ico-slc-chk"></i><span>옥션 선택됨</span></div>
+									<div class="seller-type">최저가 구매</div>
+								</div>
+								<div class="select-right">
+									<div class="p-hide slc-option">
+										<span class="t-mint">무료배송</span>
+										<span>2일소요</span>
+										<span>멤버쉼회원가</span>
+									</div>
+									<div class="dc-area"><strong>54</strong>%</div>
+									<div class="price-area"><strong>23,500</strong><span class="unit">원</span></div>
+									<div class="quantity-area">
+										<button type="button" class="btn-minus">-</button>
+										<input type="text" id="" name="" value="1">
+										<button type="button" class="btn-plus">+</button>
+									</div>
+								</div>
+							</div>
+
+							<div class="right-btm">
+								<div class="etc-area">
+									<div class="rating-area p-hide">
+										<div class="star-box">
+											<div class="star4"></div><!-- star0 / star1 / star2 / star3 / star4 / star5 -->
+										</div>
+										<div class="rating-count">
+											<dl>
+												<dt>상품만족도</dt>
+												<dd>22</dd>
+											</dl>
+										</div>
+									</div>
+									<div class="rating-area">
+										<div class="star-box">
+											<div class="star4"></div><!-- star0 / star1 / star2 / star3 / star4 / star5 -->
+										</div>
+										<div class="rating-count">
+											<dl>
+												<dt>배송만족도</dt>
+												<dd>22</dd>
+											</dl>
+										</div>
+									</div>
+
+									<div class="delivery-area m-hide">
+										<dl>
+											<dt>배송예정일</dt>
+											<dd>평일 오후 4시이전 주문 시 모레도착 <i class="ico-info"></i></dd>
+										</dl>
+									</div>
+								</div>
+								<div class="btn-area m-hide">
+									<button type="button" class="btn btn-line grow0_5 btn-wish"><strong>209</strong><i class="ico-wish"></i></button>
+									<a href="#" class="btn btn-line grow1"><strong>장바구니</strong></a>
+									<a href="#" class="btn btn-comp grow1_5"><strong>구매하기</strong></a>
+								</div>
+							</div>
+							<button type="button" class="btn-right-more p-hide"><span>Toggle button</span></button>
+						</div>
+
+						<div class="btn-area mobile-btn-area p-hide">
+							<button type="button" class="btn btn-line grow1 btn-wish"><strong>209</strong><i class="ico-wish"></i></button>
+							<button type="button" class="btn btn-comp grow3 btn-pop-area"><strong>구매하기</strong></button>
+						</div>
+					</div>
+				</div>				
+			</div>
+		</div>
+
+		<div class="detail-container">
+			<div class="inq-bnr">
+				<i class="ico-bnr-inq"></i>
+				<p><span class="m-hide">업무마켓9은 현재 1만 3천개의 기업이 이용 중입니다.</span><strong>기업 구매담당자 이신가요?</strong></p>
+				<div class="bnr-btn-area">
+					<a href="#" class="p-hide"><span>기업회원문의 바로가기</span><i class="ico-arrow"></i></a>
+					<a href="#" class="m-hide"><span>여신회원문의 바로가기</span><i class="ico-arrow"></i></a>
+					<a href="#" class="m-hide"><span>대량구매가 필요하실 땐 비교견적 신청하기</span><i class="ico-arrow"></i></a>
+				</div>
+			</div>
+			<div class="inq-bnr2 p-hide">
+				<p>대량구매가 필요 시.<strong>비교견적 신청하기</strong></p>
+				<div class="bnr-btn-area"><a href="#"><span>신청하기</span><i class="ico-arrow"></i></a></div>
+			</div>
+			<div class="detail-tab-area m-hide">
+				<button type="button" class="btn-tab active-tab" data-tab="detail-cont1"><span>상세정보</span></button>
+				<button type="button" class="btn-tab" data-tab="detail-cont2"><span>배송.교환.반품</span></button>
+			</div>
+			<div class="tab-cont active-cont" id="detail-cont1">
+				<div class="info-tt p-hide"><strong>상세정보</strong></div>
+				<div class="cont-detail-img">
+					<p style="text-align:center;"><img src="https://resource.mall.castingn.com/static/images/sub/detail-img.png" alt=""></p>
+				</div>
+				<button type="button" class="btn-more-view p-hide"><span>더보기</span></button>
+			</div>
+			<div class="tab-cont" id="detail-cont2">
+				<div class="detail-info">
+					<p class="info-tt"><strong>배송정보</strong></p>
+					<div class="info-cont">
+						<dl>
+							<dt>배송방법</dt>
+							<dd>반품/교환에 관한 일반적인 사항은 판매자 제시사항보다 관계법령이 우선합니다.</dd>
+						</dl>
+						<dl>
+							<dt>배송사</dt>
+							<dd>한진택배</dd>
+						</dl>
+						<dl>
+							<dt>배송비</dt>
+							<dd>2,500원</dd>
+						</dl>
+					</div>
+				</div>
+				<div class="detail-info">
+					<p class="info-tt"><strong>교환.반품 안내</strong></p>
+					<div class="info-cont">
+						<dl>
+							<dt>교환.반품 비용</dt>
+							<dd>반품/교환에 관한 일반적인 사항은 판매자 제시사항보다 관계법령이 우선합니다.</dd>
+						</dl>
+						<dl>
+							<dt>교환.반품 신청<br/>기준일 </dt>
+							<dd>반품/교환 시 먼저 판매자와 연락하여 협의 후 반품접수를 해주셔야 하며, 반품접수 없이 임의로 보낼 경우 환불이 불가할 수 있으니 유의하시기 바랍니다. <br/><br/>
+							1. 구매자 단순 변심은 상품 수령 후 7일 이내(구매자 반품배송비 부담) <br/>
+							2. 표시/광고와 상이, 상품하자의 경우 상품 수령 후 3개월 이내 혹은 표시/광고와 다른 사실을 안 날로부터 30일 이내 둘 중 하나 경과 시 반품/교환 불가 (판매자 반품배송비 부담)</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+			<div class="bg-gray">
+				<div class="section">
+					<div class="detail-title">
+						<dl>
+							<dt>온라인가격정보 안내</dt>
+							<dd>온라인 가격 정보는 해당 상품의 시세를 제공하는 목적으로 포털사이트의 API 정보를 기반으로 제공되며, <strong class="t-mint">배송비</strong> 및 <strong class="t-mint">배송일정</strong>은 포함되지 않습니다. <br/>캐스팅엔에서 제공하는 전문업체 구매조건과 오픈마켓의 구매조건을 비교해서 합리적인 구매를 선택하세요.</dd>
+						</dl>
+					</div>
+					<div class="detail-flex">
+						<div class="flex-box">
+							<p class="detail-tt">가격 변동 추이</p>
+							<div class="detail-cont">
+								<div class="graph-term-area">
+									<button type="button" class="btn-term active-term"><span>1개월</span></button>
+									<button type="button" class="btn-term"><span>3개월</span></button>
+									<button type="button" class="btn-term"><span>6개월</span></button>
+									<button type="button" class="btn-term"><span>12개월</span></button>
+								</div>
+								<div class="graph-area">
+									<div class="graph-main-area">
+										<dl>
+											<dt class="t-mint">최저가</dt>
+											<dd><strong>26,000</strong></dd>
+										</dl>
+										<dl>
+											<dt class="t-blue">평균가</dt>
+											<dd><strong>32,000</strong></dd>
+										</dl>
+										<dl>
+											<dt class="t-orange">최고가</dt>
+											<dd><strong>78,000</strong></dd>
+										</dl>
+									</div>
+									<div class="graph-txt">배송비를 제외한 판매가격으로 수정된 가격 정보입니다.</div>
+									<div class="graph-box">
+										<canvas id="myChart"></canvas> <!-- 참고파일 casting/product/goods_view_v5.php, casting/product/goods_info_module/common_script.php 에서 makeChart 옮겨주시면 됩니다. -->
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="flex-box">
+							<p class="detail-tt">오픈마켓 가격</p>
+							<div class="detail-cont">
+								<div class="openmarket-compare">
+									<div class="other-table">
+										<table>
+											<thead>
+												<tr>
+													<th>판매처</th>
+													<th>판매가</th>
+													<th>배송비</th>
+													<th>구매</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td><span class="m-hide">네이버</span><span class="p-hide">네이버</span></td>
+													<td class="t-mint"><i class="ico-low"></i>1,199,000원</td>
+													<td class="t-mint">배송비 별도</td>
+													<td><a href="#" class="btn-go-gray" target="_blank">직접구매</a></td>
+												</tr>
+												<tr>
+													<td><span class="m-hide"><img src="https://resource.mall.castingn.com/static/images/sub/bi/add_logo_05.png" alt="롯데ON"></span><span class="p-hide">롯데ON</span></td>
+													<td>1,201,000원</td>
+													<td>배송비 별도</td>
+													<td><a href="#" class="btn-go-gray" target="_blank">직접구매</a></td>
+												</tr>
+												<tr>
+													<td><span class="m-hide">35NETSHOP</span><span class="p-hide">35NETSHOP</span></td>
+													<td>1,201,000원</td>
+													<td>배송비 별도</td>
+													<td><a href="#" class="btn-go-gray" target="_blank">직접구매</a></td>
+												</tr>
+												<tr>
+													<td><span class="m-hide">리퍼노트</span><span class="p-hide">리퍼노트</span></td>
+													<td>1,232,100원</td>
+													<td>배송비 별도</td>
+													<td><a href="#" class="btn-go-gray" target="_blank">직접구매</a></td>
+												</tr>
+												<tr>
+													<td><span class="m-hide">아이즈팩토리</span><span class="p-hide">아이즈팩토리</span></td>
+													<td>1,249,000원</td>
+													<td>배송비 별도</td>
+													<td><a href="#" class="btn-go-gray" target="_blank">직접구매</a></td>
+												</tr>
+												<tr>
+													<td><span class="m-hide"><img src="https://resource.mall.castingn.com/static/images/sub/bi/other-logo5.png" alt="쿠팡"></span><span class="p-hide">쿠팡</span></td>
+													<td>1,368,920원</td>
+													<td>배송비 별도</td>
+													<td><a href="#" class="btn-go-gray" target="_blank">직접구매</a></td>
+												</tr>
+												<tr>
+													<td><span class="m-hide">레노버온라인스토어</span><span class="p-hide">레노버온라인스토어</span></td>
+													<td>1,429,000원</td>
+													<td>배송비 별도</td>
+													<td><a href="#" class="btn-go-gray" target="_blank">직접구매</a></td>
+												</tr>
+												<tr>
+													<td><span class="m-hide"><img src="https://resource.mall.castingn.com/static/images/sub/bi/other-logo6.png" alt="G마켓"></span><span class="p-hide">G마켓</span></td>
+													<td>1,429,000원</td>
+													<td>배송비 별도</td>
+													<td><a href="#" class="btn-go-gray" target="_blank">직접구매</a></td>
+												</tr>
+												<tr>
+													<td><span class="m-hide">SYSI 스토어</span><span class="p-hide">SYSI 스토어</span></td>
+													<td>1,459,000원</td>
+													<td>배송비 별도</td>
+													<td><a href="#" class="btn-go-gray" target="_blank">직접구매</a></td>
+												</tr>
+												<tr>
+													<td><span class="m-hide"><img src="https://resource.mall.castingn.com/static/images/sub/bi/other-logo4.png" alt="11번가"></span><span class="p-hide">11번가</span></td>
+													<td>1,496,070원</td>
+													<td>배송비 별도</td>
+													<td><a href="#" class="btn-go-gray" target="_blank">직접구매</a></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>								
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //container -->
+
+	<div class="detail-pop-fix p-hide"> <!-- 모바일 화면에서 구매하기 버튼 눌렀을때 뜨는 팝업 창 -->
+		<div class="detail-pop-cont">
+			<button type="button" class="pop-control">bar</button>
+			<div class="select-seller">
+				<div class="seller-name"><i class="ico-slc-chk"></i><span>옥션 선택됨</span></div>
+				<div class="seller-type">최저가 구매</div>
+			</div>
+			<div class="select-price-area">
+				<ul>
+					<li class="normal-price">
+						<div class="price-label">일반판매가</div>
+						<div class="price-box"><span class="t-line">75,000원</span></div>
+					</li>
+					<li>
+						<div class="price-label">
+							<input type="radio" id="" name="">
+							<label for=""><span>업무마켓9가</span></label>
+						</div>
+						<div class="price-box"><span>67,500원</span></div>
+					</li>
+					<li>
+						<div class="price-label">
+							<input type="radio" id="" name="">
+							<label for=""><strong>멤버쉽회원가</strong></label>
+						</div>
+						<div class="price-box"><strong class="t-blue">65,250원</strong></div>
+					</li>
+					<li>
+						<div class="price-label">배송비</div>
+						<div class="price-box"><span>2,500원</span></div>
+					</li>
+				</ul>
+			</div>
+			<div class="select-option-area">
+				<div class="slc-option">
+					<span class="t-mint">무료배송</span>
+					<span>2일소요</span>
+				</div>
+				<div class="quantity-area">
+					<button type="button" class="btn-minus">-</button>
+					<input type="text" id="" name="" value="1">
+					<button type="button" class="btn-plus">+</button>
+				</div>
+			</div>
+			<div class="select-total-area">
+				<p class="total-label">총주문금액 (VAT 포함)</p>
+				<div class="total-price">
+					<div class="dc-area"><strong>54</strong>%</div>
+					<div class="price-area"><strong>23,500</strong><span class="unit">원</span></div>
+				</div>
+			</div>
+			<div class="btn-area">
+				<button type="button" class="btn btn-line"><strong>장바구니 담기</strong></button>
+				<button type="button" class="btn btn-comp"><strong>구매하기</strong></button>
+			</div>
+		</div>
+	</div><!-- //detail-pop-fix -->
+
+
+
+	<!-- footer -->
+	<div id="footer">
+		<div class="section">
+			<div class="foot-menu">
+				<a href="#"><span>1:1문의</span></a>
+				<a href="#"><span>고객센터</span></a>
+				<a href="#"><span>파트너센터</span></a>
+			</div>
+			<div class="foot-etc">
+				<a href="#"><span>회사소개</span></a>
+				<a href="#"><span>서비스소개</span></a>
+				<a href="#"><span>안전거래보장</span></a>
+				<a href="#"><span>이용약관</span></a>
+				<a href="#"><span class="t-red">개인정보처리방침</span></a>
+				<a href="#"><span>공지사항</span></a>
+			</div>
+			<div class="foot-cs">
+				<div class="cs-num">1644 <i class="circle"></i> 2653</div>
+				<div class="cs-time">
+					<dl>
+						<dt>평일</dt>
+						<dd>08:30 ~ 17:30</dd>
+					</dl>
+					<dl>
+						<dt>점심시간</dt>
+						<dd>12:00~13:00</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="foot-info">
+				<strong>㈜캐스팅엔     CEO : 용성남, 최준혁</strong> <br/><br/>
+				통신판매신고 : 제 2019-인천부평-1343 호 고객섬김센터 : Tel. 1644-2653 Fax. 070-4032-2523 사업자등록번호 : 423-86-00075 [사업자정보]<br/>
+				주소 : 서울지점 - 서울특별시 마포구 백범로31길 21 서울창업허브 809호 | 본점 - 인천광역시 부평구 대정로 66, 4층 408호(부평동, 다운타운일레븐)
+			</div>
+			<p class="foot-copy">ⓒ 2017 CastingN. All rights reserved.</p>
+			<p class="foot-logo"><img src="https://resource.mall.castingn.com/static/images/foot-logo.png" alt=""></p>
+		</div>
+	</div>
+	<!-- //footer -->
+
+	<div class="right-fix m-hide">
+		<a href="#" class="btn-estimate"><span>비<br/>교<br/>견<br/>적</span><i class="ico-pen"></i></a>
+		<button type="button" class="btn-top"><img src="https://resource.mall.castingn.com/static/images/btn-top.png" alt=""></button>
+	</div><!-- //right-fix -->
+</div>
+
+
+<link rel="stylesheet" href="https://unpkg.com/swiper@6/swiper-bundle.min.css" />
+<script src="https://unpkg.com/swiper@6/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="../../../static/js/Chart.bundle.min.js"></script>
+<script type="text/javascript" src="../../../static/js/Chart.min.js"></script>
+<link rel="stylesheet" href="../../../static/css/Chart.css">
+
+
+<script>
+$(document).ready(function(){
+
+	//1018 우측영역 위치값조정
+	$('.right-fix').bind("click",function(){
+		var _t = $(this).data('scroll')
+		var offset = $(_t).offset();
+		$('html').animate({scrollTop : offset.top}, 400);
+	});
+	$(window).bind("scroll",function(){
+		var _st = $(document).scrollTop();
+		var _h = $(window).height();
+		var _f = _h
+
+		if($('#footer').length > 0){
+			_f = parseInt($('#footer').offset().top);
+		}
+		if(_st >= (_f-_h)){
+			var mt = _st - (_f - _h);
+			$('.right-fix').css({'bottom':(80+mt)+'px'})
+		}
+		if(_st < 500){
+			$('.right-fix').addClass('hide')
+		}else{
+			$('.right-fix').removeClass('hide')
+		}
+		if(_st < 100){
+			$('#header').removeClass('scrolled');
+		}else{
+			$('#header').addClass('scrolled');
+		}
+	});
+
+	$('.gnb-left .btn-cate-view').on('click',function(){
+		$('.all-cate-wrap').toggleClass('show-cate');
+		$(this).toggleClass('active-gnb');
+
+	});
+
+	$('.all-cate-wrap .btn-close').on('click',function(){
+		$('.all-cate-wrap').removeClass('show-cate');
+	});
+
+
+
+	$('.detail-tab-area .btn-tab').click(function(){
+		var tab_id = $(this).attr('data-tab');
+
+		$('.detail-tab-area .btn-tab').removeClass('active-tab');
+		$('.tab-cont').removeClass('active-cont');
+
+		$(this).addClass('active-tab');
+		$("#"+tab_id).addClass('active-cont');
+	});
+
+	$('.btn-wish').on('click',function(){
+		$(this).toggleClass('on');
+	});
+	$('.tab-cont .btn-more-view').on('click',function(){
+		$(this).prev('.cont-detail-img').addClass('all-view');
+		$(this).hide();
+	});
+	$('.detail-right-sec .btn-right-more').on('click',function(){
+		$(this).parents('.detail-right-sec').toggleClass('right-all-view');
+	});
+	$('.mobile-btn-area .btn-pop-area').on('click',function(){
+		$('.detail-pop-fix').addClass('show-pop');
+	});
+	$('.detail-pop-fix .pop-control').on('click',function(){
+		$('.detail-pop-fix').removeClass('show-pop');
+	});
+
+});
+
+var tP = $(".detail-top-wrap");
+var mBa = $(".mobile-btn-area");
+var tPoffset = tP.offset();
+var mBaoffset = mBa.offset();
+var moHeight =$('.top-area').outerHeight() - 62;
+var win = $(window);
+
+win.on('scroll',function() {
+
+	if (win.scrollTop() > tPoffset.top) {
+		tP.addClass("fix"); 
+	
+	} else {
+		tP.removeClass("fix"); 
+	};
+	if (win.scrollTop() > mBaoffset.top - moHeight) {
+		mBa.addClass("fix"); 
+	
+	} else {
+		mBa.removeClass("fix"); 
+	};
+});
+
+
+
+
+</script>
+
+</body>
+</html>
+
+
+
