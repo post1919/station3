@@ -32,5 +32,9 @@ public class Room {
 		this.roomType = roomType;
 		this.delFlag = delFlag;
 	}
+
+	public void update(String roomType){
+		this.roomType = roomType;
+	}
 }
 
