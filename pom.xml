@@ -12,7 +12,7 @@
     <groupId>org.station3</groupId>
     <artifactId>station3</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>war</packaging>
+    <packaging>jar</packaging>
     <name>station3</name>
     <description>Station3 Dabang Assignment for Spring Boot</description>
 

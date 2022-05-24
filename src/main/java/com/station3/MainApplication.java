@@ -10,10 +10,10 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 @SpringBootApplication
 public class MainApplication extends SpringBootServletInitializer {
 
-	@Override
+	/*@Override
 	protected SpringApplicationBuilder configure( SpringApplicationBuilder application ) {
 		return application.sources(MainApplication.class);
-	}
+	}*/
 
 	public static void main(String[] args) {
 		SpringApplication.run(MainApplication.class, args);
