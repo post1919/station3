@@ -52,9 +52,9 @@ public class RoomRestController {
      * @return :
      **/
     @ApiOperation(value = "방 수정")
-    @PutMapping(value = "/api/v1/room/{roomSeq}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<?> update(@PathVariable(name="roomSeq") Integer roomSeq, @RequestBody RoomRequestDto roomRequestDto) throws Exception {
-        Integer resultUpdate = roomService.update(roomSeq, roomRequestDto);
+    @PutMapping(value = "/api/v1/room/put", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<?> update(@RequestBody RoomRequestDto roomRequestDto) throws Exception {
+        Integer resultUpdate = roomService.update(roomRequestDto.getRoomSeq(), roomRequestDto);
         return ResponseEntity.ok().body(resultUpdate);
     }
 
@@ -79,6 +79,11 @@ public class RoomRestController {
                 .build();
 
         return ResponseEntity.ok().body(commonResponse);
+    }
+
+    @PostMapping(value="api/v1/room/post/", produces = MediaType.APPLICATION_JSON_VALUE)
+    public String post(@RequestBody String text) throws Exception {
+        return "Post 요청 => " + text;
     }
 
     /**

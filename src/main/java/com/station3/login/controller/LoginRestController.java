@@ -24,7 +24,7 @@ import javax.servlet.http.HttpSession;
 @RestController
 public class LoginRestController {
 
-    private final AuthenticationManager authenticationManager;
+//    private final AuthenticationManager authenticationManager;
 
     @ResponseBody
     @PostMapping(value = "/asyncLogin", produces = "application/json")
@@ -40,7 +40,7 @@ public class LoginRestController {
         ValidateUtil.password(username, password, "");
 
         // 아이디와 패스워드로, Security 가 알아 볼 수 있는 token 객체로 변경한다.
-        UsernamePasswordAuthenticationToken token = new UsernamePasswordAuthenticationToken(username, password);
+        /*UsernamePasswordAuthenticationToken token = new UsernamePasswordAuthenticationToken(username, password);
 
         // AuthenticationManager 에 token 을 넘기면 UserDetailsService 가 받아 처리하도록 한다.
         Authentication authentication = authenticationManager.authenticate(token);
@@ -50,7 +50,7 @@ public class LoginRestController {
 
         HttpSession session = request.getSession();
         CustomUserDetailsDto user = (CustomUserDetailsDto)authentication.getPrincipal();
-        session.setAttribute("USER", (CustomUserDetailsDto)authentication.getPrincipal());
+        session.setAttribute("USER", (CustomUserDetailsDto)authentication.getPrincipal());*/
 
         CommonResponse commonResponse = CommonResponse.builder()
                 //.data(loginResponseDto)
