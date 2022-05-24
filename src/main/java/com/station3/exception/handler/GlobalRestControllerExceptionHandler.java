@@ -10,8 +10,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.annotation.Order;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.authentication.BadCredentialsException;
-import org.springframework.security.authentication.InternalAuthenticationServiceException;
 import org.springframework.validation.BindException;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -53,7 +51,7 @@ public class GlobalRestControllerExceptionHandler {
         return new ResponseEntity<>(rv, HttpStatus.valueOf(bindExceptionResponse.getErrorCode()));
     }
 
-    @ExceptionHandler({InternalAuthenticationServiceException.class})
+    /*@ExceptionHandler({InternalAuthenticationServiceException.class})
     public ResponseEntity<ErrorResponse<Object>> handleInternalAuthenticationServiceException(InternalAuthenticationServiceException ex){
         log.error(CommonUtils.getClassAndMethodName(), ex);
 
@@ -79,7 +77,7 @@ public class GlobalRestControllerExceptionHandler {
         ErrorResponse<Object> rv = makeResponseModel(errorResponse);
 
         return new ResponseEntity<>(rv, HttpStatus.valueOf(errorResponse.getErrorCode()));
-    }
+    }*/
 
     @ExceptionHandler(Exception.class)
     public ResponseEntity<ErrorResponse<Object>> handleException(Exception ex){

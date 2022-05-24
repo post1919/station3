@@ -4,18 +4,13 @@ package com.station3.login.dto;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 import lombok.ToString;
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
-import org.springframework.security.core.userdetails.UserDetails;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.Collection;
 
 @Data
 @SuppressWarnings("serial")
 @ToString(callSuper = true)
-public class CustomUserDetailsDto extends LoginDto implements UserDetails, Serializable {
+public class CustomUserDetailsDto extends LoginDto /*implements UserDetails*//*, Serializable*/ {
 
 	private static final long serialVersionUID = 1L;
 
@@ -80,12 +75,12 @@ public class CustomUserDetailsDto extends LoginDto implements UserDetails, Seria
 
 	private String authYn; //USER_INFO_AUTH.authYn
 
-	@Override
+	/*@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
 		ArrayList<GrantedAuthority> authList = new ArrayList<GrantedAuthority>();
 		authList.add(new SimpleGrantedAuthority(super.getUserRole())); //USER_ROLE
 
-		/*if(Objects.nonNull(this.authFunctionList) ) {
+		*//*if(Objects.nonNull(this.authFunctionList) ) {
 			//AUTH_FUNCTION
 			for (UserCompanyManagerAuthFunctionResponseDto authFunction : this.authFunctionList) {
 				Optional<String> function = Optional.ofNullable(authFunction.getAuthFunction());
@@ -94,12 +89,12 @@ public class CustomUserDetailsDto extends LoginDto implements UserDetails, Seria
 					authList.add(new SimpleGrantedAuthority(authFunction.getAuthFunction()));
 				}
 			}
-		}*/
+		}*//*
 
 		return authList;
-	}
+	}*/
 
-	@Override
+	/*@Override
 	public String getPassword() { return upasswd; }
 
 	@Override
@@ -125,5 +120,5 @@ public class CustomUserDetailsDto extends LoginDto implements UserDetails, Seria
 	@Override
 	public boolean isEnabled() {
 		return enabled==1?true:false;
-	}
+	}*/
 }

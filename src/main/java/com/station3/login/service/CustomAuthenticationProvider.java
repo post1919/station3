@@ -1,33 +1,19 @@
 package com.station3.login.service;
 
-import com.station3.exception.CommonException;
-import com.station3.exception.type.ErrorCode;
-import com.station3.login.dto.CustomUserDetailsDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.security.authentication.AuthenticationProvider;
-import org.springframework.security.authentication.BadCredentialsException;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.AuthenticationException;
-import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.crypto.password.MessageDigestPasswordEncoder;
-
-import java.util.Objects;
-import java.util.Optional;
 
 @Slf4j
 @RequiredArgsConstructor
-public class CustomAuthenticationProvider implements AuthenticationProvider {
+public class CustomAuthenticationProvider /*implements AuthenticationProvider*/ {
 
-    private final UserDetailsService userDetailsService;
+    /*private final UserDetailsService userDetailsService;
     private final BCryptPasswordEncoder passwordEncoder;
 
     //private final MessageDigestPasswordEncoder md5Encoder;
 
-    /*@Autowired
-    private CustomUserDetailsServiceImpl customUserDetailsService;*/
+    *//*@Autowired
+    private CustomUserDetailsServiceImpl customUserDetailsService;*//*
 
     @Override
     public Authentication authenticate(Authentication authentication) throws AuthenticationException {
@@ -50,10 +36,10 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
 
         String secession = Optional.ofNullable(customUserDetailsDto.getSecession()).orElse(""); //탈퇴여부
 
-        /*
+        *//*
         * 워크마켓9 PHP 사이트는 비번을 MD5 사용하므로
         * 워크마켓9 PHP 사용자를 위해 MD5도 체크함
-         */
+         *//*
         MessageDigestPasswordEncoder md5Encoder = new MessageDigestPasswordEncoder("MD5");
         if (!passwordEncoder.matches(userPw, customUserDetailsDto.getUpasswd())) {
             log.error("비번 일치 안함 JAVA");
@@ -84,6 +70,6 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
     @Override
     public boolean supports(Class<?> authentication) {
         return authentication.equals(UsernamePasswordAuthenticationToken.class);
-    }
+    }*/
 
 }

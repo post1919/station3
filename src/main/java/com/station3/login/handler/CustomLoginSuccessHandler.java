@@ -1,34 +1,14 @@
 package com.station3.login.handler;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
-import com.station3.common.ConstantProperties;
-import com.station3.login.dto.CustomUserDetailsDto;
-import com.station3.login.dto.LoginResponseDto;
 import lombok.extern.log4j.Log4j2;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.web.authentication.SavedRequestAwareAuthenticationSuccessHandler;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 @Log4j2
-public class CustomLoginSuccessHandler extends SavedRequestAwareAuthenticationSuccessHandler {
+public class CustomLoginSuccessHandler /*extends SavedRequestAwareAuthenticationSuccessHandler*/ {
 
 //	@Autowired
 	//LoginService loginService;
 
-	@Override
+	/*@Override
 	public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException {
 		SecurityContextHolder.getContext().setAuthentication(authentication);
 
@@ -76,5 +56,5 @@ public class CustomLoginSuccessHandler extends SavedRequestAwareAuthenticationSu
 		PrintWriter out = response.getWriter();
 		out.print(json);
 		out.flush();
-	}
+	}*/
 }

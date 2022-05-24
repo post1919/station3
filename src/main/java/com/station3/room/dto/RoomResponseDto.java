@@ -7,7 +7,7 @@ import lombok.Getter;
 
 @Getter
 @ApiModel(description = "방 Response DTO")
-public class RoomResponseDto extends RoomDto {
+public class RoomResponseDto {
     @ApiModelProperty(notes = "", value = "")
     protected Integer roomSeq;
 

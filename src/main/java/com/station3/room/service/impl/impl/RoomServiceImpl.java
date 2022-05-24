@@ -53,7 +53,7 @@ public class RoomServiceImpl implements RoomService {
 
 	@Override
 	public Integer save(RoomRequestDto roomRequestDto) {
-		return null;
+		return roomRepository.save(roomRequestDto.toEntity()).getRoomSeq();
 	}
 
 

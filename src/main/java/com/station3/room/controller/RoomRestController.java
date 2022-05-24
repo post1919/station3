@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RequiredArgsConstructor
-//@RequestMapping("/api/v1/room")
+@RequestMapping("/api/v1/room")
 @RestController
 @ApiOperation(value="회원가입", notes = "회원가입")
 public class RoomRestController {
@@ -29,7 +29,7 @@ public class RoomRestController {
      * @return :
      **/
     @ApiOperation(value = "방 정보")
-    @GetMapping(value = "/api/v1/room/{roomSeq}", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "/{roomSeq}", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<?> room(@PathVariable(name="roomSeq") Integer roomSeq) throws Exception {
 
         String msg = "";
@@ -52,9 +52,9 @@ public class RoomRestController {
      * @return :
      **/
     @ApiOperation(value = "방 수정")
-    @PutMapping(value = "/api/v1/room/put", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<?> update(@RequestBody RoomRequestDto roomRequestDto) throws Exception {
-        Integer resultUpdate = roomService.update(roomRequestDto.getRoomSeq(), roomRequestDto);
+    @PutMapping(value = "/{roomSeq}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<?> update(@PathVariable(name="roomSeq") Integer roomSeq, @RequestBody RoomRequestDto roomRequestDto) throws Exception {
+        Integer resultUpdate = roomService.update(roomSeq, roomRequestDto);
         return ResponseEntity.ok().body(resultUpdate);
     }
 
@@ -66,7 +66,7 @@ public class RoomRestController {
      * @return :
      **/
     @ApiOperation(value = "방 목록 정보")
-    @PostMapping(value = "/api/v1/room/roomList", produces = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(value = "/roomList", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<?> roomList(@RequestBody RoomRequestDto roomRequestDto) throws Exception {
 
         String msg = "";
@@ -81,11 +81,6 @@ public class RoomRestController {
         return ResponseEntity.ok().body(commonResponse);
     }
 
-    @PostMapping(value="api/v1/room/post/", produces = MediaType.APPLICATION_JSON_VALUE)
-    public String post(@RequestBody String text) throws Exception {
-        return "Post 요청 => " + text;
-    }
-
     /**
      * @content : 방 > 등록
      * @name :
@@ -94,7 +89,7 @@ public class RoomRestController {
      * @return :
      **/
     @ApiOperation(value = "방 등록")
-    @PostMapping(value = "/api/v1/room/save", produces = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(value = "/save", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<?> save(@RequestBody RoomRequestDto roomRequestDto) throws Exception {
         Integer resultSave = roomService.save(roomRequestDto);
 
