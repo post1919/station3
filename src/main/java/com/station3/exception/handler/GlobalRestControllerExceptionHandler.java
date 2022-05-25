@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -35,14 +36,12 @@ public class GlobalRestControllerExceptionHandler {
         //Dto유효성 체크 후 에러발생시 응답 JSON 형식중 defaultMessage 가져옴
         List<FieldError> list = bindResult.getFieldErrors();
 
-        /*
         List<String> defaultMessageList = new ArrayList<>();
         list.forEach(fieldError->{
             System.out.println("fieldError => " + fieldError.toString());
             defaultMessageList.add(fieldError.getField()+"_"+fieldError.getDefaultMessage());
         });
         bindExceptionResponse.setErrorMessage(defaultMessageList.toString());
-        */
 
         bindExceptionResponse.setFieldErrors(bindResult.getFieldErrors());
         bindExceptionResponse.setStatus(ConstantProperties.OUTPUT_FAIL);

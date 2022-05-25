@@ -47,7 +47,7 @@ public class RoomServiceImpl implements RoomService {
 	@Transactional
 	public Integer update(Integer roomSeq, RoomRequestDto roomRequestDto) {
 		Room room = roomRepository.findById(roomSeq).orElseThrow(()->new IllegalArgumentException("정보를 찾을 수 없습니다."));
-		room.update(roomRequestDto.getRoomType());
+		room.update(roomRequestDto.getRoomType(), roomRequestDto.getDelFlag());
 		return roomSeq;
 	}
 
@@ -55,6 +55,4 @@ public class RoomServiceImpl implements RoomService {
 	public Integer save(RoomRequestDto roomRequestDto) {
 		return roomRepository.save(roomRequestDto.toEntity()).getRoomSeq();
 	}
-
-
 }

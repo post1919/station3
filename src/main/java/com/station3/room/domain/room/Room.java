@@ -33,8 +33,9 @@ public class Room {
 		this.delFlag = delFlag;
 	}
 
-	public void update(String roomType){
+	public void update(String roomType, String delFlag){
 		this.roomType = roomType;
+		this.delFlag = delFlag;
 	}
 }
 
