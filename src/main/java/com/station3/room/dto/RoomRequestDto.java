@@ -27,7 +27,7 @@ public class RoomRequestDto {
     public Room toEntity(){
         return Room.builder()
                 .roomType(roomType)
-                .tradeType(tradeType)
+//                .tradeType(tradeType)
                 .delFlag(delFlag)
                 .build();
     }

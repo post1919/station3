@@ -19,16 +19,13 @@ public class RoomResponseDto {
     private RoomType roomType;
 
     @ApiModelProperty(notes = "", value = "")
-    private String tradeType;
-
-    @ApiModelProperty(notes = "", value = "")
     private String delFlag;
 
-    private List<RoomInfo> roomInfos;
+    private List<RoomInfo> roomInfo;
 
     public RoomResponseDto(Room room){
         this.roomSeq = room.getRoomSeq();
         this.roomType = room.getRoomType();
-        this.roomInfos = room.getRoomInfos();
+        this.roomInfo = room.getRoomInfos();
     }
 }

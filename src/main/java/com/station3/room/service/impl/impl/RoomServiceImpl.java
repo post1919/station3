@@ -37,6 +37,7 @@ public class RoomServiceImpl implements RoomService {
 		return new RoomResponseDto(room);
 	}
 
+//	@Transactional
 	@Override
 	public List<RoomResponseDto> getRoomList(RoomRequestDto roomRequestDto) {
 		List<RoomResponseDto> roomResponseList = new ArrayList<>();
@@ -44,13 +45,13 @@ public class RoomServiceImpl implements RoomService {
 
 		//검색조건 있는경우
 		if( Objects.nonNull(roomRequestDto.getRoomType()) && roomRequestDto.getRoomType() != RoomType.TOTAL ) {
-			roomList = roomRepository.findByRoomType(roomRequestDto);
+			roomList = roomRepository.findByRoomType(roomRequestDto.getRoomType());
 
-		} else if( Objects.nonNull(roomRequestDto.getTradeType()) && roomRequestDto.getTradeType() != TradeType.TOTAL ) {
-			roomList = roomInfoRepository.findByTradeType(roomRequestDto);
+		/*} else if( Objects.nonNull(roomRequestDto.getTradeType()) && roomRequestDto.getTradeType() != TradeType.TOTAL ) {
+			roomList = roomRepository.findByTradeType(roomRequestDto);*/
 
-		} else if( Objects.nonNull(roomRequestDto.getKeyword()) ) {
-			roomList = roomRepository.findByKeyword(roomRequestDto);
+		/*} else if( Objects.nonNull(roomRequestDto.getKeyword()) ) {
+			roomList = roomRepository.findByKeyword(roomRequestDto);*/
 
 		} else {
 			//Sort.by(Sort.Direction.ASC, "roomSeq")

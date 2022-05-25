@@ -3,11 +3,13 @@ package com.station3.room.domain.room;
 import com.station3.room.type.TradeType;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Builder;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
 
+@Getter
 @Entity
 @Table(schema="example", catalog="example", name="room_info")
 @NoArgsConstructor
@@ -19,7 +21,7 @@ public class RoomInfo {
     private Integer roomInfoSeq;
 
     @ApiModelProperty(notes = "거래구분", value = "거래구분")
-    //@Enumerated(EnumType.STRING)
+    @Enumerated(EnumType.STRING)
     @Column(name="tradeType", nullable = false)
     private TradeType tradeType;
 
@@ -31,9 +33,9 @@ public class RoomInfo {
     @Column(name="delFlag", nullable = false)
     private String delFlag;
 
-    @ManyToOne
+    /*@ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "roomSeq")
-    private Room room;
+    private Room room;*/
 
     @Builder
     public RoomInfo(Integer roomInfoSeq, TradeType tradeType, BigDecimal price, String delFlag){

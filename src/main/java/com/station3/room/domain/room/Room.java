@@ -8,6 +8,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Getter
@@ -30,26 +31,29 @@ public class Room {
 	@Column(name="delFlag", nullable = false)
 	private String delFlag;
 
-	@OneToMany
+	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+//	@OneToMany(mappedBy = "room", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
 	@JoinColumn(name = "roomSeq")
-	private List<RoomInfo> roomInfos = new java.util.ArrayList<>();
+	private List<RoomInfo> roomInfos = new ArrayList<>();
 
-	public void setRoomInfo(List<RoomInfo> roomInfos) {
-		this.roomInfos = roomInfos;
+	/*public void setRoomInfo(List<RoomInfo> roomInfo) {
+		this.roomInfo = roomInfo;
 	}
 
-	public void newRoomInfo(RoomInfo roomInfo){
-		this.roomInfos.add(roomInfo);
-	}
+	public void addRoomInfo(RoomInfo p){
+		if( roomInfo == null ){
+			this.roomInfo = new ArrayList<>();
+		}
 
-	private String keyword;
+		this.roomInfo.add(p);
+	}*/
 
 	@Builder
-	public Room(Integer roomSeq, RoomType roomType, String delFlag, TradeType tradeType){
+	public Room(Integer roomSeq, RoomType roomType, String delFlag/*, TradeType tradeType*/){
 		this.roomSeq = roomSeq;
 		this.roomType = roomType;
 		this.delFlag = delFlag;
-		this.newRoomInfo(RoomInfo.builder().tradeType(tradeType).build());
+//		this.addRoomInfo(RoomInfo.builder().tradeType(tradeType).build());
 	}
 
 	public void update(RoomType roomType, String delFlag){
@@ -57,4 +61,3 @@ public class Room {
 		this.delFlag = delFlag;
 	}
 }
-
