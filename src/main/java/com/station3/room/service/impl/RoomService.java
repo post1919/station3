@@ -13,4 +13,6 @@ public interface RoomService {
     Integer save(RoomRequestDto roomRequestDto);
 
     Integer update(Integer roomSeq, RoomRequestDto roomRequestDto);
+
+    void delete(RoomRequestDto roomRequestDto);
 }
