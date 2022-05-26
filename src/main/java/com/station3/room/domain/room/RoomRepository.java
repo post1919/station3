@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface RoomRepository extends JpaRepository<Room, Integer> {
     List<Room> findByRoomType(RoomType roomType);
-    //List<Room> findByTradeType(RoomRequestDto requestDto);
+//    List<Room> findByTradeType(RoomInfo roomInfo);
     //List<Room> findByKeyword(RoomRequestDto requestDto);
 
     //List<Room> findAll(Specification<Room> spec, Pageable pageable);

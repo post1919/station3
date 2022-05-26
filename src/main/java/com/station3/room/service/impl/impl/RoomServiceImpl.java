@@ -1,6 +1,7 @@
 package com.station3.room.service.impl.impl;
 
 import com.station3.room.domain.room.Room;
+import com.station3.room.domain.room.RoomCustomRepositoryImpl;
 import com.station3.room.domain.room.RoomInfoRepository;
 import com.station3.room.domain.room.RoomRepository;
 import com.station3.room.dto.RoomRequestDto;
@@ -9,7 +10,6 @@ import com.station3.room.service.impl.RoomService;
 import com.station3.room.type.RoomType;
 import com.station3.room.type.TradeType;
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -30,6 +30,7 @@ public class RoomServiceImpl implements RoomService {
 
 	private final RoomRepository roomRepository;
 	private final RoomInfoRepository roomInfoRepository;
+	private final RoomCustomRepositoryImpl roomCustomRepository;
 
 	@Override
 	public RoomResponseDto getRoom(Integer roomSeq){
@@ -47,8 +48,11 @@ public class RoomServiceImpl implements RoomService {
 		if( Objects.nonNull(roomRequestDto.getRoomType()) && roomRequestDto.getRoomType() != RoomType.TOTAL ) {
 			roomList = roomRepository.findByRoomType(roomRequestDto.getRoomType());
 
-		/*} else if( Objects.nonNull(roomRequestDto.getTradeType()) && roomRequestDto.getTradeType() != TradeType.TOTAL ) {
-			roomList = roomRepository.findByTradeType(roomRequestDto);*/
+		} else if( Objects.nonNull(roomRequestDto.getTradeType()) && roomRequestDto.getTradeType() != TradeType.TOTAL ) {
+			Room room = RoomRequestDto.builder().tradeType(roomRequestDto.getTradeType()).build()
+					.toEntity();
+//			roomList = roomInfoRepository.findByTradeType(room.getRoomInfos());
+			roomList = roomCustomRepository.findAllInnerFetchJoin(roomRequestDto.getTradeType());
 
 		/*} else if( Objects.nonNull(roomRequestDto.getKeyword()) ) {
 			roomList = roomRepository.findByKeyword(roomRequestDto);*/
